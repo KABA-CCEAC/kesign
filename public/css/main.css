@@ -1,0 +1,168 @@
+/*
+ * Main CSS for kesign
+ *
+ */
+body {
+  font-size: 12px;
+  color: #808080;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #04284d;
+}
+address strong {
+  color: #04284d;
+}
+blockquote small {
+  color: #04284d;
+}
+dt {
+  color: #04284d;
+}
+a {
+  color: #04284d;
+}
+.navbar-inverse .navbar-inner,
+.navbar .navbar-inner {
+  background: #04284d;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #036), color-stop(1, #04284d));
+  background: -webkit-linear-gradient(top, #036 0%, #04284d 100%);
+  background: -moz-linear-gradient(top, #036 0%, #04284d 100%);
+  background: -o-linear-gradient(top, #036 0%, #04284d 100%);
+  background: -ms-linear-gradient(top, #036 0%, #04284d 100%);
+  background: linear-gradient(top, #036 0%, #04284d 100%);
+  border: none;
+}
+.navbar-inverse .brand,
+.navbar .brand {
+  padding: 5px 20px 5px;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.navbar-inverse .nav li a,
+.navbar .nav li a {
+  padding: 5px 20px 5px;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.navbar-inverse .nav li a:hover,
+.navbar .nav li a:hover {
+  background: #eee;
+  color: #04284d;
+  text-shadow: 0 1px 0 #fff;
+}
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret,
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background: #eee;
+  color: #04284d;
+  text-shadow: 0 1px 0 #fff;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #04284d;
+  border-bottom-color: #04284d;
+}
+.navbar-inverse .nav li .dropdown-menu,
+.navbar .nav li .dropdown-menu {
+  margin: 0;
+  border: none;
+  border-bottom: solid 2px #04284d;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #eee;
+  color: #04284d;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.navbar-inverse .nav li .dropdown-menu::before,
+.navbar .nav li .dropdown-menu::before,
+.navbar-inverse .nav li .dropdown-menu::after,
+.navbar .nav li .dropdown-menu::after {
+  display: none;
+}
+.navbar-inverse .nav li .dropdown-menu li a,
+.navbar .nav li .dropdown-menu li a {
+  padding: 2px 20px 2px;
+  color: #808080;
+  text-shadow: 0 1px 0 #fff;
+}
+.navbar-inverse .nav li .dropdown-menu li a:hover,
+.navbar .nav li .dropdown-menu li a:hover {
+  color: #04284d;
+  text-shadow: 0 1px 0 #fff;
+}
+.navbar-inverse .nav li .dropdown-menu li a::before,
+.navbar .nav li .dropdown-menu li a::before {
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #f89406;
+  margin-right: 5px;
+}
+.navbar-inverse .nav > .active a,
+.navbar .nav > .active a,
+.navbar-inverse .nav > .active a:hover,
+.navbar .nav > .active a:hover {
+  background: #eee;
+  color: #04284d;
+  text-shadow: 0 1px 0 #fff;
+}
+.navbar-inverse .divider-vertical,
+.navbar .divider-vertical {
+  height: 30px;
+  border-right: 1px solid #2a4d74;
+  border-left: 1px solid #072039;
+  margin: 0;
+}
+.navbar-inverse .navbar-form input,
+.navbar .navbar-form input,
+.navbar-inverse .navbar-form select,
+.navbar .navbar-form select,
+.navbar-inverse .navbar-form .radio,
+.navbar .navbar-form .radio,
+.navbar-inverse .navbar-form .checkbox,
+.navbar .navbar-form .checkbox {
+  margin-top: 0px;
+}
+.navbar-inverse .navbar .btn,
+.navbar .navbar .btn,
+.navbar-inverse .navbar .btn-group,
+.navbar .navbar .btn-group {
+  margin-top: 0px;
+}
+.navbar-inverse .navbar-search,
+.navbar .navbar-search {
+  margin-top: 0px;
+}
+.navbar-inverse .navbar-search .search-query,
+.navbar .navbar-search .search-query {
+  background: #fff;
+  font-size: 14px;
+  border: solid 1px #04284d;
+  color: #04284d;
+}
+.navbar-inner {
+  min-height: 30px;
+}
+body > .navbar {
+  font-size: 14px;
+}
+body > .navbar .brand {
+  color: #8d97a6;
+}
