@@ -26,6 +26,55 @@ dt {
 a {
   color: #04284d;
 }
+.btn {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.btn-primary {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #036), color-stop(1, #04284d));
+  background-image: -webkit-linear-gradient(top, #036 0%, #04284d 100%);
+  background-image: -moz-linear-gradient(top, #036 0%, #04284d 100%);
+  background-image: -o-linear-gradient(top, #036 0%, #04284d 100%);
+  background-image: -ms-linear-gradient(top, #036 0%, #04284d 100%);
+  background-image: linear-gradient(top, #036 0%, #04284d 100%);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background: #04284d;
+}
+.btn-info {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8d97a6), color-stop(1, #7e8794));
+  background-image: -webkit-linear-gradient(top, #8d97a6 0%, #7e8794 100%);
+  background-image: -moz-linear-gradient(top, #8d97a6 0%, #7e8794 100%);
+  background-image: -o-linear-gradient(top, #8d97a6 0%, #7e8794 100%);
+  background-image: -ms-linear-gradient(top, #8d97a6 0%, #7e8794 100%);
+  background-image: linear-gradient(top, #8d97a6 0%, #7e8794 100%);
+}
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  background: #7e8794;
+}
+.btn-warning {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2a200), color-stop(1, #d99100));
+  background-image: -webkit-linear-gradient(top, #f2a200 0%, #d99100 100%);
+  background-image: -moz-linear-gradient(top, #f2a200 0%, #d99100 100%);
+  background-image: -o-linear-gradient(top, #f2a200 0%, #d99100 100%);
+  background-image: -ms-linear-gradient(top, #f2a200 0%, #d99100 100%);
+  background-image: linear-gradient(top, #f2a200 0%, #d99100 100%);
+}
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  background: #d99100;
+}
 .navbar-inverse .navbar-inner,
 .navbar .navbar-inner {
   background: #04284d;
