@@ -35,10 +35,14 @@ a {
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
+.dropdown-menu li a {
+  text-shadow: 0 1px 0 #fff;
+  color: #808080;
+}
 .dropdown-menu li > a:hover,
 .dropdown-menu li > a:focus,
 .dropdown-menu .dropdown-submenu:hover > a {
-  color: #4c4c4c;
+  color: #04284d;
   text-decoration: none;
   background: #eee;
 }
