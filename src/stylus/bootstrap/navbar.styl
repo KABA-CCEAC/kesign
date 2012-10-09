@@ -72,6 +72,7 @@
         color: $kabaBlue
         text-shadow: 0 1px 0 $white
 
+
   .divider-vertical
     height: 30px
     border-right: 1px solid #2A4D74
@@ -79,22 +80,46 @@
     margin: 0
 
   .navbar-form input, .navbar-form select, .navbar-form .radio, .navbar-form .checkbox
-    margin-top: 0px
+    margin-top: 2px
+    height: 16px
+    font-size: 12px
+    border-radius: 4px
 
-  .navbar .btn, .navbar .btn-group
-    margin-top: 0px
+  .btn, .btn-group
+    margin-top: 2px
+    font-size: 12px
+    line-height: 16px
+    border-radius: 4px
 
   .navbar-search
     margin-top: 0px
 
     .search-query
-      background: $white
+      margin-top: 2px
+      padding: 5px 14px 3px
+      height: 16px
+      kabaBlue-gradient(bottom)
+      font-size: 12px
+      line-height: 15px
+      border: solid 1px lighten($kabaBlue, 15)
+      color: $kabaLightBlue
+
+      &:hover, &:focus
+        background: $white
+        color: $kabaBlue
+
+    &::after
+      position: absolute
       font-size: 14px
-      border: solid 1px $kabaBlue
-      color: $kabaBlue
+      font-family: 'FontAwesome'
+      content: "\f002"
+      color: $kabaMiddleBlue
+      right: 8px
+      top : 7px
 
 .navbar-inner
   min-height: 30px
+
 
 body > .navbar
   font-size: 14px

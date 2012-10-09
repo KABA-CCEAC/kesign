@@ -17,3 +17,24 @@ dt
 
 a
   color: $kabaBlue
+
+
+
+.dropdown-menu
+  border-bottom: solid 2px $kabaBlue
+  border-radius: 0
+  background: $kabaLightGray
+  color: $kabaBlue
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+
+  li > a:hover, li > a:focus, .dropdown-submenu:hover > a
+    color: $kabaDarkGray
+    text-decoration: none
+    background: $kabaLightGray
+
+
+  .dropdown-submenu > a::after
+    border-left-color: $kabaTextGray
+
+  .dropdown-submenu:hover > a::after
+    border-left-color: $kabaDarkGray
