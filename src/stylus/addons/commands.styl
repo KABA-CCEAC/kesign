@@ -5,6 +5,7 @@ ul.commands
   margin: 0 5px 0 0 
 
   li
+    position: relative
     margin: 0 7px
     float: left
 
@@ -12,9 +13,11 @@ ul.commands
       color: $kabaMiddleBlue
 
       [class^="icon-"], [class*=" icon-"]
+        position: relative
+        top: 3px
         margin-left: 0
         margin-right: 1px
-        font-size: 18px
+        font-size: 20px
 
       &:hover
         color: $kabaBlue
@@ -24,6 +27,8 @@ ul.commands
           color: $kabaBlue
 
     &.divider
+      position: relative
+      top: 3px
       border-right: 1px solid lighten($kabaMiddleBlue, 10)
       border-left: 1px solid darken($kabaLightBlue, 5)
       height: 20px

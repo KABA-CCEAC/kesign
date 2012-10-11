@@ -611,7 +611,7 @@ body .navbar .brand {
   -webkit-background-clip: padding-box;
 }
 .widget-header .commands {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .widget-header h3 {
   position: absolute;
@@ -725,6 +725,7 @@ ul.commands {
   margin: 0 5px 0 0;
 }
 ul.commands li {
+  position: relative;
   margin: 0 7px;
   float: left;
 }
@@ -733,9 +734,11 @@ ul.commands li a {
 }
 ul.commands li a [class^="icon-"],
 ul.commands li a [class*=" icon-"] {
+  position: relative;
+  top: 3px;
   margin-left: 0;
   margin-right: 1px;
-  font-size: 18px;
+  font-size: 20px;
 }
 ul.commands li a:hover {
   color: #04284d;
@@ -746,6 +749,8 @@ ul.commands li a:hover [class*=" icon-"] {
   color: #04284d;
 }
 ul.commands li.divider {
+  position: relative;
+  top: 3px;
   border-right: 1px solid #aab1bc;
   border-left: 1px solid #c6ced5;
   height: 20px;
