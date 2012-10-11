@@ -5,7 +5,7 @@ html(lang="en")
     include ../includes/layout/head
 
   body
-    header.header
+    header.header.header-fixed-top
       .header-inner
         .brandbar.brandbar-xsmall
             a.brand(href="#{path}index.html")
@@ -67,7 +67,7 @@ html(lang="en")
           
     .main
       .main-inner
-        .sidebar
+        .sidebar.sidebar-fixed
           ul.nav.nav-list.well
             li: a(href="#") Home
             li: a(href="#") Documentation
@@ -84,6 +84,3 @@ html(lang="en")
           | kesign is freely distributable under the terms of the MIT license.
     
     include ../includes/layout/endscripts
-
-
-

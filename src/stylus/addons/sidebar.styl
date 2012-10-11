@@ -1,11 +1,16 @@
 .sidebar
-  position: fixed
+  position: absolute
   width: 200px
   box-shadow: -1px 2px 7px darken($kabaBackgroundGray, 20)
 
   .well
     border: solid 1px darken($kabaBackgroundGray, 20)
     padding: 4px 14px 19px
+    background: #f5
 
   + .page
-    margin: 0 0 20px 220px
+    margin-left: 220px
+
+  &.sidebar-fixed
+    margin-top: 0
+    position: fixed
