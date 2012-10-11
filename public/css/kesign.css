@@ -545,6 +545,9 @@ body .navbar .brand {
   -ms-transform: skew(2deg);
   transform: skew(2deg);
 }
+.container > .page {
+  margin-left: 0;
+}
 .sidebar {
   position: absolute;
   width: 200px;
