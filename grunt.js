@@ -58,8 +58,11 @@ module.exports = function(grunt) {
     // },
 
     stylus: {
-      "public/css/main.css": [
+      "public/css/kesign.css": [
         "src/stylus/main.styl"//"client/stylus/**/*.styl"
+      ],
+      "public/css/kesign-responsive.css": [
+        "src/stylus/responsive.styl"
       ],
       "bootstrap/assets/css/kesign.css": [
         "src/stylus/main.styl"
@@ -76,8 +79,8 @@ module.exports = function(grunt) {
       "pages": [
         "src/jade/pages/**/*.jade"
       ],
-      "node": [
-        "src/jade/node/index.jade"
+      "samples": [
+        "src/jade/samples/**/*.jade"
       ],
       "node/pages": [
         "src/jade/node/pages/**/*.jade"
@@ -134,11 +137,10 @@ module.exports = function(grunt) {
     // only want to load one stylesheet in index.html.
     mincss: {
       "public/css/index.css": [
-        "public/css/bootstrap-2.0.2.css",
-        "public/css/bootstrap-responsive-2.0.2.css",
+        "public/css/bootstrap-2.1.1.css",
+        "public/css/bootstrap-responsive-2.1.1.css",
         "public/css/font-awesome-2.0.css",
-        "public/css/prettify.css",
-        "public/css/main.css"
+        "public/css/prettify.css"
       ]
     },
 
@@ -170,7 +172,7 @@ module.exports = function(grunt) {
           "public": "public",
           "bootstrap": "bootstrap",
           "pages": "pages",
-          "node": "node"
+          "samples": "samples"
       }//,
 
       // debug: {

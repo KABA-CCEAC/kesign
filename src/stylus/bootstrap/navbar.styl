@@ -2,6 +2,7 @@
   .navbar-inner
     kabaBlue-gradient()
     border: none
+    border-radius: 0
 
 
 
@@ -72,6 +73,18 @@
         color: $kabaBlue
         text-shadow: 0 1px 0 $white
 
+    &.nav-small
+      font-size: 12px
+
+      li
+          a
+            display: inline-block
+            min-height: 21px
+            padding: 5px 10px 4px
+
+      [class^="icon-"], [class*=" icon-"]
+        margin-top: 0
+
 
   .divider-vertical
     height: 30px
@@ -121,7 +134,7 @@
   min-height: 30px
 
 
-body > .navbar
+body .navbar
   font-size: 14px
 
   .brand
