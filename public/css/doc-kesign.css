@@ -2,3 +2,16 @@
  * Main CSS for kesign documentation
  *
  */
+.downloads {
+  margin: 0 0 30px;
+  padding: 5px 20px 20px;
+  background: #f2f4f6;
+  border: solid 1px #d5dbe0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 7px #c2c2c2;
+  box-shadow: 1px 2px 7px #c2c2c2;
+}
+.downloads h6 {
+  text-transform: uppercase;
+}

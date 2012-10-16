@@ -1,0 +1,32 @@
+- var path = '../'
+- var title = 'i18next - release notes'
+- var nav = '.releasenotes'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+    title i18next Release Notes
+
+  body
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .page
+        .widget
+          .widget-header
+            i.icon-file
+            h3 Release Notes
+
+          .widget-content
+            :markdown
+              ##### v0.0.1
+              - adapted styles to twitter bootstrap
+              - extended with layouts
+              - added widgets container
+              - added samples
+                
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts

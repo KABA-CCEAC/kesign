@@ -1,19 +1,53 @@
 - var path = ''
-- var version = '1.5.7'
+- var version = '0.0.1'
+- var nav = '.home'
 !!! 5
 html(lang="en")
   head
     include includes/layout/head
 
-  body
+  body(data-spy="scroll", data-target=".sidebar")
     include includes/layout/header
           
     include includes/layout/content
-      .row-fluid
-        .span8
+      .sidebar.sidebar-fixed
+        ul.nav.nav-list.well
+          li.nav-header Guidelines
+          li: a(href="#software") Software
+          li: a(href="#mobile") Mobile
 
-        .span4
+      .page
+        .section#software
+          .row-fluid(style='height: 700px;')
+            .span8
+              .widget
+                .widget-header
+                  h3 Software Guidelines
 
+
+                .widget-content
+                  p sdfdf
+
+            .span4
+              .downloads
+                h6 Downloads:
+                a.btn.btn-block.btn-large.btn-warning(href='#{path}public/download/versions/kesign-#{version}.zip', download='kesign-#{version}.zip') 
+                  i.icon-download-alt
+                  |  Current v#{version} (zip)
+
+              .downloads
+                h6 Quicklinks:
+                ul.unstyled
+                  li: a(href='#{path}bootstrap/', target='_new') Basic Bootstrap
+                  li: a(href='#{path}doc/') Kesign Extensions
+                  li: a(href='#{path}doc/samples.html') Samples
+
+        .section#mobile
+          .row-fluid
+            .span8 
+              p sdfdsf
+
+            .span4
       
     include includes/layout/footer
     
