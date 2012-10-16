@@ -4,53 +4,53 @@
 //
 module.exports = function(grunt) {
 
-  var version = '0.0.1';
+  //var version = '0.0.1';
 
 
   grunt.loadNpmTasks('grunt-contrib');
-  grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-rigger');
+  // grunt.loadNpmTasks('grunt-shell');
+  // grunt.loadNpmTasks('grunt-rigger');
   grunt.loadTasks("buildtasks");
 
   // Project configuration.
   grunt.initConfig({
-    meta: {
-      version: version,
-      banner: '// kesign, v<%= meta.version %>\n' +
-        '// Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
-        '// Distributed under MIT license\n' + 
-        '// http://kesign.com',
-      bannerCSS: '/*!' +
-        ' * kesign, v<%= meta.version %>\n' +
-        ' * Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
-        ' * Distributed under MIT license\n' + 
-        ' * http://kesign.com\n' +
-        ' */'
-    },
+    // meta: {
+    //   version: version,
+    //   banner: '// kesign, v<%= meta.version %>\n' +
+    //     '// Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
+    //     '// Distributed under MIT license\n' + 
+    //     '// http://kesign.com',
+    //   bannerCSS: '/*!' +
+    //     ' * kesign, v<%= meta.version %>\n' +
+    //     ' * Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
+    //     ' * Distributed under MIT license\n' + 
+    //     ' * http://kesign.com\n' +
+    //     ' */'
+    // },
 
-    rig: {
-      kesignCSS: {
-        src: ['<banner:meta.bannerCSS>', 'bin/css/kesign.css'],
-        dest: 'public/css/kesign.css'
-      },
-      kesignResponsiveCSS: {
-        src: ['<banner:meta.bannerCSS>', 'bin/css/kesign-responsive.css'],
-        dest: 'public/css/kesign-responsive.css'
-      }
-      /*,
-      amd: {
-        src: ['<banner:meta.banner>', 'src/amd.js'],
-        dest: 'bin/i18next.amd-latest.js'
-      },
-      amdjquery: {
-        src: ['<banner:meta.banner>', 'src/amd.jquery.js'],
-        dest: 'bin/i18next.amd.withJQuery-latest.js'
-      },
-      spec: {
-        src: ['spec/spec.js'],
-        dest: 'test/test.js'
-      }*/
-    },
+    // rig: {
+    //   kesignCSS: {
+    //     src: ['<banner:meta.bannerCSS>', 'bin/css/kesign.css'],
+    //     dest: 'public/css/kesign.css'
+    //   },
+    //   kesignResponsiveCSS: {
+    //     src: ['<banner:meta.bannerCSS>', 'bin/css/kesign-responsive.css'],
+    //     dest: 'public/css/kesign-responsive.css'
+    //   }
+    //   ,
+    //   amd: {
+    //     src: ['<banner:meta.banner>', 'src/amd.js'],
+    //     dest: 'bin/i18next.amd-latest.js'
+    //   },
+    //   amdjquery: {
+    //     src: ['<banner:meta.banner>', 'src/amd.jquery.js'],
+    //     dest: 'bin/i18next.amd.withJQuery-latest.js'
+    //   },
+    //   spec: {
+    //     src: ['spec/spec.js'],
+    //     dest: 'test/test.js'
+    //   }
+    // },
 
     // meta: {
     //   handlebars: {
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 
     // The clean task ensures all files are removed from the dist/ directory so
     // that no files linger from previous builds.
-    clean: ["index.html", "pages", "node"],
+    clean: ["index.html", "pages"],
 
     // The lint task will run the build configuration and the application
     // JavaScript through JSHint and report any errors.  You can change the
@@ -100,17 +100,8 @@ module.exports = function(grunt) {
     // },
 
     stylus: {
-      "bin/css/kesign.css": [
+      "public/css/doc-kesign.css": [
         "src/stylus/main.styl"//"client/stylus/**/*.styl"
-      ],
-      "bin/css/kesign-responsive.css": [
-        "src/stylus/responsive.styl"
-      ],
-      "bootstrap/assets/css/kesign.css": [
-        "src/stylus/main.styl"
-      ],
-      "bootstrap/assets/css/kesign-responsive.css": [
-        "src/stylus/responsive.styl"
       ]
     },
 
@@ -120,115 +111,16 @@ module.exports = function(grunt) {
       ],
       "pages": [
         "src/jade/pages/**/*.jade"
-      ],
-      "samples": [
-        "src/jade/samples/**/*.jade"
-      ],
-      "node/pages": [
-        "src/jade/node/pages/**/*.jade"
       ]
     },
 
     prettify: {
       "./": [
         "index.html",
-        "pages/**/*.html",
-        "node/**/*.html"
+        "pages/**/*.html"
       ]
     },
 
-    copy: {
-      cssVersions: {
-        options: { 
-          basePath: "public/css",
-          processName: function(filename) {
-            if (filename == "kesign-combined-min.css") {
-              filename = "kesign-combined-min-" + version + ".css";
-            }
-            if (filename == "kesign.css") {
-              filename = "kesign-" + version + ".css";
-            }
-            if (filename == "kesign-min.css") {
-              filename = "kesign-min-" + version + ".css";
-            }
-            if (filename == "kesign-responsive.css") {
-              filename = "kesign-responsive-" + version + ".css";
-            }
-            if (filename == "kesign-responsive-min.css") {
-              filename = "kesign-responsive-min-" + version + ".css";
-            }
-            return filename;
-          } 
-        },
-        files: {
-          "public/download/versions/": [
-            "public/css/kesign-combined-min.css", 
-            "public/css/kesign.css", 
-            "public/css/kesign-min.css", 
-            "public/css/kesign-responsive.css", 
-            "public/css/kesign-responsive-min.css"]
-        }
-      },
-      cssLatest: {
-        options: { 
-          basePath: "public/css"
-        },
-        files: {
-          "public/download/latest/": [
-            "public/css/kesign-combined-min.css", 
-            "public/css/kesign.css", 
-            "public/css/kesign-min.css", 
-            "public/css/kesign-responsive.css", 
-            "public/css/kesign-responsive-min.css"]
-        }
-      },
-      release: {
-        options: { 
-          basePath: ""
-        },
-        files: {
-          "dist/release/": [
-            "public/**/*",
-            "bootstrap/**/*",
-            "samples/**/*"]
-        }
-      }
-    },
-
-    compress: {
-      zip: {
-        options: {
-          mode: "zip",
-          basePath: "public/download/versions",
-          level: 1
-        },
-        files: {
-          "public/download/versions/kesign-<%= meta.version %>.zip": [
-            "public/download/versions/kesign-combined-min-" + version + ".css", 
-            "public/download/versions/kesign-" + version + ".css", 
-            "public/download/versions/kesign-min-" + version + ".css", 
-            "public/download/versions/kesign-responsive-" + version + ".css", 
-            "public/download/versions/kesign-responsive-min-" + version + ".css"]
-        }
-      }/*,
-      zipamd: {
-        options: {
-          mode: "zip",
-          basePath: "bin",
-          level: 1
-        },
-        files: {
-          "release/i18next.amd-<%= meta.version %>.zip": ["bin/i18next.amd.withJQuery-<%= meta.version %>.js", "bin/i18next.amd-<%= meta.version %>.js"]
-        }
-      }*/
-    },
-
-
-    shell: {
-        doc_bootstrap: {
-            command: 'node bootstrap/build'
-        }
-    },
 
     // handlebars: {
     //   "client/dist/debug/templates.js": [
@@ -252,23 +144,23 @@ module.exports = function(grunt) {
     // order and concatenate them into a single CSS file named index.css.  It
     // also minifies all the CSS as well.  This is named index.css, because we
     // only want to load one stylesheet in index.html.
-    mincss: {
-      "public/css/doc-base.css": [
-        "public/css/bootstrap-2.1.1.css",
-        "public/css/bootstrap-responsive-2.1.1.css",
-        "public/css/font-awesome-2.0.css",
-        "public/css/prettify.css"
-      ],
-      "public/css/kesign-combined-min.css": [
-        "public/css/bootstrap-2.1.1.css",
-        "public/css/bootstrap-responsive-2.1.1.css",
-        "public/css/font-awesome-2.0.css",
-        "public/css/kesign.css",
-        "public/css/kesign-responsive.css"
-      ],
-      "public/css/kesign-min.css": ["public/css/kesign.css"],
-      "public/css/kesign-responsive-min.css": ["public/css/kesign-responsive.css"]
-    },
+    // mincss: {
+    //   "public/css/doc-base.css": [
+    //     "public/css/bootstrap-2.1.1.css",
+    //     "public/css/bootstrap-responsive-2.1.1.css",
+    //     "public/css/font-awesome-2.0.css",
+    //     "public/css/prettify.css"
+    //   ],
+    //   "public/css/kesign-combined-min.css": [
+    //     "public/css/bootstrap-2.1.1.css",
+    //     "public/css/bootstrap-responsive-2.1.1.css",
+    //     "public/css/font-awesome-2.0.css",
+    //     "public/css/kesign.css",
+    //     "public/css/kesign-responsive.css"
+    //   ],
+    //   "public/css/kesign-min.css": ["public/css/kesign.css"],
+    //   "public/css/kesign-responsive-min.css": ["public/css/kesign-responsive.css"]
+    // },
 
     // Takes the built require.js file and minifies it for filesize benefits.
     // min: {
@@ -356,8 +248,6 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask("bootstrap", "shell stylus");
-
   // The default task will remove all contents inside the dist/ folder, lint
   // all your code, precompile all the underscore templates into
   // dist/debug/templates.js, compile all the application code into
@@ -371,9 +261,6 @@ module.exports = function(grunt) {
 
   // The release task will run the debug tasks and then minify the
   // dist/debug/require.js file and CSS files.
-  grunt.registerTask("build", "default bootstrap rig mincss");
-
-  grunt.registerTask("release", "build copy:cssVersions copy:cssLatest compress copy:release");
 
   
 
