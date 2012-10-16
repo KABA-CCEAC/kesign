@@ -1,0 +1,25 @@
+.page
+    position: relative
+    background: #f5
+    margin: 20px 0 20px 20px
+    padding: 15px
+    border: solid 1px darken($kabaBackgroundGray, 20)
+    box-shadow: -1px 2px 7px darken($kabaBackgroundGray, 20)
+    min-height: 450px
+
+.page:after
+    z-index: -1
+    box-shadow: -8px 10px 10px darken($kabaBackgroundGray, 20)
+    position: absolute
+    content: ''
+    background: transparent
+    top: 0px
+    left: 5px
+    width: 300px
+    height: 300px
+    transform: rotate(-10deg)
+    transform: skew(2deg)
+
+
+.container > .page
+    margin-left: 0
