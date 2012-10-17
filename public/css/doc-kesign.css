@@ -3,15 +3,55 @@
  *
  */
 .downloads {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   padding: 5px 20px 20px;
   background: #f2f4f6;
   border: solid 1px #d5dbe0;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 1px 2px 7px #c2c2c2;
-  box-shadow: 1px 2px 7px #c2c2c2;
 }
 .downloads h6 {
   text-transform: uppercase;
+}
+.framework-link {
+  margin: 0 0 20px;
+  padding: 5px 20px 20px;
+  background: #f2f4f6;
+  border: solid 1px #d5dbe0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  min-height: 200px;
+}
+.framework-link h6 {
+  text-transform: uppercase;
+}
+.framework-link h6 i {
+  font-size: 16px;
+  color: #f89406;
+}
+.framework-link a:hover {
+  text-decoration: none;
+}
+.framework-link:hover {
+  background: #d5dbe0;
+}
+.samples .sample {
+  margin: 0 0 20px;
+  padding: 15px 20px 20px;
+  background: #f2f4f6;
+  border: solid 1px #d5dbe0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.samples .sample:hover {
+  background: #d5dbe0;
+}
+.samples .sample .sample-img {
+  width: 100%;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.samples .sample .sample-text h6 {
+  text-transform: uppercase;
+  margin-top: 0;
 }

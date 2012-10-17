@@ -1118,12 +1118,9 @@ body .navbar .brand {
   margin-top: 6px;
 }
 .widget-header h3 {
-  position: absolute;
-  height: 18px;
-  left: 32px;
-  display: inline-block;
   overflow: hidden;
-  margin-right: 3em;
+  margin-left: 13px;
+  margin-right: 13px;
   font-size: 12px;
   font-weight: normal;
   line-height: 18px;
@@ -1139,6 +1136,13 @@ body .navbar .brand {
   margin-right: -2px;
   font-size: 18px;
   color: #8d97a6;
+}
+.widget-header [class^="icon-"] + h3,
+.widget-header [class*=" icon-"] + h3 {
+  position: absolute;
+  height: 18px;
+  left: 19px;
+  display: inline-block;
 }
 .widget-content {
   padding: 20px 15px 15px;
