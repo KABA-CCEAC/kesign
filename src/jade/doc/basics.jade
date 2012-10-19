@@ -378,3 +378,21 @@ html(lang="en")
     include ../includes/layout/footer
     
     include ../includes/layout/endscripts
+
+    script(type='text/javascript')
+
+      function toggle(ele) {
+        if (ele.hasClass('gradient')) {
+          ele.removeClass('gradient');
+        } else {
+          ele.addClass('gradient');
+        }
+      }
+
+      $(document).ready(function() {
+        $('.section .well').hover(
+          function(evt) { toggle($(this)); },
+          function(evt) { toggle($(this)); }
+        );
+      });
+
