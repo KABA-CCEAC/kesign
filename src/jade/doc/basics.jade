@@ -1,0 +1,380 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar.sidebar-fixed
+        ul.nav.nav-list.well
+          li.nav-header Basic Guidelines
+          li.active: a(href="#grid") Grid
+          li: a(href="#logo") Logo usage
+          li: a(href="#colors") Colors
+          li: a(href="#gradients") Gradients
+
+      .page
+        .section#grid
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  i.icon-th
+                  h3 Layout Grid
+
+                .widget-content
+                  :markdown
+                    While your still open to use the 5px grid defined in the __WIMP Guidelines__ , we 
+                    recommend giving up a strict 5px pixel finegrained grid.
+
+                    Instead we recommend using the grid system defined in twitter bootstrap:
+
+                    - [940px base - 12 columns](#{path}bootstrap/scaffolding.html#gridSystem)
+                    - [responsive - 12 columns](#{path}bootstrap/scaffolding.html#fluidGridSystem)
+                  
+        .section#logo
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Usage of the kaba logo
+
+                .widget-content
+                  :markdown
+                    Take into account that for the logo usage the same rules must be applied as in the 
+                    print guidelines (color usage, proportions and raster usage).
+
+                    The logos for using in the software come in 3 different sizes:
+
+                  .row-fluid
+                    .span4
+                      h6 40px height:
+                      img.img-border(src="#{path}public/img/kaba_xs.gif")
+                    .span4
+                      h6 60px height:
+                      img.img-border(src="#{path}public/img/kaba_s.gif")
+                    .span4
+                      h6 80px height:
+                      img.img-border(src="#{path}public/img/kaba.gif")
+
+
+
+        .section#colors
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  i.icon-tint
+                  h3 Usage of color:
+
+                .widget-content
+                  h3 Primary colors:
+                  .row-fluid
+                    .span4
+                      .well.well-kabaBlue
+                        h4 Kaba Blue
+                        hr.decent
+                        .color-definition
+                          | #04284D
+                          br
+                          | rgb(4, 40, 77)
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaMiddleBlue
+                        h4 Middle Blue
+                        hr.decent
+                        .color-definition
+                          | #8D97A6
+                          br
+                          | rgb(141, 151, 166)
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaLightBlue
+                        h4 Light Blue
+                        hr.decent
+                        .color-definition
+                          | #D5DBE0
+                          br
+                          | rgb(213, 219, 224)
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+
+                  h3 Gray:
+                  .row-fluid
+                    .span4
+                      .well.well-kabaDarkGray
+                        h4 Dark Gray
+                        hr.decent
+                        .color-definition
+                          | #4C4C4C
+                          br
+                          | rgb(76, 76, 76)
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaTextGray
+                        h4 Text Gray
+                        hr.decent
+                        .color-definition
+                          | #808080
+                          br
+                          | rgb(128, 128, 128)
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaMiddleGray
+                        h4 Middle Gray
+                        hr.decent
+                        .color-definition
+                          | #CCCCCC
+                          br
+                          | rgb(204, 204, 204)
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+                  .row-fluid
+                    .span4
+                      .well.well-kabaLightGray
+                        h4 Light Gray
+                        hr.decent
+                        .color-definition
+                          | #EEEEEE
+                          br
+                          | rgb(227, 227, 227)
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+                    .span4
+                      .well.well-kabaBackgroundGray
+                        h4 Background Gray
+                        hr.decent
+                        .color-definition
+                          | #F5F5F5
+                          br
+                          | rgb(245, 245, 245)
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+                    .span4
+                      .well.well-kabaWhite
+                        h4 White
+                        hr.decent
+                        .color-definition
+                          | #FFFFFF
+                          br
+                          | rgb(255, 255, 255)
+                        hr.decent
+                        span.kabaDarkGray DARK GRAY
+                        span.kabaTextGray  , TEXT GRAY
+
+                  h3 Secondary colors:
+                  .row-fluid
+                    .span4
+                      .well.well-kabaOrange
+                        h4 Orange
+                        hr.decent
+                        .color-definition
+                          | #F2A200
+                          br
+                          | rgb(242, 162, 0)
+                        hr.decent
+                        span.white WHITE
+                  .row-fluid
+                    .span4
+                      .well.well-kabaGreen
+                        h4 Green
+                        hr.decent
+                        .color-definition
+                          | #72A74B
+                          br
+                          | rgb(114, 167, 75)
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaLightYellow
+                        h4 Yellow
+                        hr.decent
+                        .color-definition
+                          | #FFFBA6
+                          br
+                          | rgb(255, 251, 166)
+                        hr.decent
+                        span.kabaDarkGray DARK GRAY
+                    .span4
+                      .well.well-kabaRed
+                        h4 Red
+                        hr.decent
+                        .color-definition
+                          | #F20000
+                          br
+                          | rgb(242, 0, 0)
+                        hr.decent
+                        span.white WHITE
+
+        .section#gradients
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  i.icon-tint
+                  h3 Usage of gradients:
+
+                .widget-content
+                  h3 Primary colors:
+                  .row-fluid
+                    .span4
+                      .well.well-kabaBlue.gradient
+                        h4 Kaba Blue
+                        hr.decent
+                        .color-definition
+                          | #003366
+                          .sep: i.icon-chevron-down
+                          | #04284D
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaMiddleBlue.gradient
+                        h4 Middle Blue
+                        hr.decent
+                        .color-definition
+                          | #8D97A6
+                          .sep: i.icon-chevron-down
+                          | #7E8794
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaLightBlue.gradient
+                        h4 Light Blue
+                        hr.decent
+                        .color-definition
+                          | #D5DBE0
+                          .sep: i.icon-chevron-down
+                          | #BDC2C7
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+
+                  h3 Gray:
+                  .row-fluid
+                    .span4
+                      .well.well-kabaDarkGray.gradient
+                        h4 Dark Gray
+                        hr.decent
+                        .color-definition
+                          | #4C4C4C
+                          .sep: i.icon-chevron-down
+                          | #333333
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaTextGray.gradient
+                        h4 Text Gray
+                        hr.decent
+                        .color-definition
+                          | #808080
+                          .sep: i.icon-chevron-down
+                          | #666666
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaMiddleGray.gradient
+                        h4 Middle Gray
+                        hr.decent
+                        .color-definition
+                          | #CCCCCC
+                          .sep: i.icon-chevron-down
+                          | #B3B3B3
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+                  .row-fluid
+                    .span4
+                      .well.well-kabaLightGray.gradient
+                        h4 Light Gray
+                        hr.decent
+                        .color-definition
+                          | #EEEEEE
+                          .sep: i.icon-chevron-down
+                          | #D4D4D4
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+                    .span4
+                      .well.well-kabaBackgroundGray.gradient
+                        h4 Background Gray
+                        hr.decent
+                        .color-definition
+                          | #F5F5F5
+                          .sep: i.icon-chevron-down
+                          | #E5E5E5
+                        hr.decent
+                        span.kabaBlue KABA BLUE
+                        span.kabaDarkGray  , DARK GRAY
+                    .span4
+                      .well.well-kabaWhite.gradient
+                        h4 White
+                        hr.decent
+                        .color-definition
+                          | #FFFFFF
+                          .sep: i.icon-chevron-down
+                          | #EEEEEE
+                        hr.decent
+                        span.kabaDarkGray DARK GRAY
+                        span.kabaTextGray  , TEXT GRAY
+
+                  h3 Secondary colors:
+                  .row-fluid
+                    .span4
+                      .well.well-kabaOrange.gradient
+                        h4 Orange
+                        hr.decent
+                        .color-definition
+                          | #F2A200
+                          .sep: i.icon-chevron-down
+                          | #D99100
+                        hr.decent
+                        span.white WHITE
+                  .row-fluid
+                    .span4
+                      .well.well-kabaGreen.gradient
+                        h4 Green
+                        hr.decent
+                        .color-definition
+                          | #8BCC5C
+                          .sep: i.icon-chevron-down
+                          | #72A74B
+                        hr.decent
+                        span.white WHITE
+                    .span4
+                      .well.well-kabaLightYellow.gradient
+                        h4 Yellow
+                        hr.decent
+                        .color-definition
+                          | #FFFCCC
+                          .sep: i.icon-chevron-down
+                          | #FFFBA6
+                        hr.decent
+                        span.kabaDarkGray DARK GRAY
+                    .span4
+                      .well.well-kabaRed.gradient
+                        h4 Red
+                        hr.decent
+                        .color-definition
+                          | #F20000
+                          .sep: i.icon-chevron-down
+                          | #D20000
+                        hr.decent
+                        span.white WHITE
+
+
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts

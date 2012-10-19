@@ -1,0 +1,45 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      //- .sidebar.sidebar-fixed
+      //-   ul.nav.nav-list.well
+      //-     li.nav-header Basic Guidelines
+      //-     li.active: a(href="#grid") Grid
+      //-     li: a(href="#logo") Logo usage
+      //-     li: a(href="#colors") Colors
+      //-     li: a(href="#gradients") Gradients
+
+      .page
+        .section#grid
+          .row-fluid
+            .span12
+              .widget
+                .widget-header
+                  i.icon-book
+                  h3 Documentation
+
+                .widget-content
+                  .framework-links
+                    .row-fluid
+                      .span4     
+                        a(href='#{path}doc/basics.html')
+                          .framework-link
+                            h6 
+                              i.icon-tint
+                              |  basics
+                            :markdown
+                              Find information about the __grid layout__, __colors__, __gradients__ and more.
+
+
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts

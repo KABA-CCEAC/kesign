@@ -8,23 +8,38 @@
   h6
     text-transform: uppercase
 
-.framework-link
-  margin: 0 0 20px
-  padding: 5px 20px 20px
-  background: lighten($kabaLightBlue, 10)
-  border: solid 1px $kabaLightBlue
-  border-radius: 2px
-  min-height: 200px
-
-  h6
-    text-transform: uppercase
-
-    i
-    	font-size: 16px
-    	color: $orange
-
+.framework-links
   a:hover
-  	text-decoration: none
+    text-decoration: none
 
-  &:hover
-    background: $kabaLightBlue
+  .framework-link
+    margin: 0 0 20px
+    padding: 5px 20px 20px
+    background: lighten($kabaLightBlue, 10)
+    border: solid 1px $kabaLightBlue
+    border-radius: 2px
+
+    h6
+      text-transform: uppercase
+
+      i
+      	font-size: 16px
+      	color: $orange
+
+    &:hover
+      background: $kabaLightBlue
+
+
+.img-border
+  border: solid 1px $kabaBlue
+
+
+span
+  &.kabaBlue
+    color: $kabaBlue
+  &.kabaDarkGray
+    color: $kabaDarkGray
+  &.kabaTextGray
+    color: $kabaTextGray
+  &.white
+    color: $white
