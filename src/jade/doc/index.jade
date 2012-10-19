@@ -20,7 +20,7 @@ html(lang="en")
       .page
         .section#grid
           .row-fluid
-            .span12
+            .span8
               .widget
                 .widget-header
                   i.icon-book
@@ -33,11 +33,30 @@ html(lang="en")
                         a(href='#{path}doc/basics.html')
                           .framework-link
                             h6 
-                              i.icon-tint
+                              i.icon-cog
                               |  basics
                             :markdown
                               Find information about the __grid layout__, __colors__, __gradients__ and more.
+                      .span4     
+                        a(href='#{path}doc/components.html')
+                          .framework-link
+                            h6 
+                              i.icon-columns
+                              |  layout
+                            :markdown
+                              Find info
 
+                      .span4     
+                        a(href='#{path}doc/components.html')
+                          .framework-link
+                            h6 
+                              i.icon-cogs
+                              |  components
+                            :markdown
+                              Find info
+
+            .span4
+              include ../includes/shared/downloads
 
       
     include ../includes/layout/footer

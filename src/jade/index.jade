@@ -1,5 +1,4 @@
 - var path = ''
-- var version = '0.0.1'
 - var nav = '.home'
 !!! 5
 html(lang="en")
@@ -84,18 +83,7 @@ html(lang="en")
 
 
             .span4
-              .downloads
-                h6 Downloads:
-                a.btn.btn-block.btn-large.btn-warning(href='#{path}public/download/versions/kesign-#{version}.zip', download='kesign-#{version}.zip') 
-                  i.icon-download-alt
-                  |  Current v#{version} (zip)
-
-              .downloads
-                h6 Quicklinks:
-                ul.unstyled
-                  li: a(href='#{path}bootstrap/', target='_new') Twitter Bootstrap
-                  li: a(href='#{path}doc/') Kesign Extensions
-                  li: a(href='#{path}pages/samples.html') Samples
+              include includes/shared/downloads
 
         .section#mobile
           .row-fluid
