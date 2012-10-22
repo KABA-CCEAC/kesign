@@ -844,6 +844,21 @@ input[type="color"],
 .navbar-inner {
   min-height: 30px;
 }
+.btn.btn-navbar {
+  background: #04284d;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #036), color-stop(1, #04284d));
+  background: -webkit-linear-gradient(bottom, #036 0%, #04284d 100%);
+  background: -moz-linear-gradient(bottom, #036 0%, #04284d 100%);
+  background: -o-linear-gradient(bottom, #036 0%, #04284d 100%);
+  background: -ms-linear-gradient(bottom, #036 0%, #04284d 100%);
+  background: linear-gradient(bottom, #036 0%, #04284d 100%);
+  padding: 5px;
+  margin-top: 2px;
+}
+.btn.btn-navbar:hover {
+  background: #04284d;
+  border: solid 1px #04284d;
+}
 body .navbar {
   font-size: 14px;
 }
@@ -1000,6 +1015,14 @@ body .navbar .brand {
 .header-fixed-top + .main .page {
   margin-top: 90px;
 }
+.header-fixed-top.collapsed + .main .page {
+  margin-top: 50px;
+  -webkit-transition: margin 1s;
+  -moz-transition: margin 1s;
+  -o-transition: margin 1s;
+  -ms-transition: margin 1s;
+  transition: margin 1s;
+}
 .footer {
   height: 30px;
   width: 100%;
@@ -1113,12 +1136,9 @@ body .navbar .brand {
   margin-top: 6px;
 }
 .widget-header h3 {
-  position: absolute;
-  height: 18px;
-  left: 32px;
-  display: inline-block;
   overflow: hidden;
-  margin-right: 3em;
+  margin-left: 13px;
+  margin-right: 13px;
   font-size: 12px;
   font-weight: normal;
   line-height: 18px;
@@ -1134,6 +1154,13 @@ body .navbar .brand {
   margin-right: -2px;
   font-size: 18px;
   color: #8d97a6;
+}
+.widget-header [class^="icon-"] + h3,
+.widget-header [class*=" icon-"] + h3 {
+  position: absolute;
+  height: 18px;
+  left: 19px;
+  display: inline-block;
 }
 .widget-content {
   padding: 20px 15px 15px;

@@ -1,3 +1,4 @@
+// header fixed
 .header-fixed-top
   position: fixed
   z-index: 1040;
@@ -9,7 +10,13 @@
   + .main .page
     margin-top: 90px
 
+// header fixed and collapsed
+// - reduce margin top
+.header-fixed-top.collapsed + .main .page
+  margin-top: 50px
+  transition: margin 1s
 
+// footer
 .footer
   height: 30px
   width: 100%

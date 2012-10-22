@@ -1,0 +1,39 @@
+@media (max-width: 480px) {
+  .page {
+    margin: 10px;
+  }
+  .sidebar {
+    margin: 10px;
+    width: inherit;
+    position: relative;
+  }
+  .sidebar + .page {
+    margin-left: 10px;
+  }
+  .sidebar.sidebar-fixed {
+    margin-top: 80px;
+    position: relative;
+  }
+  .sidebar.sidebar-fixed + .page {
+    margin-top: 10px;
+  }
+  .container > .page {
+    margin: 10px;
+  }
+  .header-fixed-top + .main .page {
+    margin-top: 80px;
+  }
+  .header-fixed-top.collapsed + .main .page {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) and (min-width: 480px) {
+  .container > .page {
+    margin: 20px;
+  }
+}

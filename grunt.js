@@ -36,6 +36,10 @@ module.exports = function(grunt) {
       kesignResponsiveCSS: {
         src: ['<banner:meta.bannerCSS>', 'bin/css/kesign-responsive.css'],
         dest: 'public/css/kesign-responsive.css'
+      },
+      kesignJS: {
+        src: ['<banner:meta.banner>', 'src/js/main.js'],
+        dest: 'public/js/kesign.js'
       }
       /*,
       amd: {
@@ -138,10 +142,13 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      cssVersions: {
+      versions: {
         options: { 
-          basePath: "public/css",
+          basePath: "public",
           processName: function(filename) {
+             if (filename == "kesign.js") {
+              filename = "kesign-" + version + ".js";
+            }
             if (filename == "kesign-combined-min.css") {
               filename = "kesign-combined-min-" + version + ".css";
             }
@@ -161,7 +168,8 @@ module.exports = function(grunt) {
           } 
         },
         files: {
-          "public/download/versions/": [
+          "public/": [
+            "public/js/kesign.js",
             "public/css/kesign-combined-min.css", 
             "public/css/kesign.css", 
             "public/css/kesign-min.css", 
@@ -171,15 +179,20 @@ module.exports = function(grunt) {
       },
       cssLatest: {
         options: { 
-          basePath: "public/css"
+          basePath: "public"
         },
         files: {
           "public/download/latest/": [
+            "public/js/kesign.js",
             "public/css/kesign-combined-min.css", 
             "public/css/kesign.css", 
             "public/css/kesign-min.css", 
             "public/css/kesign-responsive.css", 
-            "public/css/kesign-responsive-min.css"]
+            "public/css/kesign-responsive-min.css",
+            "public/css/bootstrap-2.1.1.css",
+            "public/css/bootstrap-responsive-2.1.1.css",
+            "public/css/font-awesome-2.0.css",
+            "public/css/font-awesome-ie7-2.0.css"]
         }
       },
       release: {
@@ -199,16 +212,23 @@ module.exports = function(grunt) {
       zip: {
         options: {
           mode: "zip",
-          basePath: "public/download/versions",
+          basePath: "public",
           level: 1
         },
         files: {
           "public/download/versions/kesign-<%= meta.version %>.zip": [
-            "public/download/versions/kesign-combined-min-" + version + ".css", 
-            "public/download/versions/kesign-" + version + ".css", 
-            "public/download/versions/kesign-min-" + version + ".css", 
-            "public/download/versions/kesign-responsive-" + version + ".css", 
-            "public/download/versions/kesign-responsive-min-" + version + ".css"]
+            "public/css/kesign-combined-min-" + version + ".css", 
+            "public/css/kesign-" + version + ".css", 
+            "public/css/kesign-min-" + version + ".css", 
+            "public/css/kesign-responsive-" + version + ".css", 
+            "public/css/kesign-responsive-min-" + version + ".css",
+            "public/css/bootstrap-2.1.1.css",
+            "public/css/bootstrap-responsive-2.1.1.css",
+            "public/css/font-awesome-2.0.css",
+            "public/css/font-awesome-ie7-2.0.css",
+            "public/font/*",
+            "public/img/*",
+            "public/js/*"]
         }
       }/*,
       zipamd: {
@@ -351,6 +371,11 @@ module.exports = function(grunt) {
       stylus: {
         files: "src/stylus/**/*.styl",
         tasks: "build"
+      },
+
+      js: {
+        files: "src/js/**/*.js",
+        tasks: "build"
       }
     }
 
@@ -373,7 +398,7 @@ module.exports = function(grunt) {
   // dist/debug/require.js file and CSS files.
   grunt.registerTask("build", "default bootstrap rig mincss");
 
-  grunt.registerTask("release", "build copy:cssVersions copy:cssLatest compress copy:release");
+  grunt.registerTask("release", "build copy:versions copy:cssLatest compress copy:release");
 
   
 

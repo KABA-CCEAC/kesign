@@ -1,1 +1,45 @@
+@media (max-width: 480px) 
+  // page
+  // - reduce margins
+  .page
+    margin: 10px
 
+  // sidebar
+  // - not fixed
+  .sidebar
+    margin: 10px 
+    width: inherit
+    position: relative
+
+    + .page
+      margin-left: 10px
+
+    &.sidebar-fixed
+      margin-top: 80px
+      position: relative
+
+      + .page
+        margin-top: 10px
+
+  // centered layout
+  // - reduce margin
+  .container > .page
+    margin: 10px
+
+  // fixed header and collapsed header
+  // - reduce margin-top
+  .header-fixed-top + .main .page
+    margin-top: 80px
+
+  .header-fixed-top.collapsed + .main .page
+    margin-top: 40px
+
+@media (max-width: 767px)
+  body
+    padding: 0
+
+@media (max-width: 767px) and (min-width: 480px)
+  // centered layout
+  // - reduce margin
+  .container > .page
+    margin: 20px
