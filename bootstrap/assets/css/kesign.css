@@ -865,6 +865,14 @@ body .navbar {
 body .navbar .brand {
   color: #8d97a6;
 }
+.nav-list {
+  padding: 0;
+}
+.nav-list > li > a,
+.nav-list .nav-header {
+  margin-right: 0;
+  margin-left: 0;
+}
 .nav-list > .active > a,
 .nav-list > .active > a:hover {
   background-color: #8d97a6;
@@ -878,6 +886,49 @@ body .navbar .brand {
 .nav-list.bs-docs-sidenav > .active > a:hover {
   border-left: solid 4px #f89406;
   padding: 8px 15px 8px 11px;
+}
+.nav-list .accordion-group {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-list .accordion-group .accordion-header {
+  position: relative;
+  padding: 3px 15px 3px 8px;
+  cursor: pointer;
+  background-color: #a9b5c0;
+  color: #fff;
+  border-left: solid 3px #fa9f1e;
+  margin: 0 0 1px 0;
+}
+.nav-list .accordion-group .accordion-header::after {
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  content: "\f077";
+  color: #fff;
+  margin-right: 5px;
+}
+.nav-list .accordion-group.collapsed .accordion-header {
+  border-left: none;
+  padding: 3px 15px 3px 11px;
+}
+.nav-list .accordion-group.collapsed .accordion-header::after {
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  content: "\f078";
+  color: #fff;
+  margin-right: 5px;
+}
+.nav-list .accordion-group ul.nav.nav-list {
+  margin-bottom: 0;
+}
+.nav-list .accordion-group ul.nav.nav-list li {
+  background: #d5dbe0;
 }
 .icon-white,
 .nav-tabs > .active > a > [class^="icon-"],
@@ -1075,7 +1126,7 @@ body .navbar .brand {
 }
 .sidebar .well {
   border: solid 1px #c2c2c2;
-  padding: 4px 14px 19px;
+  padding: 4px 0 19px;
   background: #f5f5f5;
 }
 .sidebar + .page {

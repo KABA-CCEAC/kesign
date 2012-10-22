@@ -1,4 +1,4 @@
-.row-fluid
+#sample-widget.row-fluid
   .span8
     .widget
       .widget-header
@@ -26,7 +26,31 @@
             li item a
             li item b
 
-.row-fluid
+#sample-widget-commands.row-fluid
+  .span12
+    .widget
+      .widget-header
+        ul.commands
+          li: a(href='#')
+            i.icon-copy
+            | copy
+          li: a(href='#')
+            i.icon-copy
+            | paste
+          li.divider
+          li: a(href='#')
+            i.icon-save
+            | save
+
+      .widget-content
+        p some text
+        p
+          h6 some list
+          ul
+            li item a
+            li item b
+
+#sample-widget-tabs.row-fluid
   .span12
     .widget
       ul.nav.nav-tabs
@@ -55,26 +79,3 @@
             li item a
             li item b
 
-.row-fluid
-  .span12
-    .widget
-      .widget-header
-        ul.commands
-          li: a(href='#')
-            i.icon-copy
-            | copy
-          li: a(href='#')
-            i.icon-copy
-            | paste
-          li.divider
-          li: a(href='#')
-            i.icon-save
-            | save
-
-      .widget-content
-        p some text
-        p
-          h6 some list
-          ul
-            li item a
-            li item b

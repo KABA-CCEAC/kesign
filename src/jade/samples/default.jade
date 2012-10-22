@@ -4,7 +4,7 @@ html(lang="en")
   head
     include ../includes/layout/head
 
-  body
+  body(data-spy="scroll", data-target=".sidebar")
     header.header
       .header-inner
         .brandbar.brandbar-xsmall.collapse.in
@@ -20,14 +20,7 @@ html(lang="en")
           
     .main
       .main-inner
-        .sidebar
-          ul.nav.nav-list.well
-            li: a(href="#") Home
-            li: a(href="#") Documentation
-            li.divider
-            li.nav-header Samples
-            li.active: a(href="#") Sample 1
-            li: a(href="#") Sample 2
+        include ../includes/sample-sidebar
 
         .page
           include ../includes/sample-content
