@@ -83,6 +83,21 @@ input[type="color"],
   border-color: #ccc;
   font-size: 12px;
 }
+table.table {
+  border-color: #8d97a6;
+}
+table.table thead {
+  background: #eee;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));
+  background: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -o-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #eee 100%);
+  background: linear-gradient(top, #fff 0%, #eee 100%);
+}
+table.table thead th {
+  border-right: solid 1px #d5dbe0;
+}
 .btn {
   position: relative;
   padding: 4px 12px;
@@ -1252,7 +1267,15 @@ body .navbar .brand {
   background: #fff;
   border: 1px solid #d5dbe0;
 }
-.widget-header+.widget-content {
+.widget-table {
+  background: #fff;
+  border: 1px solid #d5dbe0;
+}
+.widget-table > .widget-content {
+  border: none;
+}
+.widget-header+.widget-content,
+.widget-header+.widget-table {
   border-top: none;
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
@@ -1284,7 +1307,7 @@ body .navbar .brand {
   padding: 0;
 }
 .widget-table .table {
-  margin-bottom: 0;
+  margin-bottom: 1px;
   border: none;
 }
 .widget-table .table tr td:first-child {
@@ -1292,6 +1315,12 @@ body .navbar .brand {
 }
 .widget-table .table tr th:first-child {
   border-left: none;
+}
+.widget-table .table tr td:last-child {
+  border-right: none;
+}
+.widget-table .table tr th:last-child {
+  border-right: none;
 }
 .widget-plain {
   background: transparent;
@@ -1301,33 +1330,6 @@ body .navbar .brand {
   padding: 0;
   background: transparent;
   border: none;
-}
-.widget-container .widget-content {
-  background: #f8f8f8;
-  border: none;
-}
-.widget-container .widget-content.selectable {
-  cursor: pointer;
-}
-.widget-container .widget-content.selectable:hover {
-  background: #f5f5f5;
-}
-.widget-container .widget-content h3 {
-  margin-bottom: 30px;
-  padding: 0 0 3px 0;
-  border-bottom: solid 1px $darkGray;
-}
-.widget-container .widget-content h3 .commands i {
-  font-size: 20px;
-}
-.widget-container .widget-content h3 .commands i:hover {
-  color: #000;
-}
-.widget-container .widget-content .shortcuts .shortcut {
-  border: solid 1px #e8e8e8;
-}
-.widget-box .widget-content.gray {
-  background: #e3e3e3;
 }
 ul.commands {
   list-style: none;
