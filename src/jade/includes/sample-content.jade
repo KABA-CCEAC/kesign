@@ -43,12 +43,24 @@
             | save
 
       .widget-content
-        p some text
+        :markdown
+          Write long copytext in color __TEXTGRAY__. Format __bold__ or _italic_. 
+
+          Add links in copytext as needed 
+          [some mystical link leading to nowhere](http://nowhere.com)! Links are 
+          always good stuff. 
+
         p
-          h6 some list
-          ul
-            li item a
-            li item b
+          | Might be good to mark external links: 
+          a(href="#") 
+            i.icon-external-link
+            |  going no where, too
+
+        :markdown
+          But still 
+          wondering where in kaba apps there should be long copytext? But if you need 
+          it it's there. Nothing to do at all, as it's the default text stuff. Not much 
+          more to say about it. Boring stuff - isn't it?
 
 #sample-widget-tabs.row-fluid
   .span12
@@ -74,7 +86,6 @@
                 | save
 
           .widget-content
-            h6 Content Area 1
             p some table inlined:
             table.table.table-striped.table-hover
               thead

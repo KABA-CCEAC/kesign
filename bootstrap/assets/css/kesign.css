@@ -30,6 +30,10 @@ dt {
 a {
   color: #04284d;
 }
+p a {
+  color: #053565;
+  text-shadow: 0 1px 0 #d5dbe0;
+}
 .dropdown-menu {
   border-bottom: solid 2px #04284d;
   -webkit-border-radius: 0;
