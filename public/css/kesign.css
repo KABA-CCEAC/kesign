@@ -7,6 +7,10 @@
  * Main CSS for kesign
  *
  */
+html,
+body {
+  height: 100%;
+}
 body {
   font-size: 12px;
   color: #808080;
@@ -1360,4 +1364,99 @@ ul.commands li.divider {
   border-left: 1px solid #c6ced5;
   height: 20px;
   margin: 0 0 0 4px;
+}
+.login-page {
+  height: 100%;
+  position: relative;
+  background: #bdc2c7;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d5dbe0), color-stop(1, #bdc2c7));
+  background: -webkit-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background: -moz-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background: -o-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background: -ms-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background: linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+}
+.login-page .login-content {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  background: #04284d;
+}
+.login-page .login-content .brandbar {
+  position: absolute;
+  top: -80px;
+  height: 80px;
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+}
+.login-page .login-content .brandbar a.brand {
+  display: inline-block;
+  height: 80px;
+  width: 159px;
+  background: url("../img/kaba.gif") no-repeat;
+}
+.login-page .login-content .login-form {
+  width: 960px;
+  margin: 0 auto;
+  padding: 50px 0 0;
+  color: #d5dbe0;
+}
+.login-page .login-content .login-form form {
+  margin-bottom: 0;
+}
+.login-page .login-content .login-form form legend {
+  font-size: 12px;
+  line-height: 22px;
+  color: #d5dbe0;
+  margin-bottom: 0;
+  border: none;
+  margin-bottom: 10px;
+}
+.login-page .login-content .login-form form legend label.checkbox {
+  font-size: 10px;
+  margin-right: 5px;
+}
+.login-page .login-content .login-form form .fields input[type="password"],
+.login-page .login-content .login-form form .fields input[type="text"] {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2);
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2);
+}
+.login-page .login-content .login-form form .login-actions {
+  margin-top: 15px;
+}
+.login-page .login-content .login-form form .login-actions .btn {
+  position: relative;
+  padding-right: 30px;
+}
+.login-page .login-content .login-form form .login-actions .btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: -moz-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: -o-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: -ms-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  -webkit-box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+.login-page .login-content .login-form form .login-actions .btn::after {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #808080;
+  margin-right: 5px;
+}
+.login-page .login-content .login-form .login-hero {
+  float: right;
+  font-family: Garamond, Times New Roman, serif;
+  font-size: 40px;
+  line-height: 45px;
+  padding: 20px 100px;
+}
+.login-page .login-content .login-form .login-hero p {
+  margin: 0;
 }

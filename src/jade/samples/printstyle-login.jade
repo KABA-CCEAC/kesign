@@ -1,0 +1,40 @@
+- var path = '../'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+      
+
+  body
+
+    .login-page
+      .login-content
+        .brandbar
+          a.brand
+        .login-form
+          .row-fluid
+            .span8
+              .login-hero
+                p Herzlich Willkommen.
+                p Welcome.
+            .span4
+              form(action='/login', method='post')
+                legend 
+                  | Please Login
+                  .pull-right
+                    label.checkbox
+                      input(type="checkbox")
+                      | Remember me? 
+
+                .fields
+                  input.span12(name='username', type='text', placeholder='Username')
+                  input.span12(name='password', type='password', placeholder='Password')
+                        
+                .login-actions
+                  button.btn.pull-right
+                    | Login
+                  button.btn Forgot Your Password?
+      
+
+    
+    include ../includes/layout/endscripts
