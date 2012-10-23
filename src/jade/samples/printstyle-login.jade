@@ -18,7 +18,7 @@ html(lang="en")
                 p Herzlich Willkommen.
                 p Welcome.
             .span4
-              form(action='/login', method='post')
+              form.form-hideLabels(action='/login', method='post')
                 legend 
                   | Please Login
                   .pull-right
@@ -27,7 +27,9 @@ html(lang="en")
                       | Remember me? 
 
                 .fields
+                  label.hideable(for="username") Username:
                   input.span12(name='username', type='text', placeholder='Username')
+                  label.hideable(for="password") Password:
                   input.span12(name='password', type='password', placeholder='Password')
                         
                 .login-actions
