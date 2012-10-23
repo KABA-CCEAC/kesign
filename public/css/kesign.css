@@ -81,6 +81,7 @@ input[type="color"],
   -webkit-border-radius: 3px;
   border-radius: 3px;
   border-color: #ccc;
+  font-size: 12px;
 }
 .btn {
   position: relative;
@@ -564,6 +565,7 @@ input[type="color"],
 .btn {
   -webkit-border-radius: 0;
   border-radius: 0;
+  font-size: 12px;
 }
 .btn-primary {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #036), color-stop(1, #04284d));
@@ -1406,7 +1408,7 @@ ul.commands li.divider {
   margin-bottom: 0;
 }
 .login-page .login-content .login-form form legend {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 22px;
   color: #d5dbe0;
   margin-bottom: 0;
