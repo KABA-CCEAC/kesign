@@ -54,28 +54,51 @@
   .span12
     .widget
       ul.nav.nav-tabs
-        li.active: a(href="#") Content Area 1
-        li: a(href="#") Content Area 2
-        li: a(href="#") Content Area 3
+        li.active: a(href="#tab1", data-toggle="tab") Content Area 1
+        li: a(href="#tab2", data-toggle="tab") Content Area 2
+        li: a(href="#tab3", data-toggle="tab") Content Area 3
     
-      .widget-header
-        ul.commands.pull-right
-          li: a(href='#')
-            i.icon-copy
-            | copy
-          li: a(href='#')
-            i.icon-copy
-            | paste
-          li.divider
-          li: a(href='#')
-            i.icon-save
-            | save
+      .tab-content
+        #tab1.tab-pane.active
+          .widget-header
+            ul.commands.pull-right
+              li: a(href='#')
+                i.icon-copy
+                | copy
+              li: a(href='#')
+                i.icon-copy
+                | paste
+              li.divider
+              li: a(href='#')
+                i.icon-save
+                | save
 
-      .widget-content
-        p some text
-        p
-          h6 some list
-          ul
-            li item a
-            li item b
+          .widget-content
+            h6 Content Area 1
+            p some text
+
+        #tab2.tab-pane
+          .widget-header
+            ul.commands.pull-right
+              li: a(href='#')
+                i.icon-copy
+                | copy
+              li: a(href='#')
+                i.icon-copy
+                | paste
+
+          .widget-content
+            h6 Content Area 2
+            p some text
+
+        #tab3.tab-pane
+          .widget-header
+            ul.commands.pull-right
+              li: a(href='#')
+                i.icon-save
+                | save
+
+          .widget-content
+            h6 Content Area 3
+            p some text
 

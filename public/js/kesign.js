@@ -8,7 +8,7 @@ if('placeholder' in placeholderTest) $.support.placeholder = true;
 
 $(document).ready(function() {
 	if ($.support.placeholder) {
-	    $('.form-hideLabels').find('label.hideable').hide();
+	  $('.form-hideLabels').find('label.hideable').hide();
 	}
 	if ($('.toggleBrandbar').data('toggle') === 'collapse') {
 	  var icon = $('.toggleBrandbar i');
