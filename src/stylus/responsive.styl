@@ -10,6 +10,7 @@
     margin: 10px 
     width: inherit
     position: relative
+    min-height: 8px
 
     + .page
       margin-left: 10px
@@ -20,6 +21,14 @@
 
       + .page
         margin-top: 10px
+
+    .btn-sidebar
+      display: block
+
+    .sidebar-collapse, .sidebar-collapse.collapse
+      -webkit-transform: translate3d(0,0,0)
+      height: 0
+      overflow: hidden
 
   // centered layout
   // - reduce margin
@@ -43,3 +52,10 @@
   // - reduce margin
   .container > .page
     margin: 20px
+
+
+@media (min-width: 481px)
+  .sidebar
+    .sidebar-collapse, .sidebar-collapse.collapse
+      height: auto !important
+      overflow: visible !important

@@ -1,5 +1,10 @@
-.sidebar.sidebar-fixed
-  ul#accordion1.nav.nav-list.well
+a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+  span.icon-bar
+  span.icon-bar
+  span.icon-bar
+
+.sidebar-collapse
+  ul#accordion1.nav.nav-list
     li: a(href="/") Home
     li: a(href="#{path}doc/") Documentation
     li.divider
