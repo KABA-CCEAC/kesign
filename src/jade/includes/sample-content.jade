@@ -55,8 +55,8 @@
     .widget
       ul.nav.nav-tabs
         li.active: a(href="#tab1", data-toggle="tab") Content Area 1
-        li: a(href="#tab2", data-toggle="tab") Content Area 2
-        li: a(href="#tab3", data-toggle="tab") Content Area 3
+        li: a(href="#tab2", data-toggle="tab") Table Basic
+        li: a(href="#tab3", data-toggle="tab") Table Striped/Hover
     
       .tab-content
         #tab1.tab-pane.active
@@ -87,9 +87,31 @@
                 i.icon-copy
                 | paste
 
-          .widget-content
-            h6 Content Area 2
-            p some text
+          .widget-table
+            .widget-content
+                table.table
+                  thead
+                    tr
+                      th #
+                      th givenname
+                      th familyname
+                      th @twitter
+                  tbody
+                    tr
+                      td 1
+                      td Jan
+                      td Mühlemann
+                      td @jamuhl
+                    tr
+                      td 2
+                      td Mark
+                      td Otto
+                      td @mdo
+                    tr
+                      td 3
+                      td Jacob
+                      td Thornton
+                      td @fat
 
         #tab3.tab-pane
           .widget-header
@@ -98,7 +120,29 @@
                 i.icon-save
                 | save
 
-          .widget-content
-            h6 Content Area 3
-            p some text
+          .widget-table
+            .widget-content
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th #
+                      th givenname
+                      th familyname
+                      th @twitter
+                  tbody
+                    tr
+                      td 1
+                      td Jan
+                      td Mühlemann
+                      td @jamuhl
+                    tr
+                      td 2
+                      td Mark
+                      td Otto
+                      td @mdo
+                    tr
+                      td 3
+                      td Jacob
+                      td Thornton
+                      td @fat
 
