@@ -6,7 +6,8 @@
         h3 User Information
 
       .widget-content
-        p some text
+        p 
+          a.btn(href="#myModal", role="button", data-toggle="modal") Launch demo modal
         p
           h6 some list
           ul
@@ -19,7 +20,8 @@
           h3 More Information
 
       .widget-content
-        p some text
+        p 
+          a.btn(href="#myModal", role="button", data-toggle="modal") Launch demo modal
         p
           h6 some list
           ul
@@ -147,15 +149,71 @@
                       td Thornton
                       td @fat
 
-        #tab3.tab-pane
-          .widget-header
-            ul.commands.pull-right
-              li: a(href='#')
-                i.icon-save
-                | save
+          #tab3.tab-pane
+            .widget-header
+              ul.commands.pull-right
+                li: a(href='#')
+                  i.icon-save
+                  | save
 
-          .widget-table
-            .widget-content
+            .widget-table
+              .widget-content
+                  table.table.table-striped.table-hover
+                    thead
+                      tr
+                        th #
+                        th givenname
+                        th familyname
+                        th @twitter
+                    tbody
+                      tr
+                        td 1
+                        td Jan
+                        td Mühlemann
+                        td @jamuhl
+                      tr
+                        td 2
+                        td Mark
+                        td Otto
+                        td @mdo
+                      tr
+                        td 3
+                        td Jacob
+                        td Thornton
+                        td @fat
+
+
+//- MODAL DEMO
+#myModal.modal.hide.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+  .modal-header
+    button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+    h3#myModalLabel Modal header
+
+  .modal-body
+    .row-fluid
+      .span12
+        .widget
+          ul.nav.nav-tabs
+            li.active: a(href="#tab11", data-toggle="tab") Table Inline
+            li: a(href="#tab12", data-toggle="tab") Table Widget - Basic
+        
+          .tab-content
+            #tab11.tab-pane.active
+              .widget-header
+                ul.commands.pull-right
+                  li: a(href='#')
+                    i.icon-copy
+                    | copy
+                  li: a(href='#')
+                    i.icon-copy
+                    | paste
+                  li.divider
+                  li: a(href='#')
+                    i.icon-save
+                    | save
+
+              .widget-content
+                p some table inlined:
                 table.table.table-striped.table-hover
                   thead
                     tr
@@ -179,4 +237,44 @@
                       td Jacob
                       td Thornton
                       td @fat
+
+            #tab12.tab-pane
+              .widget-header
+                ul.commands.pull-right
+                  li: a(href='#')
+                    i.icon-copy
+                    | copy
+                  li: a(href='#')
+                    i.icon-copy
+                    | paste
+
+              .widget-table
+                .widget-content
+                    table.table
+                      thead
+                        tr
+                          th #
+                          th givenname
+                          th familyname
+                          th @twitter
+                      tbody
+                        tr
+                          td 1
+                          td Jan
+                          td Mühlemann
+                          td @jamuhl
+                        tr
+                          td 2
+                          td Mark
+                          td Otto
+                          td @mdo
+                        tr
+                          td 3
+                          td Jacob
+                          td Thornton
+                          td @fat
+
+  .modal-footer
+    button.btn(data-dismiss="modal", aria-hidden="true") Close
+    button.btn.btn-primary Save changes
 
