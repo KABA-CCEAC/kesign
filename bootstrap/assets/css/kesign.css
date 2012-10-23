@@ -1446,7 +1446,8 @@ ul.commands li.divider {
   margin-right: 5px;
 }
 .login-page .login-content .login-form .login-hero {
-  float: right;
+  display: inline-block;
+  margin: 0 auto;
   font-family: Garamond, Times New Roman, serif;
   font-size: 40px;
   line-height: 45px;

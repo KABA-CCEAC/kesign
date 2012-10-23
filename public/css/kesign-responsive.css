@@ -41,15 +41,46 @@
   .header-fixed-top.collapsed + .main .page {
     margin-top: 40px;
   }
+  .login-page .login-content .login-form {
+    width: 90%;
+    padding: 10px;
+  }
+  .login-page .login-content .login-form .login-hero,
+  .login-page .login-content .login-form .span8 {
+    display: none;
+  }
+  .login-page .login-content .login-form .span4 {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   body {
     padding: 0;
   }
 }
+@media (max-width: 979px) and (min-width: 767px) {
+  .login-page .login-content .login-form {
+    width: 760px;
+  }
+  .login-page .login-content .login-form .span4,
+  .login-page .login-content .login-form .span8 {
+    width: 45%;
+  }
+}
 @media (max-width: 767px) and (min-width: 480px) {
   .container > .page {
     margin: 20px;
+  }
+  .login-page .login-content .login-form {
+    width: 70%;
+    padding: 10px;
+  }
+  .login-page .login-content .login-form .login-hero,
+  .login-page .login-content .login-form .span8 {
+    display: none;
+  }
+  .login-page .login-content .login-form .span4 {
+    width: 100%;
   }
 }
 @media (min-width: 481px) {
