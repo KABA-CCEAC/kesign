@@ -81,18 +81,6 @@ input[type="color"],
 table.table {
   border-color: #8d97a6;
 }
-table.table thead {
-  background: #eee;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));
-  background: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
-  background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
-  background: -o-linear-gradient(top, #fff 0%, #eee 100%);
-  background: -ms-linear-gradient(top, #fff 0%, #eee 100%);
-  background: linear-gradient(top, #fff 0%, #eee 100%);
-}
-table.table thead th {
-  border-right: solid 1px #d5dbe0;
-}
 .btn {
   position: relative;
   padding: 4px 12px;
@@ -1304,6 +1292,18 @@ body .navbar .brand {
 .widget-table .table {
   margin-bottom: 1px;
   border: none;
+}
+.widget-table .table thead {
+  background: #eee;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));
+  background: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -o-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #eee 100%);
+  background: linear-gradient(top, #fff 0%, #eee 100%);
+}
+.widget-table .table thead th {
+  border-right: solid 1px #d5dbe0;
 }
 .widget-table .table tr td:first-child {
   border-left: none;
