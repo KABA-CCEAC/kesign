@@ -624,6 +624,9 @@ span.white {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
+.samples .sample .sample-text {
+  padding-left: 10px;
+}
 .samples .sample .sample-text h6 {
   text-transform: uppercase;
   margin-top: 0;

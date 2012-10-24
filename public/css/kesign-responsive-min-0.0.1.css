@@ -2,4 +2,4 @@
  * Copyright (c)2012 Kaba AG.
  * Distributed under MIT license
  * http://kesign.com
- */
+ */@media (max-width: 480px){.page{ margin:10px}.sidebar{margin:10px;width:inherit;position:relative;min-height:8px}.sidebar+.page{margin-left:10px}.sidebar.sidebar-fixed{margin-top:80px;position:relative}.sidebar.sidebar-fixed+.page{margin-top:10px}.sidebar .btn-sidebar{display:block}.sidebar .sidebar-collapse,.sidebar .sidebar-collapse.collapse{-webkit-transform:translate3d(0,0,0);height:0;overflow:hidden}.container>.page{margin:10px}.header-fixed-top+.main .page{margin-top:80px}.header-fixed-top.collapsed+.main .page{margin-top:40px}}@media (max-width: 767px){body{ padding:0}}@media (max-width: 767px) and (min-width: 480px){.container>.page{ margin:20px}}@media (min-width: 481px){.sidebar .sidebar-collapse,.sidebar .sidebar-collapse.collapse{ height:auto!important;overflow:visible!important}}

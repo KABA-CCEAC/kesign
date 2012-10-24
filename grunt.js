@@ -124,6 +124,18 @@ module.exports = function(grunt) {
       ]
     },
 
+    copy: {
+      'public': {
+        options: { 
+          basePath: "public"
+        },
+        files: {
+          "public/": [
+            "src/public/**/*"
+          ]
+        }
+      }
+    },
 
     // handlebars: {
     //   "client/dist/debug/templates.js": [
@@ -257,7 +269,7 @@ module.exports = function(grunt) {
   // dist/debug/templates.js, compile all the application code into
   // dist/debug/require.js, and then concatenate the require/define shim
   // almond.js and dist/debug/templates.js into the require.js file.
-  grunt.registerTask("default", "clean jade prettify stylus");
+  grunt.registerTask("default", "clean jade prettify stylus copy");
 
   // The debug task is simply an alias to default to remain consistent with
   // debug/release.

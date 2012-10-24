@@ -9,11 +9,17 @@ html(lang="en")
     include includes/layout/header
           
     include includes/layout/content
-      .sidebar.sidebar-fixed
-        ul.nav.nav-list.well
-          li.nav-header Guidelines
-          li.active: a(href="#software") Software
-          li: a(href="#mobile") Mobile
+      .sidebar
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Guidelines
+            li.active: a(href="#software") Software
+            li: a(href="#mobile") Mobile
 
       .page
         .section#software
@@ -36,25 +42,26 @@ html(lang="en")
                     what is needed to build a webapplication in the __offical kaba softwaredesign styleguide__. 
                     So you could focus on developing the solutions and just adopt the provided styles.
 
-                  h4 where should i start?
-                  ol
-                    li
-                      | first you should get used to 
-                      a(href='#{path}bootstrap/', target='_new') 
-                        i.icon-link
-                        | twitter bootstrap
-                      |  for grid, forms, tables, ...
-                    li
-                      | than head over to the 
-                      a(href='#{path}doc/') 
-                        i.icon-link
-                        | kesign documentation
-                      |  for layout, widget, ...
-                    li
-                      | or checkout 
-                      a(href='#{path}pages/samples.html') 
-                        i.icon-link
-                        | the samples page
+                  p
+                    h4 where should i start?
+                    ol
+                      li
+                        | first you should get used to 
+                        a(href='#{path}bootstrap/', target='_new') 
+                          i.icon-link
+                          | twitter bootstrap
+                        |  for grid, forms, tables, ...
+                      li
+                        | than head over to the 
+                        a(href='#{path}doc/') 
+                          i.icon-link
+                          | kesign documentation
+                        |  for layout, widget, ...
+                      li
+                        | or checkout 
+                        a(href='#{path}pages/samples.html') 
+                          i.icon-link
+                          | the samples page
 
                   h4 kesign is based on
                   .framework-links

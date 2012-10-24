@@ -9,11 +9,17 @@ html(lang="en")
     include ../includes/layout/header
           
     include ../includes/layout/content
-      .sidebar.sidebar-fixed
-        ul.nav.nav-list.well
-          li.nav-header Guidelines
-          li: a(href="#software") Software
-          li: a(href="#mobile") Mobile
+      .sidebar
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Guidelines
+            li: a(href="#software") Software
+            li: a(href="#mobile") Mobile
 
       .page
         .section#software
@@ -21,7 +27,7 @@ html(lang="en")
             .span8
               .widget
                 .widget-header
-                  h3 Layout Samples Software Guidelines
+                  h3 Layout Samples - Software Guidelines
 
 
                 .widget-content
@@ -78,6 +84,30 @@ html(lang="en")
                               p 
                                | The centered layout comes without sidebar navigation.
                                | Header and Footer will be fixed.
+
+
+          .row-fluid
+            .span8
+              .widget
+                .widget-header
+                  h3 Login Page Samples - Software Guidelines
+
+
+                .widget-content
+                  h3 Printstyle loginpage:
+                  ul.samples.unstyled
+                    li 
+                      a(href='#{path}samples/printstyle-login.html')
+                        .sample
+                          .row-fluid
+                            .span6
+                              img.sample-img.img-polaroid(src='#{path}public/img/samples/printstyle-login.png')
+
+                            .span6.sample-text
+                              h6 Login Page (printstyle)
+                              p 
+                               | This login page comes in printstyle.
+                               | Full responsive. Replace background image on .login-page selector.
 
 
         .section#mobile
