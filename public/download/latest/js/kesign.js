@@ -1,8 +1,15 @@
-// kesign, v0.0.1
+// kesign, v0.0.5
 // Copyright (c)2012 Kaba AG.
 // Distributed under MIT license
 // http://kesign.com
+$.support.placeholder = false;
+var placeholderTest = document.createElement('input');
+if('placeholder' in placeholderTest) $.support.placeholder = true;
+
 $(document).ready(function() {
+	if ($.support.placeholder) {
+	  $('.form-hideLabels').find('label.hideable').hide();
+	}
 	if ($('.toggleBrandbar').data('toggle') === 'collapse') {
 	  var icon = $('.toggleBrandbar i');
 	  $('.brandbar').on('hide', function () {

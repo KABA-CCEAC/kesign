@@ -1,4 +1,4 @@
-/*! * kesign, v0.0.1
+/*! * kesign, v0.0.5
  * Copyright (c)2012 Kaba AG.
  * Distributed under MIT license
  * http://kesign.com
@@ -41,15 +41,64 @@
   .header-fixed-top.collapsed + .main .page {
     margin-top: 40px;
   }
+  .login-page .login-content .brandbar {
+    top: -40px;
+    height: 40px;
+  }
+  .login-page .login-content .brandbar a.brand {
+    height: 40px;
+    width: 80px;
+    background: url("../img/kaba_xs.gif") no-repeat;
+  }
+  .login-page .login-content .login-form {
+    width: 90%;
+    padding: 10px;
+  }
+  .login-page .login-content .login-form .login-hero,
+  .login-page .login-content .login-form .span8 {
+    display: none;
+  }
+  .login-page .login-content .login-form .span4 {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   body {
     padding: 0;
   }
 }
+@media (max-width: 979px) and (min-width: 767px) {
+  .login-page .login-content .login-form {
+    width: 760px;
+  }
+  .login-page .login-content .login-form .span4,
+  .login-page .login-content .login-form .span8 {
+    width: 45%;
+  }
+}
 @media (max-width: 767px) and (min-width: 480px) {
   .container > .page {
     margin: 20px;
+  }
+  .login-page .login-content .brandbar {
+    top: -60px;
+    height: 60px;
+  }
+  .login-page .login-content .brandbar a.brand {
+    height: 60px;
+    width: 120px;
+    background: url("../img/kaba_s.gif") no-repeat;
+  }
+  .login-page .login-content .login-form {
+    width: 70%;
+    padding: 10px;
+  }
+  .login-page .login-content .login-form .login-hero,
+  .login-page .login-content .login-form .span8 {
+    display: none;
+  }
+  .login-page .login-content .login-form .span4 {
+    width: 100%;
   }
 }
 @media (min-width: 481px) {

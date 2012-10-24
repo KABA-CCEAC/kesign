@@ -1378,6 +1378,10 @@ ul.commands li.divider {
   background: -o-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
   background: -ms-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
   background: linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background: url("../img/login_bg.jpg") no-repeat center -250px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 .login-page .login-content {
   position: absolute;
