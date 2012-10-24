@@ -19,12 +19,12 @@ module.exports = function(grunt) {
       banner: '// kesign, v<%= meta.version %>\n' +
         '// Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
         '// Distributed under MIT license\n' + 
-        '// http://kesign.com',
+        '// http://kaba-cceac.github.com/kesign/',
       bannerCSS: '/*!' +
         ' * kesign, v<%= meta.version %>\n' +
         ' * Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
         ' * Distributed under MIT license\n' + 
-        ' * http://kesign.com\n' +
+        ' * http://kaba-cceac.github.com/kesign/\n' +
         ' */'
     },
 
