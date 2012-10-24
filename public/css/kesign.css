@@ -1,7 +1,7 @@
 /*! * kesign, v0.0.5
  * Copyright (c)2012 Kaba AG.
  * Distributed under MIT license
- * http://kesign.com
+ * http://kaba-cceac.github.com/kesign/
  */
 /*
  * Main CSS for kesign
@@ -1410,7 +1410,7 @@ ul.commands li.divider {
   background: url("../img/kaba.gif") no-repeat;
 }
 .login-page .login-content .login-form {
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
   padding: 50px 0 0;
   color: #d5dbe0;
