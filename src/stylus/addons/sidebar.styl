@@ -1,5 +1,6 @@
 .sidebar
-  position: absolute
+  display: inline-block
+  float: left
   width: 200px
   box-shadow: -1px 2px 7px darken($kabaBackgroundGray, 20)
   border: solid 1px darken($kabaBackgroundGray, 20)
@@ -14,9 +15,11 @@
   &.sidebar-fixed
     margin-top: 0
     position: fixed
+    float: none
+    display: block
 
   .btn-sidebar
-    z-index: 1300
+    z-index: 1000
     position: absolute
     right: 0
     margin-right: 5px
@@ -36,3 +39,7 @@
 
   .sidebar-collapse, .sidebar-collapse.collapse
     height: auto
+
+// support for bootstrap affix
+.sidebar.affix
+  top: 10px

@@ -1,7 +1,7 @@
 // kesign, v0.0.5
 // Copyright (c)2012 Kaba AG.
 // Distributed under MIT license
-// http://kesign.com
+// http://kaba-cceac.github.com/kesign/
 $.support.placeholder = false;
 var placeholderTest = document.createElement('input');
 if('placeholder' in placeholderTest) $.support.placeholder = true;
