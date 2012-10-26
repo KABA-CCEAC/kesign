@@ -77,10 +77,6 @@
   body {
     padding: 0;
   }
-  .sidebar + .page [class*="span"],
-  .sidebar + .page .row-fluid [class*="span"] {
-    float: left;
-  }
 }
 @media (max-width: 979px) and (min-width: 767px) {
   .login-page .login-content .login-form {
