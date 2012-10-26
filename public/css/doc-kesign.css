@@ -2,6 +2,9 @@
  * Main CSS for kesign documentation
  *
  */
+p {
+  font-size: 14px;
+}
 .downloads {
   margin: 0 0 20px;
   padding: 5px 20px 20px;
@@ -48,6 +51,12 @@ span.kabaTextGray {
 }
 span.white {
   color: #fff;
+}
+.widget-content .section {
+  margin-bottom: 40px;
+}
+.widget-content .section:last-child {
+  margin-bottom: 10px;
 }
 .well.well-kabaBlue {
   background: #04284d;
@@ -607,6 +616,42 @@ span.white {
   background: rgba(255,255,255,0.05);
   -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
   box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+.kesign-example {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.kesign-example:after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+  border-radius: 4px 0 4px 0;
+}
+.kesign-example + .prettyprint {
+  margin-top: -35px;
+  padding-top: 15px;
+}
+.kesign-example > p:last-child {
+  margin-bottom: 0;
+}
+.kesign-example.kesign-example-brandbar .example-header {
+  -webkit-box-shadow: 0 -3px 15px #ccc;
+  box-shadow: 0 -3px 15px #ccc;
+  margin: 30px 0 50px;
 }
 .samples .sample {
   margin: 0 0 20px;

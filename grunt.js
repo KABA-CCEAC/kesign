@@ -120,7 +120,8 @@ module.exports = function(grunt) {
     prettify: {
       "./": [
         "index.html",
-        "pages/**/*.html"
+        "pages/**/*.html",
+        "doc/**/*.html"
       ]
     },
 

@@ -1,0 +1,145 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Basic Guidelines
+            li.active: a(href="#header") Header
+
+      .page
+        .section#header
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Header and Brandbar
+
+                .widget-content
+                  .section
+                    h4 Basic:
+
+                    :markdown
+                      To add an additional bar in the header with the kaba brand you just 
+                      have to prepend an additional `div` before the `.navbar` of __bootstrap__.
+
+                    p 
+                      | For the markup of the navigation bar go to 
+                      a(href="#{path}bootstrap/components.html#navbar") bootstrap navbar.
+
+
+                    .kesign-example.kesign-example-brandbar
+                      .example-header
+                        .brandbar.brandbar-xsmall
+                            a.brand(href="#")
+
+                            .statusbar.pull-right
+                              strong Welcome 
+                              | John Mustermann 
+                              span.label.label-warning Admin Status
+                        .navbar
+                          .navbar-inner
+                      
+                    .prettyprint
+                      - var sample = '<div>\n'
+                      - sample    += '  <div class="brandbar brandbar-xsmall">\n'
+                      - sample    += '    <a href="/" class="brand"></a>\n'
+                      - sample    += '    <div class="statusbar pull-right">\n'
+                      - sample    += '      <strong>Welcome</strong> Hans Mustermann\n'
+                      - sample    += '      <span class="label label-warning">Admin Status</span>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="navbar">\n'
+                      - sample    += '    <div class="navbar-inner">\n'
+                      - sample    += '    ...\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 Collapsible:
+                    
+                    :markdown
+                      To have the __brandbar__ collapsible you just need to add some additional 
+                      classes plus add a toggle button to the navbar.
+
+                      > To have this working you will have to add the _kesign.js_ to your page!
+
+
+                    .kesign-example.kesign-example-brandbar
+                      .example-header
+                        .brandbar.brandbar-xsmall.brandbar-collapse.collapse.in
+                            a.brand(href="#")
+
+                            .statusbar.pull-right
+                              strong Welcome 
+                              | John Mustermann 
+                              span.label.label-warning Admin Status
+                        .navbar
+                          .navbar-inner
+                            ul.nav.pull-right.nav-small
+                              li
+                                a.toggleBrandbar(href='javascript:;', data-toggle="collapse", data-target=".brandbar-collapse")
+                                  i.icon-chevron-up
+                      
+                    .prettyprint
+                      - var sample = '<div>\n'
+                      - sample    += '  <div class="brandbar brandbar-xsmall collapse in">\n'
+                      - sample    += '    <a href="/" class="brand"></a>\n'
+                      - sample    += '    <div class="statusbar pull-right">\n'
+                      - sample    += '      <strong>Welcome</strong> Hans Mustermann\n'
+                      - sample    += '      <span class="label label-warning">Admin Status</span>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="navbar">\n'
+                      - sample    += '    <div class="navbar-inner">\n'
+                      - sample    += '      <ul class="nav nav-small pull-right">\n'
+                      - sample    += '        <li>\n'
+                      - sample    += '          <a href="#" class="toggleBrandbar"\n'
+                      - sample    += '             data-toggle="collapse" data-target=".brandbar">\n'
+                      - sample    += '            <i class="icon-chevron-up></i>\n'
+                      - sample    += '          </a>\n'
+                      - sample    += '        </li>\n'
+                      - sample    += '      </ul>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts
+
+    script(type='text/javascript')
+      if ($('.toggleBrandbar').data('toggle') === 'collapse') {
+        var icon = $('.toggleBrandbar i');
+        $('.brandbar-collapse').on('hide', function () {
+          $('.example-header').addClass('collapsed');
+          icon.removeClass('icon-chevron-up').addClass('icon-chevron-down');
+        });
+        $('.brandbar-collapse').on('show', function () {
+          $('.example-header').removeClass('collapsed');
+          icon.removeClass('icon-chevron-down').addClass('icon-chevron-up');
+        });
+      }
+
