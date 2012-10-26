@@ -9,7 +9,7 @@ html(lang="en")
     include ../includes/layout/header
           
     include ../includes/layout/content
-      .sidebar
+      .sidebar(data-spy="affix", data-offset-top="100")
         a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
           span.icon-bar
           span.icon-bar
@@ -18,10 +18,13 @@ html(lang="en")
         .sidebar-collapse
           ul.nav.nav-list
             li.nav-header Basic Guidelines
-            li.active: a(href="#header") Header
+            li.active: a(href="#header-section") Header
+            li: a(href="#page-section") Page / Main Content Area
+            li: a(href="#sidebar-section") Sidebar Navigation
+            li: a(href="#footer-section") Footer
 
       .page
-        .section#header
+        .section#header-section
           .row-fluid
             .span10
               .widget
@@ -54,7 +57,7 @@ html(lang="en")
                           .navbar-inner
                       
                     .prettyprint
-                      - var sample = '<div>\n'
+                      - var sample = '<div class="header">\n'
                       - sample    += '  <div class="brandbar brandbar-xsmall">\n'
                       - sample    += '    <a href="/" class="brand"></a>\n'
                       - sample    += '    <div class="statusbar pull-right">\n'
@@ -100,7 +103,7 @@ html(lang="en")
                                   i.icon-chevron-up
                       
                     .prettyprint
-                      - var sample = '<div>\n'
+                      - var sample = '<div class="header">\n'
                       - sample    += '  <div class="brandbar brandbar-xsmall collapse in">\n'
                       - sample    += '    <a href="/" class="brand"></a>\n'
                       - sample    += '    <div class="statusbar pull-right">\n'
@@ -121,6 +124,351 @@ html(lang="en")
                       - sample    += '    </div>\n'
                       - sample    += '  </div>\n'
                       - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 fixed at top:
+
+                    :markdown
+                      While the regular header will move on page scroll you can fix the header to the top by 
+                      just adding the class `.header-fixed-top` to the container of the brand- and navbar.
+
+
+                    .kesign-example.kesign-example-brandbar
+                      .kesign-example-brandbar-fixed-wrapper
+                        .example-header.header-fixed-top
+                          .brandbar.brandbar-xsmall
+                              a.brand(href="#")
+
+                              .statusbar.pull-right
+                                strong Welcome 
+                                | John Mustermann 
+                                span.label.label-warning Admin Status
+                          .navbar
+                            .navbar-inner
+
+                        .main
+                          .page
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                      
+                    .prettyprint
+                      - var sample = '<div class="header header-fixed-top">\n'
+                      - sample    += '  <div class="brandbar brandbar-xsmall">\n'
+                      - sample    += '    <a href="/" class="brand"></a>\n'
+                      - sample    += '    <div class="statusbar pull-right">\n'
+                      - sample    += '      <strong>Welcome</strong> Hans Mustermann\n'
+                      - sample    += '      <span class="label label-warning">Admin Status</span>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="navbar">\n'
+                      - sample    += '    <div class="navbar-inner">\n'
+                      - sample    += '    ...\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#page-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Page / Main Content Area
+
+                .widget-content
+                  .section
+                    h4 Basic:
+
+                    :markdown
+                      To add the _page_ to the site just add another div with class `.page` after your header.
+
+                    .kesign-example.kesign-example-page
+                      .kesign-example-page-wrapper
+                        .example-header
+                          .brandbar.brandbar-xsmall
+                              a.brand(href="#")
+
+                              .statusbar.pull-right
+                                strong Welcome 
+                                | John Mustermann 
+                                span.label.label-warning Admin Status
+                          .navbar
+                            .navbar-inner
+
+                        .main
+                          .page
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                      
+                    .prettyprint
+                      - var sample = '<div class="header">\n'
+                      - sample    += '...\n'
+                      - sample    += '</div>\n'
+                      - sample    += '<div class="main">\n'
+                      - sample    += '  <div class="page"></div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                    p to have the page centered wrap a div with class `.container` (bootstrap layout class) around the page:
+
+                    .kesign-example.kesign-example-page
+                      .kesign-example-page-wrapper
+                        .example-header
+                          .brandbar.brandbar-xsmall
+                              a.brand(href="#")
+
+                              .statusbar.pull-right
+                                strong Welcome 
+                                | John Mustermann 
+                                span.label.label-warning Admin Status
+                          .navbar
+                            .navbar-inner
+
+                        .main
+                          .container
+                            .page
+                              p
+                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                              p
+                                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                      
+                    .prettyprint
+                      - var sample = '<div class="header">\n'
+                      - sample    += '...\n'
+                      - sample    += '</div>\n'
+                      - sample    += '<div class="main">\n'
+                      - sample    += '  <div class="main">\n'
+                      - sample    += '    <div class="page"></div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+
+        .section#sidebar-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Sidebar
+
+                .widget-content
+                  .section
+                    h4 Basic:
+
+                    :markdown
+                      To add the _sidebar_ to the site just add another div with class `.sidebar` before your page.
+
+                    p 
+                      | For the markup of the navigation list go to 
+                      a(href="#{path}bootstrap/components.html#navs") bootstrap nav list.
+
+                    .kesign-example.kesign-example-page
+                      .kesign-example-page-wrapper
+                        .example-header
+                          .brandbar.brandbar-xsmall
+                              a.brand(href="#")
+
+                              .statusbar.pull-right
+                                strong Welcome 
+                                | John Mustermann 
+                                span.label.label-warning Admin Status
+                          .navbar
+                            .navbar-inner
+
+                        .main
+                          .sidebar
+                            ul.nav.nav-list
+                              li.nav-header A title
+                              li.active: a(href="#") Link 1
+                              li: a(href="#") Link 2
+                          .page
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                            p
+                              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                      
+                    .prettyprint
+                      - var sample = '<div class="header">\n'
+                      - sample    += '...\n'
+                      - sample    += '</div>\n'
+                      - sample    += '<div class="main">\n'
+                      - sample    += '  <div class="sidebar">\n'
+                      - sample    += '    <ul class="nav nav-list">\n'
+                      - sample    += '      <li><a href="#">link 1</a></li>\n'
+                      - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="page"></div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                    p to have the __sidebar__ fixed you could:
+                    ol.large
+                      li add the class `.sidebar-fixed` to the sidebar (if the header is fixed, too)
+                      li 
+                        | or use the 
+                        a(href="#{path}bootstrap/javascript.html#affix") affix javascript extension 
+                        | of twitter bootstrap
+                    
+                  .section
+                    h4 Responsive:
+
+                    :markdown
+                      Change the markup like in given example. To see the 
+                      effect change screen width to under 480px
+
+                    .kesign-example.kesign-example-sidebar
+                      .sidebar
+                        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+                          span.icon-bar
+                          span.icon-bar
+                          span.icon-bar
+                        .sidebar-collapse
+                          ul.nav.nav-list
+                            li.nav-header A title
+                            li.active: a(href="#") Link 1
+                            li: a(href="#") Link 2
+                            li.divider
+                            li.nav-header Another title
+                            li: a(href="#") Link 3
+                            li: a(href="#") Link 4
+
+                    .prettyprint
+                      - var sample = '<div class="sidebar">\n'
+                      - sample    += '  <a class="btn btn-sidebar" data-toggle="collapse" data-target=".sidebar-collapse">\n'
+                      - sample    += '    <span class="icon-bar"></span>\n'
+                      - sample    += '    <span class="icon-bar"></span>\n'
+                      - sample    += '    <span class="icon-bar"></span>\n'
+                      - sample    += '  </a>\n'
+                      - sample    += '  <div class="sidebar-collapse">\n'
+                      - sample    += '    <ul class="nav nav-list">\n'
+                      - sample    += '      <li><a href="#">link 1</a></li>\n'
+                      - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 Adding Accordion to the sidebar:
+
+                    p 
+                      | For the markup of the navigation list go to 
+                      a(href="#{path}bootstrap/components.html#navs") bootstrap nav list.
+
+                    p 
+                      | For the futher information on collapsible go to
+                      a(href="#{path}bootstrap/javascript.html#collapse") bootstrap collapse js.
+
+                    .kesign-example.kesign-example-sidebar
+                      .sidebar
+                        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+                          span.icon-bar
+                          span.icon-bar
+                          span.icon-bar
+                        .sidebar-collapse
+                          ul#accordion1.nav.nav-list
+                            li.nav-header Accordion Samples
+                            li.accordion-group(data-toggle="collapse", data-target="#acc1", data-parent="#accordion1") 
+                              .accordion-header accordion group 1
+                              ul#acc1.nav.nav-list.collapse.in
+                                li: a(href="#") item 1
+                                li: a(href="#") item 2
+                            li.accordion-group.collapsed(data-toggle="collapse", data-target="#acc2", data-parent="#accordion1") 
+                              .accordion-header accordion group 2
+                              ul#acc2.nav.nav-list.collapse
+                                li: a(href="#") item 3
+                                li: a(href="#") item 4
+                      
+                    .prettyprint
+                      - var sample = '<div class="sidebar">\n'
+                      - sample    += '  <a class="btn btn-sidebar" data-toggle="collapse" data-target=".sidebar-collapse">\n'
+                      - sample    += '    <span class="icon-bar"></span>\n'
+                      - sample    += '    <span class="icon-bar"></span>\n'
+                      - sample    += '    <span class="icon-bar"></span>\n'
+                      - sample    += '  </a>\n'
+                      - sample    += '  <div class="sidebar-collapse">\n'
+                      - sample    += '    <ul id="accordion1" class="nav nav-list">\n'
+                      - sample    += '      <li class="accordion-group" data-toggle="collapse"\n'
+                      - sample    += '          data-target="#acc-group1" data-parent="#accordion1">\n'
+                      - sample    += '        <div class="accordion-header">accordion group 1</div>\n'
+                      - sample    += '        <ul id="acc-group1" class="nav nav-list collapse in">\n'
+                      - sample    += '          <li><a href="#">link 1</a></li>\n'
+                      - sample    += '          <li><a href="#">link 1</a></li>\n'
+                      - sample    += '        </ul>\n'
+                      - sample    += '      </li>\n'
+                      - sample    += '      <li class="accordion-group" data-toggle="collapse"\n'
+                      - sample    += '          data-target="#acc-group2" data-parent="#accordion1">\n'
+                      - sample    += '        <div class="accordion-header">accordion group 2</div>\n'
+                      - sample    += '        <ul id="acc-group2" class="nav nav-list collapse in">\n'
+                      - sample    += '          <li><a href="#">link 3</a></li>\n'
+                      - sample    += '          <li><a href="#">link 4</a></li>\n'
+                      - sample    += '        </ul>\n'
+                      - sample    += '      </li>\n'
+                      - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#footer-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Footer
+
+                .widget-content
+                  .section
+                    h4 Basic:
+
+                    :markdown
+                      To add an optional footer bar to the application add a div with 
+                      class `.footer` to the end of the body tag.
+
+                    p 
+                      | Alternatively you can add a navigation bar  
+                      a(href="#{path}bootstrap/components.html#navbar") bootstrap navbar.
+
+
+                    .kesign-example.kesign-example-footer
+                      .footer
+                        .footer-inner
+                          p Hello Mr. Footer
+                      
+                    .prettyprint
+                      - var sample = '<div class="footer"></div>'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                    p to fix the footer at the bottom just add the class `.footer-fixed-bottom`:
+
+                    .kesign-example.kesign-example-footer
+                      
+                    .prettyprint
+                      - var sample = '<div class="footer footer-fixed-bottom"></div>'
                       
                       pre
                         code

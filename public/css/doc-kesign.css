@@ -2,7 +2,8 @@
  * Main CSS for kesign documentation
  *
  */
-p {
+p,
+.large li {
   font-size: 14px;
 }
 .downloads {
@@ -51,12 +52,6 @@ span.kabaTextGray {
 }
 span.white {
   color: #fff;
-}
-.widget-content .section {
-  margin-bottom: 40px;
-}
-.widget-content .section:last-child {
-  margin-bottom: 10px;
 }
 .well.well-kabaBlue {
   background: #04284d;
@@ -652,6 +647,43 @@ span.white {
   -webkit-box-shadow: 0 -3px 15px #ccc;
   box-shadow: 0 -3px 15px #ccc;
   margin: 30px 0 50px;
+}
+.kesign-example.kesign-example-brandbar .example-header .navbar-inner {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.kesign-example .kesign-example-brandbar-fixed-wrapper {
+  position: relative;
+  -webkit-box-shadow: 0 -3px 15px #ccc;
+  box-shadow: 0 -3px 15px #ccc;
+}
+.kesign-example .kesign-example-brandbar-fixed-wrapper .example-header {
+  margin: 0px 0 50px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.kesign-example .kesign-example-brandbar-fixed-wrapper .header-fixed-top {
+  position: absolute;
+}
+.kesign-example .kesign-example-brandbar-fixed-wrapper .main {
+  overflow: scroll;
+  height: 200px;
+}
+.kesign-example.kesign-example-page .kesign-example-page-wrapper {
+  -webkit-box-shadow: 0 -3px 15px #ccc;
+  box-shadow: 0 -3px 15px #ccc;
+  overflow: scroll;
+  height: 200px;
+  margin: 30px 0 50px;
+}
+.kesign-example.kesign-example-page .kesign-example-page-wrapper .container {
+  width: 80%;
+}
+.kesign-example.kesign-example-sidebar .sidebar {
+  float: none;
+}
+.kesign-example.kesign-example-footer .footer {
+  margin: 70px 0 20px;
 }
 .samples .sample {
   margin: 0 0 20px;

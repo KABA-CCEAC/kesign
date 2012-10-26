@@ -9,7 +9,7 @@ html(lang="en")
     include includes/layout/header
           
     include includes/layout/content
-      .sidebar
+      .sidebar(data-spy="affix", data-offset-top="100")
         a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
           span.icon-bar
           span.icon-bar
@@ -31,18 +31,46 @@ html(lang="en")
 
 
                 .widget-content
-                  h4 why kesign?
-                  :markdown
-                    In 2011 kaba ag started a project called __WIMP__ focused on defining a styleguide 
-                    for software - like it was defined for hardware devices before. The result 
-                    was a nice modern visual style focusing on web applications.
+                  .section
+                    h4 why kesign?
+                    :markdown
+                      In 2011 kaba ag started a project called __WIMP__ focused on defining a styleguide 
+                      for software - like it was defined for hardware devices before. The result 
+                      was a nice modern visual style focusing on web applications.
 
-                    __kesign__ should fill some gaps from the WIMP project by bringing a more interactive form of 
-                    the styleguide document. Additional it should provide all 
-                    what is needed to build a webapplication in the __offical kaba softwaredesign styleguide__. 
-                    So you could focus on developing the solutions and just adopt the provided styles.
+                      __kesign__ should fill some gaps from the WIMP project by bringing a more interactive form of 
+                      the styleguide document - able to present interactions, animation behaviour and other nice stuff. 
 
-                  p
+                      Additional it should provide all 
+                      what is needed to build a webapplication in the __offical kaba software design styleguide__. 
+                      So you could focus on developing the solutions and just adopt the provided styles.
+
+                  
+                  .section
+                    h4 kesign is based on
+                    .framework-links
+                      .row-fluid
+                        .span4
+                          a(href='http://twitter.github.com/bootstrap/', target='_new')
+                            .framework-link
+                              h6 
+                                i.icon-twitter
+                                |  twitter bootstrap
+                              p 
+                                | Believe it or not twitter bootstrap is the most starred project on github. 
+                                | Endless sites are based on this css framework.
+
+                        .span4
+                          a(href='http://fortawesome.github.com/Font-Awesome/', target='_new')
+                            .framework-link
+                              h6
+                                i.icon-font 
+                                |  Font-Awesome
+                              p 
+                                | Font-Awesome is a iconic-font replacing the image sprite implementation of twitter bootstrap.
+                                | You can resize icons (as they are vector based) or recolorize them with ease.
+
+                  .section
                     h4 where should i start?
                     ol
                       li
@@ -62,31 +90,6 @@ html(lang="en")
                         a(href='#{path}pages/samples.html') 
                           i.icon-link
                           | the samples page
-
-                  h4 kesign is based on
-                  .framework-links
-                    .row-fluid
-                      .span4
-                        a(href='http://twitter.github.com/bootstrap/', target='_new')
-                          .framework-link
-                            h6 
-                              i.icon-twitter
-                              |  twitter bootstrap
-                            p 
-                              | Believe it or not twitter bootstrap is the most starred project on github. 
-                              | Endless sites are based on this css framework.
-
-                      .span4
-                        a(href='http://fortawesome.github.com/Font-Awesome/', target='_new')
-                          .framework-link
-                            h6
-                              i.icon-font 
-                              |  Font-Awesome
-                            p 
-                              | Font-Awesome is a iconic-font replacing the image sprite implementation of twitter bootstrap.
-                              | You can resize icons (as they are vector based) or recolorize them with ease.
-
-
 
 
             .span4

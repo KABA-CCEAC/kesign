@@ -1,0 +1,101 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar(data-spy="affix", data-offset-top="100")
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Basic Guidelines
+            li.active: a(href="#loginpage-section") Login Page
+
+      .page
+        .section#loginpage-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Loginpage printstyle
+
+                .widget-content
+                  .section
+                    h4 Printstyle:
+
+                    :markdown
+                      You can easily create a login page in print style
+
+                    .kesign-example.kesign-example-login
+                      img.sample-img.img-polaroid(src='#{path}public/img/samples/printstyle-login.png')
+
+                    .prettyprint
+                      - var sample = '<div class="login-page">\n'
+                      - sample    += '  <div class="login-content">\n'
+                      - sample    += '    <div class="brandbar"><a class="brand"></a></div>\n'
+                      - sample    += '    <div class="login-form">\n'
+                      - sample    += '      <div class="row-fluid">\n'
+                      - sample    += '        <div class="span8">\n'
+                      - sample    += '          <div class="login-hero">\n'
+                      - sample    += '            <p>Herzlich Willkommen</p>\n'
+                      - sample    += '            <p>welcome</p>\n'
+                      - sample    += '          </div>\n'
+                      - sample    += '        </div>\n'
+                      - sample    += '        <div class="span4">\n'
+                      - sample    += '          <form class="form-hideLabels" action="/login" methode="post">\n'
+                      - sample    += '            <legend>Please Login\n'
+                      - sample    += '              <div class="pull-right">\n'
+                      - sample    += '                <label class="checkbox"><input\n'
+                      - sample    += '                  <input type="checkbox" />\n'
+                      - sample    += '                  Remember me?\n'
+                      - sample    += '                </label>\n'
+                      - sample    += '              </div>\n'
+                      - sample    += '            </legend>\n'
+                      - sample    += '            <div class="fields">\n'
+                      - sample    += '              <label class="hideable" for="username">Username:</label>\n'
+                      - sample    += '              <input class="span12" name="username" type="text", placeholder="Username" />\n'
+                      - sample    += '              <label class="hideable" for="password">Password:</label>\n'
+                      - sample    += '              <input class="span12" name="password" type="text", placeholder="Password" />\n'
+                      - sample    += '            </div>\n'
+                      - sample    += '            <div class="login-actions">\n'
+                      - sample    += '              <button class="btn pull-right">Login</button>\n'
+                      - sample    += '              <button class="btn">Forgot Your Password?</button>\n'
+                      - sample    += '            </div>\n'
+                      - sample    += '          </form>\n'
+                      - sample    += '        </div>\n'
+                      - sample    += '      </div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts
+
+    // script(type='text/javascript')
+    //   if ($('.toggleBrandbar').data('toggle') === 'collapse') {
+    //     var icon = $('.toggleBrandbar i');
+    //     $('.brandbar-collapse').on('hide', function () {
+    //       $('.example-header').addClass('collapsed');
+    //       icon.removeClass('icon-chevron-up').addClass('icon-chevron-down');
+    //     });
+    //     $('.brandbar-collapse').on('show', function () {
+    //       $('.example-header').removeClass('collapsed');
+    //       icon.removeClass('icon-chevron-down').addClass('icon-chevron-up');
+    //     });
+    //   }
+
