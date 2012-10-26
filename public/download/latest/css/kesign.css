@@ -1149,6 +1149,7 @@ body .navbar .brand {
 }
 .sidebar + .page {
   margin-left: 220px;
+  overflow: scroll;
 }
 .sidebar.sidebar-fixed {
   margin-top: 0;
