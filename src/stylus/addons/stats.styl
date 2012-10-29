@@ -1,0 +1,56 @@
+.stats 
+  width: 100%
+  display: table
+  padding: 0 0 0 10px
+  margin-top: .5em
+  margin-bottom: 1.9em
+  border-spacing: 10px
+
+  .stat 
+    display: table-cell
+    vertical-align: top
+    text-align: center
+    font-size: 12px
+    border: solid 1px $kabaLightGray
+    kabaWhite-gradient()
+    border-radius: 4px
+    padding: 10px 5px
+
+
+    &.selectable
+      cursor: pointer
+
+      &:hover
+        kabaBackgroundGray-gradient(bottom)
+
+
+.stat-value 
+  display: block
+  margin-bottom: .25em
+  
+  font-size: 30px
+  //letter-spacing: -2px
+
+.stat-text
+  text-align: center
+  padding-top: 1.5em
+
+
+.stat-text .stat-value 
+  color: $orange
+  font-size: 30px
+
+  .small
+    color: $kabaTextGray
+    font-size: 14px
+
+.stat-icon
+  font-size: 25px
+  margin-bottom: 2px
+  line-height: 18px
+
+// .stat-icon.small
+//   font-size: 15px
+
+// .stat-icon.medium
+//   font-size: 20px
