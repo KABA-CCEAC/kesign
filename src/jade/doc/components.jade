@@ -326,6 +326,37 @@ html(lang="en")
                         code
                           | #{sample}
 
+
+                  .section
+                    h5 news list
+                 
+                    .kesign-example.kesign-example-widget.kesign-example-links
+                      kesign-example-widget
+                        .row-fluid
+                          .span6
+                            .news-list
+                              h4 Latest News
+                              ul
+                                li: a(href="#") 23/10/2012: Nothing interesting happened.
+                                li: a(href="#") 03/09/2012: Another day with world braking news.
+                                li: a(href="#") 14/08/2012: Today the sun is shinning and we having fun.
+                                li.news-end: a(href="#") more news
+
+                    .prettyprint
+                      - var sample = '<div class="news-list">\n'
+                      - sample    += '  <h4>Latest News</h4>\n'
+                      - sample    += '  <ul>\n'
+                      - sample    += '    <li><a href="#">some news item</a></li>\n'
+                      - sample    += '    <li><a href="#">some news item</a></li>\n'
+                      - sample    += '    <li><a href="#">some news item</a></li>\n'
+                      - sample    += '    <li class="news-end"><a href="#">more news</a></li>\n'
+                      - sample    += '  </ul>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
         .section#images-section
           .row-fluid
             .span10

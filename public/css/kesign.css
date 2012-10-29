@@ -2151,3 +2151,50 @@ ul.commands li.divider {
 [class*=" icon-"] .ribbon.ribbon-success {
   background: #46a546;
 }
+.news-list {
+  padding: 10px 0;
+  background: #d5dbe0;
+  border-bottom: solid 2px #04284d;
+}
+.news-list h1,
+.news-list h2,
+.news-list h3,
+.news-list h4,
+.news-list h5,
+.news-list h6 {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 19px;
+}
+.news-list ul {
+  list-style-type: none;
+  margin: 0;
+}
+.news-list ul li {
+  position: relative;
+  padding: 5px 40px 5px 19px;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #ccc;
+}
+.news-list ul li:hover {
+  border-left: solid 2px #f2a200;
+  padding: 5px 40px 5px 17px;
+  background: #b8c2ca;
+}
+.news-list ul li.news-end {
+  text-align: right;
+  border-bottom: none;
+  padding: 5px 30px 5px 17px;
+}
+.news-list ul li a:hover {
+  text-decoration: none;
+}
+.news-list ul li::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 15px;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #f2a200;
+}
