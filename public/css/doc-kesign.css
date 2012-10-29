@@ -682,6 +682,17 @@ span.white {
 .kesign-example.kesign-example-sidebar .sidebar {
   float: none;
 }
+.kesign-example.kesign-example-widget .kesign-example-page-wrapper {
+  -webkit-box-shadow: 0 -3px 15px #ccc;
+  box-shadow: 0 -3px 15px #ccc;
+  margin: 30px 0 50px;
+}
+.kesign-example.kesign-example-widget .kesign-example-page-wrapper .container {
+  width: 80%;
+}
+.kesign-example.kesign-example-widget .kesign-example-page-wrapper .container .page {
+  min-height: 50px;
+}
 .kesign-example.kesign-example-footer .footer {
   margin: 70px 0 20px;
 }

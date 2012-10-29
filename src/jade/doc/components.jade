@@ -1,0 +1,183 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar(data-spy="affix", data-offset-top="100")
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Basic Guidelines
+            li.active: a(href="#well-section") Wells
+            li: a(href="#font-color-section") Font Color
+
+      .page
+        .section#well-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Wells
+
+                .widget-content
+                  .section
+                 
+                    .kesign-example.kesign-example-well
+                      .well-wrapper
+                        h5 Primary colors:
+                        .row-fluid
+                          .span4
+                            .well.well-kabaBlue
+                              h6 .well-kabaBlue
+                          .span4
+                            .well.well-kabaMiddleBlue
+                              h6 .well-kabaMiddleBlue
+                          .span4
+                            .well.well-kabaLightBlue
+                              h6 .well-kabaLightBlue
+
+                        h5 Gray:
+                        .row-fluid
+                          .span4
+                            .well.well-kabaDarkGray
+                              h6 .well-kabaDarkGray
+                          .span4
+                            .well.well-kabaTextGray
+                              h6 .well-kabaTextGray
+                          .span4
+                            .well.well-kabaMiddleGray
+                              h6 .well-kabaMiddleGray
+                        .row-fluid
+                          .span4
+                            .well.well-kabaLightGray
+                              h6 .well-kabaLightGray
+                          .span4
+                            .well.well-kabaBackgroundGray
+                              h6 .well-kabaBackgroundGray
+                          .span4
+                            .well.well-kabaWhite
+                              h6 .well-kabaWhite
+
+                        h5 Secondary colors:
+                        .row-fluid
+                          .span4
+                            .well.well-kabaOrange
+                              h6 .well-kabaOrange
+                        .row-fluid
+                          .span4
+                            .well.well-kabaGreen
+                              h6 .well-kabaGreen
+                          .span4
+                            .well.well-kabaLightYellow
+                              h6 .well-kabaLightYellow
+                          .span4
+                            .well.well-kabaRed
+                              h6 .well-kabaRed
+
+                        hr
+
+                        h5 Gradients Primary colors:
+                        .row-fluid
+                          .span4
+                            .well.well-kabaBlue.gradient
+                              h6 .well-kabaBlue
+                          .span4
+                            .well.well-kabaMiddleBlue.gradient
+                              h6 .well-kabaMiddleBlue
+                          .span4
+                            .well.well-kabaLightBlue.gradient
+                              h6 .well-kabaLightBlue
+
+                        h5 Gradients Gray:
+                        .row-fluid
+                          .span4
+                            .well.well-kabaDarkGray.gradient
+                              h6 .well-kabaDarkGray
+                          .span4
+                            .well.well-kabaTextGray.gradient
+                              h6 .well-kabaTextGray
+                          .span4
+                            .well.well-kabaMiddleGray.gradient
+                              h6 .well-kabaMiddleGray
+                        .row-fluid
+                          .span4
+                            .well.well-kabaLightGray.gradient
+                              h6 .well-kabaLightGray
+                          .span4
+                            .well.well-kabaBackgroundGray.gradient
+                              h6 .well-kabaBackgroundGray
+                          .span4
+                            .well.well-kabaWhite.gradient
+                              h6 .well-kabaWhite
+
+                        h5 Gradients Secondary colors:
+                        .row-fluid
+                          .span4
+                            .well.well-kabaOrange.gradient
+                              h6 .well-kabaOrange
+                        .row-fluid
+                          .span4
+                            .well.well-kabaGreen.gradient
+                              h6 .well-kabaGreen
+                          .span4
+                            .well.well-kabaLightYellow.gradient
+                              h6 .well-kabaLightYellow
+                          .span4
+                            .well.well-kabaRed.gradient
+                              h6 .well-kabaRed
+                      
+                    .prettyprint
+                      - var sample = '<!-- without gradient -->\n'
+                      - sample    += '<div class="well well-kabaBlue">\n'
+                      - sample    += '</div>\n'
+                      - sample    += '<!-- with gradient -->\n'
+                      - sample    += '<div class="well well-kabaBlue gradient">\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#well-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Wells
+
+                .widget-content
+                  .section
+                 
+                    .kesign-example.kesign-example-well
+                      .well-wrapper
+                        h5 font colors:
+                        .row-fluid
+                          .well.well-kabaWhite.gradient
+                            .text-kabaBlue This is '.text-kabaBlue'
+                            .text-kabaDarkGray This is '.text-kabaDarkGray'
+                            .text-kabaTextGray This is '.text-kabaTextGray'
+
+                          .well.well-kabaBlue.gradient
+                            .text-white This is '.text-white'
+
+                    .prettyprint
+                      - var sample = '<div class="text-kabaBlue">\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts

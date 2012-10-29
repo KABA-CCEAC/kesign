@@ -21,6 +21,7 @@ html(lang="en")
             li.active: a(href="#header-section") Header
             li: a(href="#page-section") Page / Main Content Area
             li: a(href="#sidebar-section") Sidebar Navigation
+            li: a(href="#widget-section") Widget Container
             li: a(href="#footer-section") Footer
 
       .page
@@ -424,6 +425,313 @@ html(lang="en")
                       - sample    += '        </ul>\n'
                       - sample    += '      </li>\n'
                       - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#widget-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Widget container
+
+                .widget-content
+                  .section
+                    h4 Basic:
+
+                    :markdown
+                      The widget container separates different parts of the application on one page.
+
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                .widget-header
+                                  h3 Widget title without icon
+                                .widget-content
+                                  p content...
+
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <h3>Title</h3>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-content">content...</div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 Add an icon:
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                .widget-header
+                                  i.icon-envelope-alt
+                                  h3 Widget title with icon
+                                .widget-content
+                                  p content...
+
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <i class="icon-envelope-alt"></i>\n'
+                      - sample    += '    <h3>Title</h3>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-content">content...</div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 Adding some action-links:
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                .widget-header
+                                  i.icon-envelope-alt
+                                  h3 Widget title with icon
+                                  ul.commands.pull-right
+                                    li: a(href='#')
+                                      i.icon-copy
+                                      | copy
+                                    li: a(href='#')
+                                      i.icon-paste
+                                      | paste
+                                    li.divider
+                                    li: a(href='#')
+                                      i.icon-save
+                                      | save
+
+                                .widget-content
+                                  p content...
+
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <i class="icon-envelope-alt"></i>\n'
+                      - sample    += '    <h3>Title</h3>\n'
+                      - sample    += '    <ul class="commands pull-right">\n'
+                      - sample    += '       <li><a href="#"><i class="icon-copy"></i>copy</a></li>\n'
+                      - sample    += '       <li><a href="#"><i class="icon-paste"></i>paste</a></li>\n'
+                      - sample    += '       <li class="divider"></li>\n'
+                      - sample    += '       <li><a href="#"><i class="icon-save"></i>save</a></li>\n'
+                      - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-content">content...</div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 only action-links:
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                .widget-header
+                                  ul.commands
+                                    li: a(href='#')
+                                      i.icon-copy
+                                      | copy
+                                    li: a(href='#')
+                                      i.icon-paste
+                                      | paste
+                                    li.divider
+                                    li: a(href='#')
+                                      i.icon-save
+                                      | save
+
+                                .widget-content
+                                  p content...
+
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <ul class="commands">\n'
+                      - sample    += '       <li><a href="#"><i class="icon-copy"></i>copy</a></li>\n'
+                      - sample    += '       <li><a href="#"><i class="icon-paste"></i>paste</a></li>\n'
+                      - sample    += '       <li class="divider"></li>\n'
+                      - sample    += '       <li><a href="#"><i class="icon-save"></i>save</a></li>\n'
+                      - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-content">content...</div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h4 Tabs with action-links:
+
+                    p 
+                      | For the markup of the tab bar go to 
+                      a(href="#{path}bootstrap/components.html#navs") bootstrap tabs.
+
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                ul.nav.nav-tabs
+                                  li.active: a(href="#tab1", data-toggle="tab") Tab 1
+                                  li: a(href="#tab2", data-toggle="tab") Tab 2
+                            
+                                .tab-content
+                                  #tab1.tab-pane.active
+                                    .widget-header
+                                      ul.commands.pull-right
+                                        li: a(href='#')
+                                          i.icon-copy
+                                          | copy
+                                        li: a(href='#')
+                                          i.icon-paste
+                                          | paste
+                                        li.divider
+                                        li: a(href='#')
+                                          i.icon-save
+                                          | save
+
+                                    .widget-content
+                                      p content 1...
+
+                                  #tab2.tab-pane
+                                    .widget-header
+                                      ul.commands.pull-right
+                                        li: a(href='#')
+                                          i.icon-save
+                                          | save
+
+                                    .widget-content
+                                      p content 2...
+
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <ul class="nav nav-tabs">\n'
+                      - sample    += '     <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>\n'
+                      - sample    += '     <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>\n'
+                      - sample    += '  </ul>\n'
+                      - sample    += '  <div id="tab1" class="tab-pane active">\n'
+                      - sample    += '    <div class="widget-header">\n'
+                      - sample    += '      <ul class="commands pull-right">\n'
+                      - sample    += '        <li><a href="#"><i class="icon-copy"></i>copy</a></li>\n'
+                      - sample    += '        <li><a href="#"><i class="icon-paste"></i>paste</a></li>\n'
+                      - sample    += '        <li class="divider"></li>\n'
+                      - sample    += '        <li><a href="#"><i class="icon-save"></i>save</a></li>\n'
+                      - sample    += '      </ul>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '    <div class="widget-content">content...</div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div id="tab2" class="tab-pane">\n'
+                      - sample    += '    <div class="widget-header">\n'
+                      - sample    += '      <ul class="commands pull-right">\n'
+                      - sample    += '        <li><a href="#"><i class="icon-save"></i>save</a></li>\n'
+                      - sample    += '      </ul>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '    <div class="widget-content">content...</div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+
+                  .section
+                    h4 widget data grid:
+
+                    p 
+                      | For the markup of tables go to 
+                      a(href="#{path}bootstrap/base-css.html#tables") bootstrap table.
+
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                .widget-header
+                                  i.icon-table
+                                  h3 Widget data grid
+                                  ul.commands.pull-right
+                                    li: a(href='#')
+                                      i.icon-copy
+                                      | copy
+                                    li: a(href='#')
+                                      i.icon-paste
+                                      | paste
+                                    li.divider
+                                    li: a(href='#')
+                                      i.icon-save
+                                      | save
+
+                                .widget-table
+                                  .widget-content
+                                      table.table
+                                        thead
+                                          tr
+                                            th #
+                                            th givenname
+                                            th familyname
+                                            th @twitter
+                                        tbody
+                                          tr
+                                            td 1
+                                            td Jan
+                                            td Mühlemann
+                                            td @jamuhl
+                                          tr
+                                            td 2
+                                            td Mark
+                                            td Otto
+                                            td @mdo
+                                          tr
+                                            td 3
+                                            td Jacob
+                                            td Thornton
+                                            td @fat
+
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <i class="icon-table"></i>\n'
+                      - sample    += '    <h3>Title</h3>\n'
+                      - sample    += '    <ul class="commands pull-right">\n'
+                      - sample    += '       <li><a href="#"><i class="icon-copy"></i>copy</a></li>\n'
+                      - sample    += '       <li><a href="#"><i class="icon-paste"></i>paste</a></li>\n'
+                      - sample    += '       <li class="divider"></li>\n'
+                      - sample    += '       <li><a href="#"><i class="icon-save"></i>save</a></li>\n'
+                      - sample    += '    </ul>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-table">\n'
+                      - sample    += '    <div class="widget-content">\n'
+                      - sample    += '      <table class="table">\n'
+                      - sample    += '        <thead>...</thead>\n'
+                      - sample    += '        <tbody>...</tbody>\n'
+                      - sample    += '      </table>\n'
+                      - sample    += '    </div>\n'
                       - sample    += '  </div>\n'
                       - sample    += '</div>\n'
                       
