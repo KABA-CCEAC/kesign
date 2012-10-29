@@ -20,6 +20,7 @@ html(lang="en")
             li.nav-header Basic Guidelines
             li.active: a(href="#well-section") Wells
             li: a(href="#font-color-section") Font Color
+            li: a(href="#links-section") Special Links
 
       .page
         .section#well-section
@@ -148,7 +149,7 @@ html(lang="en")
                         code
                           | #{sample}
 
-        .section#well-section
+        .section#font-color-section
           .row-fluid
             .span10
               .widget
@@ -172,6 +173,105 @@ html(lang="en")
 
                     .prettyprint
                       - var sample = '<div class="text-kabaBlue">\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#links-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Special forms of links
+
+                .widget-content
+                  .section
+                    h5 Shortcuts
+                 
+                    .kesign-example.kesign-example-widget.kesign-example-links
+                      kesign-example-widget
+                        h6 variants:
+                        .shortcuts
+                          a(href='#')
+                            .shortcut
+                              i.icon-envelope.shortcut-icon
+                              .shortcut-label Some shortcut
+                          a(href='#')
+                            .shortcut.shortcut-gray
+                              i.icon-home.shortcut-icon
+                              .shortcut-label Another shortcut
+                          a(href='#')
+                            .shortcut.shortcut-orange
+                              i.icon-cloud.shortcut-icon
+                              .shortcut-label Another shortcut
+                        h6 selected:
+                        .shortcuts
+                          a(href='#')
+                            .shortcut.selected
+                              i.icon-envelope.shortcut-icon
+                              .shortcut-label Some shortcut
+                          a(href='#')
+                            .shortcut.shortcut-gray.selected
+                              i.icon-home.shortcut-icon
+                              .shortcut-label Another shortcut
+                          a(href='#')
+                            .shortcut.shortcut-orange.selected
+                              i.icon-cloud.shortcut-icon
+                              .shortcut-label Another shortcut
+                        h6 disabled:
+                        .shortcuts
+                          a(href='#')
+                            .shortcut.disabled
+                              i.icon-envelope.shortcut-icon
+                              .shortcut-label disabled shortcut
+                          a(href='#')
+                            .shortcut.disabled
+                              i.icon-home.shortcut-icon
+                              .shortcut-label disabled shortcut
+                          a(href='#')
+                            .shortcut.disabled
+                              i.icon-cloud.shortcut-icon
+                              .shortcut-label disabled shortcut
+
+                    .prettyprint
+                      - var sample = '<div class="shortcuts">\n'
+                      - sample    += '  <!-- middle blue -->\n'
+                      - sample    += '  <a href="#">\n'
+                      - sample    += '    <div class="shortcut">\n'
+                      - sample    += '      <i class="shortcut-icon icon-envelope"></i>\n'
+                      - sample    += '      <div class="shortcut-label">some shortcut</div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </a>\n'
+                      - sample    += '  <!-- light gray -->\n'
+                      - sample    += '  <a href="#">\n'
+                      - sample    += '    <div class="shortcut shortcut-gray">\n'
+                      - sample    += '      <i class="shortcut-icon icon-home"></i>\n'
+                      - sample    += '      <div class="shortcut-label">another shortcut</div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </a>\n'
+                      - sample    += '  <!-- orange -->\n'
+                      - sample    += '  <a href="#">\n'
+                      - sample    += '    <div class="shortcut shortcut-orange">\n'
+                      - sample    += '      <i class="shortcut-icon icon-cloud"></i>\n'
+                      - sample    += '      <div class="shortcut-label">another shortcut</div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </a>\n'
+                      - sample    += '  <!-- selected eg. middle blue -->\n'
+                      - sample    += '  <a href="#">\n'
+                      - sample    += '    <div class="shortcut selected">\n'
+                      - sample    += '      <i class="shortcut-icon icon-envelope"></i>\n'
+                      - sample    += '      <div class="shortcut-label">some shortcut</div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </a>\n'
+                      - sample    += '  <!-- disabled eg. middle blue -->\n'
+                      - sample    += '  <a href="#">\n'
+                      - sample    += '    <div class="shortcut disabled">\n'
+                      - sample    += '      <i class="shortcut-icon icon-envelope"></i>\n'
+                      - sample    += '      <div class="shortcut-label">some shortcut</div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </a>\n'
                       - sample    += '</div>\n'
                       
                       pre
