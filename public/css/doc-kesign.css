@@ -696,6 +696,65 @@ span.white {
 .kesign-example.kesign-example-footer .footer {
   margin: 70px 0 20px;
 }
+.stats {
+  width: 100%;
+  display: table;
+  padding: 0 0 0 10px;
+  margin-top: 0.5em;
+  margin-bottom: 1.9em;
+  border-spacing: 10px;
+}
+.stats .stat {
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+  font-size: 12px;
+  border: solid 1px #eee;
+  background: #eee;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));
+  background: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -o-linear-gradient(top, #fff 0%, #eee 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #eee 100%);
+  background: linear-gradient(top, #fff 0%, #eee 100%);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px 5px;
+}
+.stats .stat.selectable {
+  cursor: pointer;
+}
+.stats .stat.selectable:hover {
+  background: #e5e5e5;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5f5f5), color-stop(1, #e5e5e5));
+  background: -webkit-linear-gradient(bottom, #f5f5f5 0%, #e5e5e5 100%);
+  background: -moz-linear-gradient(bottom, #f5f5f5 0%, #e5e5e5 100%);
+  background: -o-linear-gradient(bottom, #f5f5f5 0%, #e5e5e5 100%);
+  background: -ms-linear-gradient(bottom, #f5f5f5 0%, #e5e5e5 100%);
+  background: linear-gradient(bottom, #f5f5f5 0%, #e5e5e5 100%);
+}
+.stat-value {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 30px;
+}
+.stat-text {
+  text-align: center;
+  padding-top: 1.5em;
+}
+.stat-text .stat-value {
+  color: #f89406;
+  font-size: 30px;
+}
+.stat-text .stat-value .small {
+  color: #808080;
+  font-size: 14px;
+}
+.stat-icon {
+  font-size: 25px;
+  margin-bottom: 2px;
+  line-height: 18px;
+}
 .samples .sample {
   margin: 0 0 20px;
   padding: 15px 20px 20px;

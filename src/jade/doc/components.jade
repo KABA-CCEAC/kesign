@@ -22,6 +22,7 @@ html(lang="en")
             li: a(href="#font-color-section") Font Color
             li: a(href="#links-section") Special Links
             li: a(href="#images-section") Special Images
+            li: a(href="#stats-section") Stats & Charts
 
       .page
         .section#well-section
@@ -487,6 +488,97 @@ html(lang="en")
                       - sample    += '<i class="icon-envelope-alt icon-large"></i>\n'
                       - sample    += '  <div class="ribbon ribbon-error">5</i>\n'
                       - sample    += '</i>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#stats-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Stats & Charts
+
+                .widget-content
+                  .section
+                    h5 Stats
+                 
+                    .kesign-example.kesign-example-widget.kesign-example-links
+                      kesign-example-widget
+                        h6 unselectable
+                        .stats
+                          .stat
+                            span.stat-value
+                                | 2
+                                i.icon-user.stat-icon
+                            | some title
+
+                          .stat
+                            span.stat-value
+                                | 14
+                                i.icon-comments-alt.stat-icon
+                            | some title
+
+                          .stat
+                            span.stat-text
+                              span.stat-value 22:00
+                                span.small PM
+                            | some title
+
+                          .stat
+                            span.stat-text
+                              span.stat-value 22:00
+                                span.small PM
+                            | some title
+
+                        h6 selectable
+                        .stats
+                          .stat.selectable
+                            span.stat-value
+                                | 2
+                                i.icon-user.stat-icon
+                            | some title
+
+                          .stat.selectable
+                            span.stat-value
+                                | 14
+                                i.icon-comments-alt.stat-icon
+                            | some title
+
+                          .stat.selectable
+                            span.stat-text
+                              span.stat-value 22:00
+                                span.small PM
+                            | some title
+
+                          .stat.selectable
+                            span.stat-text
+                              span.stat-value 22:00
+                                span.small PM
+                            | some title
+                          
+
+                    .prettyprint
+                      - var sample = '<div class="stats">\n'
+                      - sample    += '  <!-- stat with icon -->\n'
+                      - sample    += '  <div class="stat">\n'
+                      - sample    += '    <span class="stat-value">15<i class="icon-envelope stat-icon"></i></span>\n'
+                      - sample    += '    some title\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <!-- stat with text only -->\n'
+                      - sample    += '  <div class="stat">\n'
+                      - sample    += '    <span class="stat-text">\n'
+                      - sample    += '      <span class="stat-value">22:00<span class="small">PM</span></span>\n'
+                      - sample    += '    </span>\n'
+                      - sample    += '    some title\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <!-- stat selectable -->\n'
+                      - sample    += '  <div class="stat selectable">\n'
+                      - sample    += '    <span class="stat-value">15<i class="icon-envelope stat-icon"></i></span>\n'
+                      - sample    += '    some title\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
                       
                       pre
                         code
