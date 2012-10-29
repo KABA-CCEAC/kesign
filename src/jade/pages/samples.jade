@@ -31,7 +31,7 @@ html(lang="en")
 
 
                 .widget-content
-                  h3 Default:
+                  h5 Default:
                   ul.samples.unstyled
                     li 
                       a(href='#{path}samples/default.html')
@@ -58,7 +58,7 @@ html(lang="en")
                                | The default layout comes optional with a sidebar navigation.
                                | Header and Footer will be fixed.
 
-                  h3 Centered:
+                  h5 Centered:
                   ul.samples.unstyled
                     li
                       a(href='#{path}samples/default-center.html')
@@ -94,7 +94,6 @@ html(lang="en")
 
 
                 .widget-content
-                  h3 Printstyle loginpage:
                   ul.samples.unstyled
                     li 
                       a(href='#{path}samples/printstyle-login.html')
@@ -109,6 +108,26 @@ html(lang="en")
                                | This login page comes in printstyle.
                                | Full responsive. Replace background image on .login-page selector.
 
+          .row-fluid
+            .span8
+              .widget
+                .widget-header
+                  h3 Forms Sample - Software Guidelines
+
+
+                .widget-content
+                  ul.samples.unstyled
+                    li 
+                      a(href='#{path}samples/forms.html')
+                        .sample
+                          .row-fluid
+                            .span6
+                              img.sample-img.img-polaroid(src='#{path}public/img/samples/forms.png')
+
+                            .span6.sample-text
+                              h6 Forms
+                              p 
+                               | Presentation of a form on different backgrounds (set via class '.well')
 
         .section#mobile
           .row-fluid

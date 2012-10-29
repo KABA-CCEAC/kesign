@@ -21,6 +21,7 @@ html(lang="en")
             li.active: a(href="#well-section") Wells
             li: a(href="#font-color-section") Font Color
             li: a(href="#links-section") Special Links
+            li: a(href="#images-section") Special Images
 
       .page
         .section#well-section
@@ -32,6 +33,10 @@ html(lang="en")
 
                 .widget-content
                   .section
+
+                    p 
+                      | To see some samples of forms in combination with wells go to 
+                      a(href="#{path}samples/forms.html") forms sample.
                  
                     .kesign-example.kesign-example-well
                       .well-wrapper
@@ -273,6 +278,184 @@ html(lang="en")
                       - sample    += '    </div>\n'
                       - sample    += '  </a>\n'
                       - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h5 Links with arrow
+                 
+                    .kesign-example.kesign-example-widget.kesign-example-links
+                      kesign-example-widget
+                        .row-fluid
+                          .span6
+                            h6 default (orange):
+                            ul.unstyled
+                              li: a.kaba-link(href="#") going nowhere default
+                              li: a.kaba-link(href="#") going nowhere default
+                        .row-fluid
+                          .span6
+                            h6 blue:
+                            ul.unstyled
+                              li: a.kaba-link.kaba-link-kabaBlue(href="#") going nowhere blue
+                              li: a.kaba-link.kaba-link-kabaBlue(href="#") going nowhere blue
+                              li: a.kaba-link.kaba-link-kabaMiddleBlue(href="#") going nowhere middle blue
+                              li: a.kaba-link.kaba-link-kabaMiddleBlue(href="#") going nowhere middle blue
+                          .span6
+                            h6 gray:
+                            ul.unstyled
+                              li: a.kaba-link.kaba-link-kabaDarkGray(href="#") going nowhere dark gray
+                              li: a.kaba-link.kaba-link-kabaDarkGray(href="#") going nowhere dark gray
+                              li: a.kaba-link.kaba-link-kabaTextGray(href="#") going nowhere text gray
+                              li: a.kaba-link.kaba-link-kabaTextGray(href="#") going nowhere text gray
+
+                    .prettyprint
+                      - var sample = '<!-- default orange -->\n'
+                      - sample    += '<a href="#" class="kaba-link">link</a>\n'
+                      - sample    += '<!-- kaba blue -->\n'
+                      - sample    += '<a href="#" class="kaba-link kaba-link-kabaBlue">link</a>\n'
+                      - sample    += '<!-- kaba middle blue -->\n'
+                      - sample    += '<a href="#" class="kaba-link kaba-link-kabaMiddleBlue">link</a>\n'
+                      - sample    += '<!-- kaba dark gray -->\n'
+                      - sample    += '<a href="#" class="kaba-link kaba-link-kabaDarkGray">link</a>\n'
+                      - sample    += '<!-- kaba text gray -->\n'
+                      - sample    += '<a href="#" class="kaba-link kaba-link-kabaTextGray">link</a>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#images-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Images
+
+                .widget-content
+                  .section
+                    h5 image with caption
+                 
+                    .kesign-example.kesign-example-well
+                      .well-wrapper
+                        .row-fluid
+                          .span4
+                            .img-caption
+                              img(src="#{path}public/img/product.jpeg")
+                              .caption
+                                h6 Reader
+                                p This is some description text.
+
+                          .span4
+                            .img-caption.img-caption-orange
+                              img(src="#{path}public/img/product.jpeg")
+                              .caption
+                                h6 Reader
+                                p This is some description text.
+
+                          .span4
+                            .img-caption.img-caption-gray
+                              img(src="#{path}public/img/product.jpeg")
+                              .caption
+                                h6 Reader
+                                p This is some description text.
+
+                    .prettyprint
+                      - var sample = '<!-- default (blue) -->\n'
+                      - sample    += '<div class="img-caption">\n'
+                      - sample    += '  <img src="path/img.png">\n'
+                      - sample    += '  <div class="caption">\n'
+                      - sample    += '    <h6>title</h6>\n'
+                      - sample    += '    <p>description</p>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      - sample    += '<!-- orange -->\n'
+                      - sample    += '<div class="img-caption img-caption-orange">\n'
+                      - sample    += '  <img src="path/img.png">\n'
+                      - sample    += '  <div class="caption">\n'
+                      - sample    += '    <h6>title</h6>\n'
+                      - sample    += '    <p>description</p>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      - sample    += '<!-- gray -->\n'
+                      - sample    += '<div class="img-caption img-caption-gray">\n'
+                      - sample    += '  <img src="path/img.png">\n'
+                      - sample    += '  <div class="caption">\n'
+                      - sample    += '    <h6>title</h6>\n'
+                      - sample    += '    <p>description</p>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#ribbon-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Ribbons
+
+                .widget-content
+                  .section
+                    h5 Add an ribbon icon to widget-header:
+                    .kesign-example.kesign-example-widget
+                      .row-fluid
+                        .span4
+                          .widget
+                            .widget-header
+                              i.icon-envelope-alt
+                                .ribbon 7
+                              h3 default ribbon
+                      
+                        .span4
+                          .widget
+                            .widget-header
+                              i.icon-envelope-alt
+                                .ribbon.ribbon-success 5
+                              h3 success ribbon
+
+                        .span4
+                          .widget
+                            .widget-header
+                              i.icon-envelope-alt
+                                .ribbon.ribbon-error 3
+                              h3 error ribbon
+
+                      .row-fluid
+                        .span4
+                          i.icon-cloud.icon-large
+                            .ribbon 4
+                        
+                        .span4
+                          i.icon-rss.icon-large
+                            .ribbon.ribbon-success 9
+
+                        .span4
+                          i.icon-camera.icon-large
+                            .ribbon.ribbon-error 2
+
+                    .prettyprint
+                      - var sample = '<!-- widget -->\n'
+                      - sample    += '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <i class="icon-envelope-alt"></i>\n'
+                      - sample    += '      <div class="ribbon">5</i>\n'
+                      - sample    += '    </i>\n'
+                      - sample    += '    <h3>Title</h3>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-content">content...</div>\n'
+                      - sample    += '</div>\n\n'
+                      - sample    += '<!-- success -->\n'
+                      - sample    += '<i class="icon-envelope-alt icon-large"></i>\n'
+                      - sample    += '  <div class="ribbon ribbon-success">5</i>\n'
+                      - sample    += '</i>\n'
+                      - sample    += '<!-- error -->\n'
+                      - sample    += '<i class="icon-envelope-alt icon-large"></i>\n'
+                      - sample    += '  <div class="ribbon ribbon-error">5</i>\n'
+                      - sample    += '</i>\n'
                       
                       pre
                         code
