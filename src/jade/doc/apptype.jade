@@ -1,0 +1,129 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      //- .sidebar(data-spy="affix", data-offset-top="100")
+      //-   a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+      //-     span.icon-bar
+      //-     span.icon-bar
+      //-     span.icon-bar
+
+      //-   .sidebar-collapse
+      //-     ul.nav.nav-list
+      //-       li.nav-header Basic Guidelines
+      //-       li.active: a(href="#hideLabels-section") Hide labels
+      //-       li: a(href="#equalheight-section") Equal heights
+
+      .page
+        .section#hideLabels-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Choose Application Type
+
+                .widget-content
+                  .section
+                    p This section will help you to decide for the right application type and appropriate interface style.
+                    p If you got any uncertainties feel free to contact the Kaba User Interface Design Officer for guideance.
+                    
+                    .app-types
+                      .app-type
+                        .app-type-title
+                          h4 Webapplikation
+                        .app-type-description
+                          :markdown
+                            Doing a responsive webapplikation is in most cases the best and cost efficient solution. If the 
+                            applikation is developed with the mobile first approach for interaction there is not even the need 
+                            for a separate solution for the mobile.
+
+                            You might consider not doing a webapplikation if you have special requirements:
+
+                          ul.large
+                            li: access to device sensors
+                            li: usability of webapplikation would be distracting
+
+                          .row-fluid
+                            .span6
+                              ul.app-type-pros
+                                li: do only once for all devices
+                                li: lower cost than native apps
+                                li: branding is possible
+                            .span6
+                              ul.app-type-cons
+                                li: restricted access to device sensors
+                        .app-type-interface
+                          h6 choose the interface style of kesign
+
+                      .app-type
+                        .app-type-title
+                          h4 Native Application
+                        .app-type-description
+                          :markdown
+                            If an webapplikation is not sufficent. You should consider doing an application to the devices 
+                            native style.
+
+                            You might consider not doing a native application if you have special requirements:
+
+                          ul.large
+                            li: usability would be improved by custom application
+
+                          .row-fluid
+                            .span6
+                              ul.app-type-pros
+                                li: seemless to the specific devices
+                                li: higher cost than webapplikation
+                                li: full access to device sensors
+                            .span6
+                              ul.app-type-cons
+                                li: restricted branding
+                                li: specific development environment
+                                li: deployment via store
+                        .app-type-interface.yellow
+                          h6 
+                           | choose the style of the given device 
+                           small (iOS, Android, Win8,...)
+
+                      .app-type
+                        .app-type-title
+                          h4 Custom Application
+                        .app-type-description
+                          :markdown
+                            If an native application is not sufficent. You should consider doing an application to the devices 
+                            native style.
+
+                            If ever possible try to reuse an existing kaba design style (eg. b-inspired).
+
+                            You might consider choosing a custom application if:
+
+                          ul.large
+                            li: for a kaba device with display (try reuse of b-inspired style)
+                            li: the usability wins (eg. user is used to terminal usage, reuse of terminal style might be better than native style experience)
+
+                          .row-fluid
+                            .span6
+                              ul.app-type-pros
+                                li: seemless to the specific devices
+                                li: higher cost than native applikation
+                                li: full access to device sensors
+                            .span6
+                              ul.app-type-cons
+                                li: custom style will raise costs
+                                li: specific development environment
+                                li: deployment via store
+                        .app-type-interface.red
+                          h6 
+                           | reuse a kaba design style or create a special 
+                           small (b-inspired)
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts
+

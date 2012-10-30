@@ -1,0 +1,84 @@
+.app-types
+  .app-type
+    margin: 25px 0 75px
+    border-radius: 5px
+    box-shadow: 1px 2px 3px $kabaTextGray
+
+    .app-type-title
+      kabaBackgroundGray-gradient()
+      text-align: center
+      padding: 10px 10px 15px
+      border-radius: top 5px
+      border-bottom: solid 1px $kabaMiddleGray
+
+      h4
+        font-size: 18px
+        color: $kabaDarkGray
+        text-shadow: 0 -1px 1px $white
+
+    .app-type-description
+      background: $kabaBackgroundGray
+      padding: 20px 15px
+
+      ul.app-type-pros
+        list-style-type: none
+        margin: 0
+
+        li
+          position: relative
+          padding: 5px 40px 5px 19px
+          border-bottom: solid 1px $kabaMiddleGray
+
+          &::before
+            position: absolute
+            top: 50%
+            margin-top: -8px
+            left: 0
+            font-family: 'FontAwesome'
+            content: "\f00c"
+            color: $green
+
+      ul.app-type-cons
+        list-style-type: none
+        margin: 0
+
+        li
+          position: relative
+          padding: 5px 40px 5px 19px
+          border-bottom: solid 1px $kabaMiddleGray
+
+          &::before
+            position: absolute
+            top: 50%
+            margin-top: -8px
+            left: 0
+            font-family: 'FontAwesome'
+            content: "\f068"
+            color: $red
+
+    .app-type-interface
+      kabaGreen-gradient()
+      padding: 10px 10px 15px
+      margin: 0
+      border-radius: bottom 5px
+      text-align: center
+
+      h6
+        color: darken($kabaGreen, 10)
+        text-shadow: 0 1px 1px $kabaDarkGray
+        font-size: 14px
+
+      &.yellow
+       kabaLightYellow-gradient()
+
+       h6
+        color: $kabaTextGray
+
+      &.red
+       kabaRed-gradient()
+
+       h6
+        color: darken($kabaRed, 20)
+
+        small
+          color: darken($kabaRed, 20)

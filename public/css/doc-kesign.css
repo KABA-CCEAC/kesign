@@ -778,3 +778,119 @@ span.white {
   text-transform: uppercase;
   margin-top: 0;
 }
+.app-types .app-type {
+  margin: 25px 0 75px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 2px 3px #808080;
+  box-shadow: 1px 2px 3px #808080;
+}
+.app-types .app-type .app-type-title {
+  background: #e5e5e5;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f5f5f5), color-stop(1, #e5e5e5));
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background: -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background: -ms-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background: linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  text-align: center;
+  padding: 10px 10px 15px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: solid 1px #ccc;
+}
+.app-types .app-type .app-type-title h4 {
+  font-size: 18px;
+  color: #4c4c4c;
+  text-shadow: 0 -1px 1px #fff;
+}
+.app-types .app-type .app-type-description {
+  background: #f5f5f5;
+  padding: 20px 15px;
+}
+.app-types .app-type .app-type-description ul.app-type-pros {
+  list-style-type: none;
+  margin: 0;
+}
+.app-types .app-type .app-type-description ul.app-type-pros li {
+  position: relative;
+  padding: 5px 40px 5px 19px;
+  border-bottom: solid 1px #ccc;
+}
+.app-types .app-type .app-type-description ul.app-type-pros li::before {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 0;
+  font-family: 'FontAwesome';
+  content: "\f00c";
+  color: #46a546;
+}
+.app-types .app-type .app-type-description ul.app-type-cons {
+  list-style-type: none;
+  margin: 0;
+}
+.app-types .app-type .app-type-description ul.app-type-cons li {
+  position: relative;
+  padding: 5px 40px 5px 19px;
+  border-bottom: solid 1px #ccc;
+}
+.app-types .app-type .app-type-description ul.app-type-cons li::before {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 0;
+  font-family: 'FontAwesome';
+  content: "\f068";
+  color: #9d261d;
+}
+.app-types .app-type .app-type-interface {
+  background: #72a74b;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8bcc5c), color-stop(1, #72a74b));
+  background: -webkit-linear-gradient(top, #8bcc5c 0%, #72a74b 100%);
+  background: -moz-linear-gradient(top, #8bcc5c 0%, #72a74b 100%);
+  background: -o-linear-gradient(top, #8bcc5c 0%, #72a74b 100%);
+  background: -ms-linear-gradient(top, #8bcc5c 0%, #72a74b 100%);
+  background: linear-gradient(top, #8bcc5c 0%, #72a74b 100%);
+  padding: 10px 10px 15px;
+  margin: 0;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+}
+.app-types .app-type .app-type-interface h6 {
+  color: #5a843b;
+  text-shadow: 0 1px 1px #4c4c4c;
+  font-size: 14px;
+}
+.app-types .app-type .app-type-interface.yellow {
+  background: #fffba6;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fffccc), color-stop(1, #fffba6));
+  background: -webkit-linear-gradient(top, #fffccc 0%, #fffba6 100%);
+  background: -moz-linear-gradient(top, #fffccc 0%, #fffba6 100%);
+  background: -o-linear-gradient(top, #fffccc 0%, #fffba6 100%);
+  background: -ms-linear-gradient(top, #fffccc 0%, #fffba6 100%);
+  background: linear-gradient(top, #fffccc 0%, #fffba6 100%);
+}
+.app-types .app-type .app-type-interface.yellow h6 {
+  color: #808080;
+}
+.app-types .app-type .app-type-interface.red {
+  background: #d20000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f20000), color-stop(1, #d20000));
+  background: -webkit-linear-gradient(top, #f20000 0%, #d20000 100%);
+  background: -moz-linear-gradient(top, #f20000 0%, #d20000 100%);
+  background: -o-linear-gradient(top, #f20000 0%, #d20000 100%);
+  background: -ms-linear-gradient(top, #f20000 0%, #d20000 100%);
+  background: linear-gradient(top, #f20000 0%, #d20000 100%);
+}
+.app-types .app-type .app-type-interface.red h6 {
+  color: #8c0000;
+}
+.app-types .app-type .app-type-interface.red h6 small {
+  color: #8c0000;
+}
