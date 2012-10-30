@@ -703,6 +703,12 @@ table.table {
   color: #fff;
   text-shadow: 0 -1px 0 #000;
 }
+.navbar-inverse .nav li a [class^="icon-"],
+.navbar .nav li a [class^="icon-"],
+.navbar-inverse .nav li a [class*=" icon-"],
+.navbar .nav li a [class*=" icon-"] {
+  height: 14px;
+}
 .navbar-inverse .nav li a:hover,
 .navbar .nav li a:hover {
   background: #eee;
