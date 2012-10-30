@@ -16,13 +16,14 @@
     .nav-collapse
 
       ul.nav
-        li: a(href="#") Home
-        li.divider-vertical
-        li.active: a(href="#") Documentation
+        li
+          a(href="#{path}pages/samples.html")
+            i.icon-arrow-left
+            |  zurück
         li.divider-vertical
         li.dropdown
           a.dropdown-toggle(href="#", data-toggle='dropdown') 
-            | Samples 
+            | Sample DropDown 
             b.caret
           ul.dropdown-menu(role='menu', aria-labelledBy='dropdownMenu')
             li: a(href="#") Sample 1

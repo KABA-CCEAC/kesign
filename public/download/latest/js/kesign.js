@@ -6,10 +6,7 @@ $.support.placeholder = false;
 var placeholderTest = document.createElement('input');
 if('placeholder' in placeholderTest) $.support.placeholder = true;
 
-$(document).ready(function() {
-	if ($.support.placeholder) {
-	  $('.form-hideLabels').find('label.hideable').hide();
-	}
+$(document).ready(function() {	
 	if ($('.toggleBrandbar').data('toggle') === 'collapse') {
 	  var icon = $('.toggleBrandbar i');
 	  $('.brandbar').on('hide', function () {
@@ -36,6 +33,21 @@ $(document).ready(function() {
 	}
 });
 
+$.fn.hideLabels = function (options) {
+    if (!$.support.placeholder) return;
+    
+    return this.each(function() {
+        // localize childs
+        var elements =  $(this).find('label.hideable');
+        elements.each(function() { 
+            $(this).hide();
+        });
+    });
+};
+
+$(document).ready(function() {
+  $('.form-hideLabels').hideLabels();
+});
 (function($) {
 	$.fn.equalHeights = function(minHeight, maxHeight) {
 		tallest = (minHeight) ? minHeight : 0;
