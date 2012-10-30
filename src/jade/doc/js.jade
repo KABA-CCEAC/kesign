@@ -1,0 +1,140 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar(data-spy="affix", data-offset-top="100")
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Basic Guidelines
+            li.active: a(href="#hideLabels-section") Hide labels
+            li.active: a(href="#equalheight-section") Equal heights
+
+      .page
+        .section#hideLabels-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 hide Labels script
+
+                .widget-content
+                  .section
+                    :markdown
+                      You can use this script to hide the form labels to use only placeholder.
+
+                      The script will only hide the labels if the browser supports placeholders!
+
+                    .kesign-example.kesign-example-hidelabel
+                      .row-fluid
+                        .span6.offset3
+                          form(action='#', method='post')
+                            legend Please Login
+
+                            .fields
+                              label.hideable(for="username") Username:
+                              input.span12(name='username', type='text', placeholder='Username')
+                              label.hideable(for="password") Password:
+                              input.span12(name='password', type='password', placeholder='Password')
+                                    
+                            .login-actions
+                              button.btn Login
+
+                          button#toggleHideLabel.btn.btn-warning toggle it
+
+                      hr
+
+                      - var sample = '<!-- mark label with class hideable-->\n'
+                      - sample    += '<label class="hideable" for="username">Username</label>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                    .prettyprint
+                      - var sample = '// javascript\n'
+                      - sample    += '$(\'form\').hideLabels();'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#equalheight-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 equal height script
+
+                .widget-content
+                  .section
+                    :markdown
+                      Just a little helper to get some elements to have equal height.
+
+                    .kesign-example.kesign-example-equalheight
+                      .row-fluid
+                        .span4
+                          .well.well-kabaMiddleBlue
+                            p i should be equal in height as my neighbors. but i'm not.
+                        .span4
+                          .well.well-kabaMiddleBlue
+                            p that's because im to small.
+                        .span4
+                          .well.well-kabaMiddleBlue
+                            p and i'm a lot taller. this is because i play mister very important. but just for this sample!!!
+
+                        button#toggleEqualHeight.btn.btn-warning toggle it
+
+                    .prettyprint
+                      - var sample = '// javascript\n'
+                      - sample    += '$(\'.well\').equalHeights();'
+                      - sample    += '\n'
+                      - sample    += '\n'
+                      - sample    += '// options\n'
+                      - sample    += '$(\'.well\').equalHeights(400); // sets minheight to 400\n'
+                      - sample    += '$(\'.well\').equalHeights(100, 400); // sets minheight to 100 and maxheight to 400'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts
+
+    script(type='text/javascript')
+      var isLabelHidden = false;
+      $('#toggleHideLabel').click(function() {
+        if (!isLabelHidden) {
+          $('.kesign-example-hidelabel').hideLabels();
+          isLabelHidden = true;
+        } else {
+          $('.kesign-example-hidelabel').find('.hideable').show();
+          isLabelHidden = false;
+        }
+      });
+      
+
+      var isEqualHeight = false;
+      $('#toggleEqualHeight').click(function() {
+        if (!isEqualHeight) {
+          $('.kesign-example-equalheight .well').equalHeights();
+          isEqualHeight = true;
+        } else {
+          $('.kesign-example-equalheight .well').css("height","auto");
+          isEqualHeight = false;
+        }
+      });
+

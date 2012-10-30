@@ -22,6 +22,7 @@ html(lang="en")
             li: a(href="#font-color-section") Font Color
             li: a(href="#links-section") Special Links
             li: a(href="#images-section") Special Images
+            li: a(href="#ribbon-section") Ribbons
             li: a(href="#stats-section") Stats & Charts
 
       .page
@@ -439,42 +440,42 @@ html(lang="en")
                           .widget
                             .widget-header
                               i.icon-envelope-alt
-                                .ribbon 7
+                                small.ribbon 7
                               h3 default ribbon
                       
                         .span4
                           .widget
                             .widget-header
                               i.icon-envelope-alt
-                                .ribbon.ribbon-success 5
+                                small.ribbon.ribbon-success 5
                               h3 success ribbon
 
                         .span4
                           .widget
                             .widget-header
                               i.icon-envelope-alt
-                                .ribbon.ribbon-error 3
+                                small.ribbon.ribbon-error 3
                               h3 error ribbon
 
                       .row-fluid
                         .span4
                           i.icon-cloud.icon-large
-                            .ribbon 4
+                            small.ribbon 4
                         
                         .span4
                           i.icon-rss.icon-large
-                            .ribbon.ribbon-success 9
+                            small.ribbon.ribbon-success 9
 
                         .span4
                           i.icon-camera.icon-large
-                            .ribbon.ribbon-error 2
+                            small.ribbon.ribbon-error 2
 
                     .prettyprint
                       - var sample = '<!-- widget -->\n'
                       - sample    += '<div class="widget">\n'
                       - sample    += '  <div class="widget-header">\n'
                       - sample    += '    <i class="icon-envelope-alt"></i>\n'
-                      - sample    += '      <div class="ribbon">5</i>\n'
+                      - sample    += '      <small class="ribbon">5</small>\n'
                       - sample    += '    </i>\n'
                       - sample    += '    <h3>Title</h3>\n'
                       - sample    += '  </div>\n'
@@ -482,11 +483,11 @@ html(lang="en")
                       - sample    += '</div>\n\n'
                       - sample    += '<!-- success -->\n'
                       - sample    += '<i class="icon-envelope-alt icon-large"></i>\n'
-                      - sample    += '  <div class="ribbon ribbon-success">5</i>\n'
+                      - sample    += '  <small class="ribbon ribbon-success">5</small>\n'
                       - sample    += '</i>\n'
                       - sample    += '<!-- error -->\n'
                       - sample    += '<i class="icon-envelope-alt icon-large"></i>\n'
-                      - sample    += '  <div class="ribbon ribbon-error">5</i>\n'
+                      - sample    += '  <small class="ribbon ribbon-error">5</small>\n'
                       - sample    += '</i>\n'
                       
                       pre
