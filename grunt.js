@@ -4,7 +4,7 @@
 //
 module.exports = function(grunt) {
 
-  var version = '0.0.5';
+  var version = '0.9.0';
 
 
   grunt.loadNpmTasks('grunt-contrib');
@@ -189,8 +189,8 @@ module.exports = function(grunt) {
             "public/css/kesign-min.css", 
             "public/css/kesign-responsive.css", 
             "public/css/kesign-responsive-min.css",
-            "public/css/bootstrap-2.1.1.css",
-            "public/css/bootstrap-responsive-2.1.1.css",
+            "public/css/bootstrap-2.2.0.css",
+            "public/css/bootstrap-responsive-2.2.0.css",
             "public/css/font-awesome-2.0.css",
             "public/css/font-awesome-ie7-2.0.css"]
         }
@@ -222,8 +222,8 @@ module.exports = function(grunt) {
             "public/css/kesign-min-" + version + ".css", 
             "public/css/kesign-responsive-" + version + ".css", 
             "public/css/kesign-responsive-min-" + version + ".css",
-            "public/css/bootstrap-2.1.1.css",
-            "public/css/bootstrap-responsive-2.1.1.css",
+            "public/css/bootstrap-2.2.0.css",
+            "public/css/bootstrap-responsive-2.2.0.css",
             "public/css/font-awesome-2.0.css",
             "public/css/font-awesome-ie7-2.0.css",
             "public/font/*",
@@ -274,14 +274,14 @@ module.exports = function(grunt) {
     // only want to load one stylesheet in index.html.
     mincss: {
       "public/css/doc-base.css": [
-        "public/css/bootstrap-2.1.1.css",
-        "public/css/bootstrap-responsive-2.1.1.css",
+        "public/css/bootstrap-2.2.0.css",
+        "public/css/bootstrap-responsive-2.2.0.css",
         "public/css/font-awesome-2.0.css",
         "public/css/prettify.css"
       ],
       "public/css/kesign-combined-min.css": [
-        "public/css/bootstrap-2.1.1.css",
-        "public/css/bootstrap-responsive-2.1.1.css",
+        "public/css/bootstrap-2.2.0.css",
+        "public/css/bootstrap-responsive-2.2.0.css",
         "public/css/font-awesome-2.0.css",
         "public/css/kesign.css",
         "public/css/kesign-responsive.css"
