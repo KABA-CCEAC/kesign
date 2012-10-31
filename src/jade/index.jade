@@ -17,7 +17,7 @@ html(lang="en")
 
         .sidebar-collapse
           ul.nav.nav-list
-            li.nav-header Guidelines
+            li.nav-header Interface Guidelines
             li.active: a(href="#software") Software
             li: a(href="#mobile") Mobile
 
@@ -42,7 +42,7 @@ html(lang="en")
                       the styleguide document - able to present interactions, animation behaviour and other nice stuff. 
 
                       Additional it should provide all 
-                      what is needed to build a webapplication in the __offical kaba software design styleguide__. 
+                      what is needed to build a webapplication in the __offical kaba user interface design styleguide__. 
                       So you could focus on developing the solutions and just adopt the provided styles.
 
                   
@@ -55,7 +55,8 @@ html(lang="en")
                             .framework-link
                               h6 
                                 i.icon-twitter
-                                |  twitter bootstrap
+                                |  bootstrap 
+                                small @twitter
                               p 
                                 | Believe it or not twitter bootstrap is the most starred project on github. 
                                 | Endless sites are based on this css framework.
@@ -72,24 +73,38 @@ html(lang="en")
 
                   .section
                     h4 where should i start?
-                    ol
-                      li
-                        | first you should get used to 
-                        a(href='#{path}bootstrap/', target='_new') 
-                          i.icon-link
-                          | twitter bootstrap
-                        |  for grid, forms, tables, ...
-                      li
-                        | than head over to the 
-                        a(href='#{path}doc/') 
-                          i.icon-link
-                          | kesign documentation
-                        |  for layout, widget, ...
-                      li
-                        | or checkout 
-                        a(href='#{path}pages/samples.html') 
-                          i.icon-link
-                          | the samples page
+
+                    .row-fluid.section
+                      .span4
+                        a.btn.btn-primary.btn-hero.btn-block(href='#{path}bootstrap/', target='_new')
+                          span.lead 1.   
+                          i.icon-cog
+                          |  bootstrap
+                      .span4
+                        a.btn.btn-warning.btn-hero.btn-block(href='#{path}doc/')
+                          span.lead 2.   
+                          i.icon-cogs
+                          |  kesign
+                      .span4
+                        a.btn.btn-hero.btn-block(href='#{path}pages/samples.html')
+                          span.lead 3.   
+                          i.icon-play-circle
+                          |  samples
+                    
+                    .row-fluid.section
+                      .span12
+                        ol.large
+                          li
+                            | first you should get used to 
+                            a.kaba-link(href='#{path}bootstrap/', target='_new') twitter bootstrap
+                            |  for grid, forms, tables, ...
+                          li
+                            | than head over to the 
+                            a.kaba-link(href='#{path}doc/') kesign documentation
+                            |  for layout, widget, ...
+                          li
+                            | or checkout 
+                            a.kaba-link(href='#{path}pages/samples.html') the samples page
 
 
             .span4

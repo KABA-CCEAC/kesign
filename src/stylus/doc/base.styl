@@ -37,7 +37,7 @@ p, .large li
   border: solid 1px $kabaBlue
 
 
-span
+span, i
   &.kabaBlue
     color: $kabaBlue
   &.kabaDarkGray
@@ -46,5 +46,26 @@ span
     color: $kabaTextGray
   &.white
     color: $white
+  &.orange
+    color: $kabaOrange
+
+
+.btn-hero
+  font-size: 16px
+  padding: 20px 16px
+  border-radius: 3px
+
+  span.lead
+    color: $kabaMiddleBlue
+    font-weight: bold
+    font-size: 25px
+  
+  &.btn-primary
+    span.lead
+      color: $kabaOrange
+
+  &.btn-warning
+    span.lead
+      color: darken($kabaOrange, 15)
 
 // changes to kesign

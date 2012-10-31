@@ -17,13 +17,17 @@ html(lang="en")
 
         .sidebar-collapse
           ul.nav.nav-list
-            li.nav-header Basic Guidelines
+            li.nav-header Components Guidelines
             li.active: a(href="#well-section") Wells
             li: a(href="#font-color-section") Font Color
             li: a(href="#links-section") Special Links
             li: a(href="#images-section") Special Images
             li: a(href="#ribbon-section") Ribbons
             li: a(href="#stats-section") Stats & Charts
+            li
+              a(href="#{path}doc/index.html").pull-right
+                i.icon-chevron-left.orange
+                | back
 
       .page
         .section#well-section

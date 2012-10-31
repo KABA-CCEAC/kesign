@@ -9,125 +9,123 @@ html(lang="en")
     include ../includes/layout/header
           
     include ../includes/layout/content
-      .sidebar(data-spy="affix", data-offset-top="100")
-        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+      //- .sidebar(data-spy="affix", data-offset-top="100")
+      //-   a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+      //-     span.icon-bar
+      //-     span.icon-bar
+      //-     span.icon-bar
 
-        .sidebar-collapse
-          ul.nav.nav-list
-            li.nav-header Guidelines
-            li: a(href="#software") Software
-            //li: a(href="#mobile") Mobile
+      //-   .sidebar-collapse
+      //-     ul.nav.nav-list
+      //-       li.nav-header Guidelines
+      //-       li: a(href="#software") Software
+      //-       //li: a(href="#mobile") Mobile
 
       .page
         .section#software
+          h5 Layout Samples
           .row-fluid
-            .span8
-              .widget
-                .widget-header
-                  h3 Layout Samples - Software Guidelines
+            .span6
+              ul.samples.unstyled
+                li 
+                  a(href='#{path}samples/default.html')
+                    .sample
+                      .row-fluid
+                        .span6
+                          img.sample-img.img-polaroid(src='#{path}public/img/samples/default.png')
 
+                        .span6.sample-text
+                          h6 Default Layout
+                          p 
+                           | The default layout comes optional with a sidebar navigation.
+                           | Header and Footer will scroll.
 
-                .widget-content
-                  h5 Default:
-                  ul.samples.unstyled
-                    li 
-                      a(href='#{path}samples/default.html')
-                        .sample
-                          .row-fluid
-                            .span6
-                              img.sample-img.img-polaroid(src='#{path}public/img/samples/default.png')
+            .span6
+              ul.samples.unstyled
+                li 
+                  a(href='#{path}samples/default-fixed.html')
+                    .sample
+                      .row-fluid
+                        .span6
+                          img.sample-img.img-polaroid(src='#{path}public/img/samples/default-fixed.png')
 
-                            .span6.sample-text
-                              h6 Default Layout
-                              p 
-                               | The default layout comes optional with a sidebar navigation.
-                               | Header and Footer will scroll.
-                    li 
-                      a(href='#{path}samples/default-fixed.html')
-                        .sample
-                          .row-fluid
-                            .span6
-                              img.sample-img.img-polaroid(src='#{path}public/img/samples/default-fixed.png')
-
-                            .span6.sample-text
-                              h6 Fixed Default Layout
-                              p 
-                               | The default layout comes optional with a sidebar navigation.
-                               | Header and Footer will be fixed.
-
-                  h5 Centered:
-                  ul.samples.unstyled
-                    li
-                      a(href='#{path}samples/default-center.html')
-                        .sample
-                          .row-fluid
-                            .span6
-                              img.sample-img.img-polaroid(src='#{path}public/img/samples/default-centered.png')
-
-                            .span6.sample-text
-                              h6 Centered Layout
-                              p 
-                               | The centered layout comes without sidebar navigation.
-                               | Header and Footer will scroll.
-                    li
-                      a(href='#{path}samples/default-fixed-center.html')
-                        .sample
-                          .row-fluid
-                            .span6
-                              img.sample-img.img-polaroid(src='#{path}public/img/samples/default-centered-fixed.png')
-
-                            .span6.sample-text
-                              h6 Fixed Centered Layout
-                              p 
-                               | The centered layout comes without sidebar navigation.
-                               | Header and Footer will be fixed.
-
+                        .span6.sample-text
+                          h6 Fixed Default Layout
+                          p 
+                           | The default layout comes optional with a sidebar navigation.
+                           | Header and Footer will be fixed.
 
           .row-fluid
-            .span8
-              .widget
-                .widget-header
-                  h3 Login Page Samples - Software Guidelines
+            .span6
+              ul.samples.unstyled
+                li
+                  a(href='#{path}samples/default-center.html')
+                    .sample
+                      .row-fluid
+                        .span6
+                          img.sample-img.img-polaroid(src='#{path}public/img/samples/default-centered.png')
 
+                        .span6.sample-text
+                          h6 Centered Layout
+                          p 
+                           | The centered layout comes without sidebar navigation.
+                           | Header and Footer will scroll.
+                  
+            .span6
+              ul.samples.unstyled
+                li
+                  a(href='#{path}samples/default-fixed-center.html')
+                    .sample
+                      .row-fluid
+                        .span6
+                          img.sample-img.img-polaroid(src='#{path}public/img/samples/default-centered-fixed.png')
 
-                .widget-content
-                  ul.samples.unstyled
-                    li 
-                      a(href='#{path}samples/printstyle-login.html')
-                        .sample
-                          .row-fluid
-                            .span6
-                              img.sample-img.img-polaroid(src='#{path}public/img/samples/printstyle-login.png')
-
-                            .span6.sample-text
-                              h6 Login Page (printstyle)
-                              p 
-                               | This login page comes in printstyle.
-                               | Full responsive. Replace background image on .login-page selector.
+                        .span6.sample-text
+                          h6 Fixed Centered Layout
+                          p 
+                           | The centered layout comes without sidebar navigation.
+                           | Header and Footer will be fixed.
 
           .row-fluid
-            .span8
-              .widget
-                .widget-header
-                  h3 Forms Sample - Software Guidelines
+            .span12
+              hr
 
+          h5 Special Page Samples
+          .row-fluid
+            .span6
+              ul.samples.unstyled
+                li 
+                  a(href='#{path}samples/printstyle-login.html')
+                    .sample
+                      .row-fluid
+                        .span6
+                          img.sample-img.img-polaroid(src='#{path}public/img/samples/printstyle-login.png')
 
-                .widget-content
-                  ul.samples.unstyled
-                    li 
-                      a(href='#{path}samples/forms.html')
-                        .sample
-                          .row-fluid
-                            .span6
-                              img.sample-img.img-polaroid(src='#{path}public/img/samples/forms.png')
+                        .span6.sample-text
+                          h6 Login Page (printstyle)
+                          p 
+                           | This login page comes in printstyle.
+                           | Full responsive. Replace background image on .login-page selector.
 
-                            .span6.sample-text
-                              h6 Forms
-                              p 
-                               | Presentation of a form on different backgrounds (set via class '.well')
+          .row-fluid
+            .span12
+              hr
+
+          h5 Component Samples
+          .row-fluid
+            .span6
+              ul.samples.unstyled
+                li 
+                  a(href='#{path}samples/forms.html')
+                    .sample
+                      .row-fluid
+                        .span6
+                          img.sample-img.img-polaroid(src='#{path}public/img/samples/forms.png')
+
+                        .span6.sample-text
+                          h6 Forms
+                          p 
+                           | Presentation of a form on different backgrounds (set via class '.well')
 
         //- .section#mobile
         //-   .row-fluid

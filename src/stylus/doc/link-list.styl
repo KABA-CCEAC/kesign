@@ -1,0 +1,38 @@
+ul.link-list
+  list-style-type: none
+  margin: 0
+
+
+
+  li
+    position: relative
+    kabaBackgroundGray-gradient()
+    padding: 5px 10px
+    margin: 5px 0
+    border-radius: 4px
+
+    &:hover
+      kabaLightGray-gradient()
+
+    a:hover
+      text-decoration: none
+
+    &::after
+          position: absolute
+          top: 50%
+          margin-top: -8px
+          right: 10px
+          font-family: 'FontAwesome'
+          font-size: 20px
+          content: "\f054"
+          color: $kabaOrange
+          text-shadow: 0 1px 1px $kabaDarkGray
+
+    h5
+      color: $kabaOrange
+      text-shadow: 0 1px 1px $kabaMiddleGray
+
+    p
+      font-size: 12px
+      padding: 0 30px 0 0
+

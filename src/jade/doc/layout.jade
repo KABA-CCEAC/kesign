@@ -17,12 +17,16 @@ html(lang="en")
 
         .sidebar-collapse
           ul.nav.nav-list
-            li.nav-header Basic Guidelines
+            li.nav-header Layout Guidelines
             li.active: a(href="#header-section") Header
             li: a(href="#page-section") Page / Main Content Area
             li: a(href="#sidebar-section") Sidebar Navigation
             li: a(href="#widget-section") Widget Container
             li: a(href="#footer-section") Footer
+            li
+              a(href="#{path}doc/index.html").pull-right
+                i.icon-chevron-left.orange
+                | back
 
       .page
         .section#header-section

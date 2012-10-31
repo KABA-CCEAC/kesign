@@ -1,0 +1,120 @@
+- var path = '../'
+- var nav = '.home'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar(data-spy="affix", data-offset-top="100")
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse
+          ul.nav.nav-list
+            li.nav-header Extensions / AddOns
+            li.active: a(href="#bootstrap") Bootstrap
+            li: a(href="#javascripts") Javascript Must-haves
+
+      .page
+        .section#bootstrap
+          .row-fluid
+            .span8
+              .widget
+                .widget-header
+                  h3 Extensions to bootstrap
+
+                .widget-content
+                  .section
+                    ul.link-list
+                      li
+                        a(href="http://www.larentis.eu/bootstrap_toggle_buttons/")
+                          h5 bootstrap toogle buttons
+                          p Get on/off toggle buttons (or with other text).
+                      li
+                        a(href="http://bootboxjs.com/")
+                          h5 bootbox.js
+                          p Simplifies usage of modals from javascript code.
+                      li
+                        a(href="http://nijikokun.github.com/bootstrap-notify/")
+                          h5 bootstrap notify
+                          p The alert messages you wanted.
+
+        .section#javascripts
+          .row-fluid
+            .span8
+              .widget
+                .widget-header
+                  h3 BestOf / Must have javascripts
+
+                .widget-content
+                  .section
+                    h5 i18n, dates and numbers
+                    ul.link-list
+                      li
+                        a(href="http://momentjs.com/")
+                          h5 moment.js
+                          p A 5kb javascript date library for parsing, validating, manipulating, and formatting dates.
+                      li
+                        a(href="http://numeraljs.com/")
+                          h5 numeral.js
+                          p A javascript library for formatting and manipulating numbers.
+                      li
+                        a(href="http://i18next.com")
+                          h5 i18next
+                          p  A full-featured i18n javascript library for translating your webapplication.
+                  
+                  .section
+                    h5 toolbelt & utilities
+                    ul.link-list
+                      li
+                        a(href="http://lodash.com/")
+                          h5 lodash.js - drop-in replacement for underscore
+                          p
+                            | Utility-belt library for JavaScript that provides a lot of the functional programming support that you would expect. 
+                            | Documentation can be found at &nbsp;&nbsp;&nbsp;
+                            a.kaba-link(href="http://underscorejs.org/") underscore
+                      li
+                        a(href="http://augmentjs.com/")
+                          h5 augment.js
+                          p Enables use of modern JavaScript by augmenting built in objects with the latest JavaScript methods.
+                  
+                      li
+                        a(href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/")
+                          h5 jquery-plugin-validation
+                          p This jQuery plugin makes simple clientside form validation trivial, while offering lots of option for customization.
+                  
+                      li
+                        a(href="http://harvesthq.github.com/chosen/")
+                          h5 chosen
+                          p Chosen is a JavaScript plugin that makes long, unwieldy select boxes much more user-friendly.
+                  
+                  .section
+                    h5 single-page app
+                    ul.link-list
+                      li
+                        a(href="http://requirejs.org/")
+                          h5 require.js
+                          p RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node.
+                      li
+                        a(href="https://github.com/marionettejs/backbone.marionette")
+                          h5 backbone marionette
+                          p Make your Backbone.js apps dance with a composite application architecture.
+                      li
+                        a(href="http://jamuhl.github.com/backbone.CQRS/")
+                          h5 backbone CQRS
+                          p Simplify the usage of the CQRS Pattern under backbone.js by providing needed infrastructure.
+                      li
+                        a(href="https://github.com/jamuhl/bmq-tmpl")
+                          h5 bmq boilerplate
+                          p Combination of Backbone-Boilerpate plus Backbone.Marionette, Backbone.CQRS and others.
+
+
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts
