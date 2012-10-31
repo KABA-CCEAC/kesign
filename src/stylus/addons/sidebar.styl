@@ -10,14 +10,14 @@
 
   + .page
     margin-left: 220px
-    overflow: scroll
+    overflow: hidden
 
   // fixed sidebar
   &.sidebar-fixed
     margin-top: 0
     position: fixed
     float: none
-    display: block
+    display: inline-block
 
   .btn-sidebar
     z-index: 1000
@@ -44,3 +44,7 @@
 // support for bootstrap affix
 .sidebar.affix
   top: 10px
+
+// opera only fix for margin top
+x:-o-prefocus, .sidebar.sidebar-fixed
+  margin-top: 90px
