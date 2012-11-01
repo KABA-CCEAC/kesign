@@ -3,7 +3,8 @@
  *
  */
 p,
-.large li {
+.large li,
+span.large {
   font-size: 14px;
 }
 .downloads {
@@ -16,6 +17,10 @@ p,
 }
 .downloads h6 {
   text-transform: uppercase;
+}
+.downloads .img16 {
+  position: relative;
+  margin: -5px 5px 0 0;
 }
 .framework-links a:hover {
   text-decoration: none;
