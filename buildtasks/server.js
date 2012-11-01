@@ -87,6 +87,16 @@ module.exports = function(grunt) {
       });
     });
 
+
+    // Map static files.
+    if (_.isObject(options.files)) {
+      Object.keys(options.files).sort().reverse().forEach(function(key) {
+        site.get(root + key, function(req, res) {
+          return res.sendfile(options.files[key]);
+        });
+      });
+    }
+    
     // Map static folders.
     Object.keys(options.folders).sort().reverse().forEach(function(key) {
       site.get(root + key + "/*", function(req, res, next) {
@@ -97,14 +107,7 @@ module.exports = function(grunt) {
       });
     });
 
-    // Map static files.
-    if (_.isObject(options.files)) {
-      Object.keys(options.files).sort().reverse().forEach(function(key) {
-        site.get(root + key, function(req, res) {
-          return res.sendfile(options.files[key]);
-        });
-      });
-    }
+
 
     // Serve favicon.ico.
     site.use(express.favicon(options.favicon));
