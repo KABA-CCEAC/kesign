@@ -312,7 +312,10 @@ module.exports = function(grunt) {
     //  until documentation has been written.
     server: {
       host: "0.0.0.0",
-      files: { "favicon.ico": "./favicon.ico" },
+      files: { 
+        "favicon.ico": "./favicon.ico",
+        "public/font/fontawesome-webfont.eot?": "public/font/fontawesome-webfont.eot" 
+      },
 
       folders: {
           "/": "./",
