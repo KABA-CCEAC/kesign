@@ -58,6 +58,10 @@
     .main
       overflow: scroll
       height: 200px
+      *position: relative /* IE 7 fix overflow with relative inner div */
+
+      .page
+        *margin-top: 10px
 
   &.kesign-example-page
     .kesign-example-page-wrapper
@@ -65,6 +69,7 @@
       overflow: scroll
       height: 200px
       margin: 30px 0 50px
+      *position: relative /* IE 7 fix overflow with relative inner div */
 
       .container
         width: 80%

@@ -2306,3 +2306,117 @@ x:-o-prefocus,
   margin-left: -6px;
 }
 .img-caption { display /*\**/: block\9; }
+.sidebar {
+  *margin-top: 20px;
+}
+.sidebar.sidebar-fixed {
+  *margin-top: 90px;
+  *position: absolute;
+  *left: 0;
+}
+.header-fixed-top + .main .page {
+  *margin-top: 90px;
+  *position: relatice;
+  *top: 90px;
+  *left: 0;
+}
+.header-fixed-top.collapsed + .main .page {
+  *margin-top: 10px;
+  *position: relative;
+  *top: 10px;
+  *left: 0;
+}
+.header-fixed-top.collapsed + .main .sidebar.sidebar-fixed {
+  *margin-top: 10px;
+  *position: relative;
+  *top: 10px;
+  *left: 0;
+}
+.header-fixed-top + .main .container .page {
+  *margin-top: 50px;
+  *position: relatice;
+  *top: 50px;
+  *left: 0;
+}
+.header-fixed-top.collapsed + .main .container .page {
+  *margin-top: 30px;
+  *position: relative;
+  *top: 30px;
+  *left: 0;
+}
+.brandbar {
+  *position: relative;
+}
+.brandbar .statusbar {
+  *float: none;
+  *position: absolute;
+  *right: 0;
+}
+.navbar-inverse .nav li a [class^="icon-"],
+.navbar .nav li a [class^="icon-"],
+.navbar-inverse .nav li a [class*=" icon-"],
+.navbar .nav li a [class*=" icon-"] {
+  *position: relative;
+  *top: -5px;
+}
+.navbar-inverse .nav.nav-small [class^="icon-"],
+.navbar .nav.nav-small [class^="icon-"],
+.navbar-inverse .nav.nav-small [class*=" icon-"],
+.navbar .nav.nav-small [class*=" icon-"] {
+  *position: relative;
+  *top: -5px;
+}
+.navbar-inverse .nav.nav-small li a.toggleBrandbar [class^="icon-"],
+.navbar .nav.nav-small li a.toggleBrandbar [class^="icon-"],
+.navbar-inverse .nav.nav-small li a.toggleBrandbar [class*=" icon-"],
+.navbar .nav.nav-small li a.toggleBrandbar [class*=" icon-"] {
+  *position: relative;
+  *top: 0px;
+}
+.widget-header {
+  *position: relative;
+}
+.widget-header .commands.pull-right {
+  *display: inline;
+  *float: none;
+  *position: absolute;
+  *right: 0;
+}
+.stats {
+  *display: block;
+  zoom: 1;
+}
+.stats:before,
+.stats:after {
+  content: "";
+  display: table;
+}
+.stats:after {
+  clear: both;
+}
+.stats .stat {
+  *float: left;
+  *display: block;
+  *width: 22.5%;
+}
+.shortcuts {
+  zoom: 1;
+}
+.shortcuts:before,
+.shortcuts:after {
+  content: "";
+  display: table;
+}
+.shortcuts:after {
+  clear: both;
+}
+.shortcuts .shortcut {
+  *float: left;
+  *display: block;
+  *width: 22.5%;
+}
+@media (max-width: 480px) {
+  .sidebar {
+    *width: auto;
+  }
+}
