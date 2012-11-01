@@ -4,20 +4,26 @@
 
 .btn-primary
   background-image: linear-gradient(top, #003366, $kabaBlue)
+  filter unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr=#003366, endColorstr=#04284d, GradientType=0)')
 
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled]
   background: $kabaBlue
+  filter unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr=#04284d, endColorstr=#003366, GradientType=0)')
+  border-color: $kabaBlue
 
 .btn-info
   background-image: linear-gradient(top, $kabaMiddleBlue, #7e8794)
+  filter unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr=#8d97a6, endColorstr=#7e8794, GradientType=0)')
   border-color: $kabaMiddleBlue
 
 .btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled]
-  background: #7e8794
+  background: darken(#7e8794, 15)
+  filter unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr=#7e8794, endColorstr=#8d97a6, GradientType=0)')
   border-color: $kabaMiddleBlue
 
 .btn-warning
   background-image: linear-gradient(top, $kabaOrange, #d99100)
+  filter unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2a200, endColorstr=#f2a200, GradientType=0)')
 
 .btn-warning:hover, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled]
   background: #d99100
