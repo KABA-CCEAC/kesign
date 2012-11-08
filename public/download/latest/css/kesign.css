@@ -1249,7 +1249,9 @@ body .navbar .brand {
   margin-bottom: 2em;
   overflow: hidden;
 }
-.widget-header {
+.widget-header,
+.widget-th,
+.widget-tf {
   position: relative;
   height: 37px;
   line-height: 40px;
@@ -1258,10 +1260,14 @@ body .navbar .brand {
   border: 1px solid #d5dbe0;
   -webkit-background-clip: padding-box;
 }
-.widget-header .commands {
+.widget-header .commands,
+.widget-th .commands,
+.widget-tf .commands {
   margin-top: 6px;
 }
-.widget-header h3 {
+.widget-header h3,
+.widget-th h3,
+.widget-tf h3 {
   overflow: hidden;
   margin-left: 13px;
   margin-right: 13px;
@@ -1287,6 +1293,11 @@ body .navbar .brand {
   height: 18px;
   left: 24px;
   display: inline-block;
+}
+.widget-th,
+.widget-tf {
+  padding: 2px 10px;
+  color: #8d97a6;
 }
 .widget-content {
   padding: 20px 15px 15px;
