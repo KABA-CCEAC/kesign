@@ -1297,7 +1297,8 @@ body .navbar .brand {
 .widget-th,
 .widget-tf {
   padding: 2px 10px;
-  color: #8d97a6;
+  background: #8d97a6;
+  color: #d5dbe0;
 }
 .widget-content {
   padding: 20px 15px 15px;
