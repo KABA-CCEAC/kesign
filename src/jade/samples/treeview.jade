@@ -1,0 +1,223 @@
+- var path = '../'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+    link(href='#{path}public/css/bootstrap.treeview.css', rel='stylesheet')
+
+  body
+    header.header
+      .header-inner
+        .brandbar.brandbar-xsmall.collapse.in
+            a.brand(href="#{path}index.html")
+
+            .statusbar.pull-right
+              strong Welcome 
+              | John Mustermann 
+              span.label.label-warning Admin Status
+
+        .navbar
+          include ../includes/sample-navbar
+
+          
+    .main
+      .main-inner
+        .container
+          .page
+            .row-fluid
+              .span8
+                .widget
+                  .widget-header
+                    h3 Tree View Sample (CSS only)
+                  .widget-content
+                    .css-treeview
+                      ul
+                        li
+                          input#item-0(type='checkbox')
+                          label(for='item-0') 
+                            i.icon-cloud
+                            |  This Folder is Closed By Default
+                          ul
+                            li
+                              input#item-0-0(type='checkbox')
+                              label(for='item-0-0') 
+                                i.icon-envelope
+                                |  Ooops! A Nested Folder
+                              ul
+                                li
+                                  input#item-0-0-0(type='checkbox')
+                                  label(for='item-0-0-0') Look Ma - No Hands!
+                                  ul
+                                    li
+                                      a(href='./') First Nested Item
+                                    li
+                                      a(href='./') Second Nested Item
+                                    li
+                                      a(href='./') Third Nested Item
+                                    li
+                                      a(href='./') Fourth Nested Item
+                                li
+                                  a(href='./') Item 1
+                                li
+                                  a(href='./') Item 2
+                                li
+                                  a(href='./') Item 3
+                            li
+                              input#item-0-1(type='checkbox')
+                              label(for='item-0-1') 
+                                i.icon-legal
+                                |  Yet Another One
+                              ul
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                            li
+                              input#item-0-2(type='checkbox', disabled='disabled')
+                              label(for='item-0-2') 
+                                i.icon-lemon
+                                | Disabled Nested Items
+                              ul
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                            li
+                              a(href='./') item
+                            li
+                              a(href='./') item
+                            li
+                              a(href='./') item
+                            li
+                              a(href='./') item
+                        li
+                          input#item-1(type='checkbox', checked='checked')
+                          label(for='item-1') 
+                            i.icon-magic
+                            |  This One is Open by Default...
+                          ul
+                            li
+                              input#item-1-0(type='checkbox')
+                              label(for='item-1-0') 
+                                i.icon-inbox
+                                |  And Contains More Nested Items...
+                              ul
+                                li
+                                  a(href='./') Look Ma - No Hands
+                                li
+                                  a(href='./') Another Item
+                                li
+                                  a(href='./') And Yet Another
+                            li
+                              a(href='./') Lorem
+                            li
+                              a(href='./') Ipsum
+                            li
+                              a(href='./') Dolor
+                            li
+                              a(href='./') Sit Amet
+                        li
+                          input#item-2(type='checkbox')
+                          label(for='item-2') Can You Believe...
+                          ul
+                            li
+                              input#item-2-0(type='checkbox')
+                              label(for='item-2-0') That This Treeview...
+                              ul
+                                li
+                                  input#item-2-2-0(type='checkbox')
+                                  label(for='item-2-2-0') Does Not Use Any JavaScript...
+                                  ul
+                                    li
+                                      a(href='./') But Relies Only
+                                    li
+                                      a(href='./') On the Power
+                                    li
+                                      a(href='./') Of CSS3
+                                li
+                                  a(href='./') Item 1
+                                li
+                                  a(href='./') Item 2
+                                li
+                                  a(href='./') Item 3
+                            li
+                              input#item-2-1(type='checkbox')
+                              label(for='item-2-1') This is a Folder With...
+                              ul
+                                li
+                                  a(href='./') Some Nested Items...
+                                li
+                                  a(href='./') Some Nested Items...
+                                li
+                                  a(href='./') Some Nested Items...
+                                li
+                                  a(href='./') Some Nested Items...
+                                li
+                                  a(href='./') Some Nested Items...
+                            li
+                              input#item-2-2(type='checkbox', disabled='disabled')
+                              label(for='item-2-2') Disabled Nested Items
+                              ul
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+                                li
+                                  a(href='./') item
+
+              .span4
+                .well.well-kabaLightGray
+                  h5 
+                    i.icon-file.icon-large
+                    |  Source
+                  p This example is based on a pure css3 technique:
+
+                  ul
+                    li: a(href="http://acidmartin.wordpress.com/2011/09/26/css3-treevew-no-javascript/", target="_new") Blogpost about pure css3 tree view
+                    li: a(href="#{path}public/css/bootstrap.treeview.css") additional stylesheet
+
+                  p If you need more javascript control you might try:
+                  ul
+                    li: a(href="http://www.jstree.com/", target="_new") jsTree
+    footer.footer
+      .footer-inner
+          | kesign is freely distributable under the terms of the MIT license.
+    
+    include ../includes/layout/endscripts
+
+
