@@ -1,0 +1,33 @@
+@media print
+
+  // visibility
+  body *, .print-hidden
+    visibility: hidden
+
+  .main *, .print-visible
+    visibility: visible
+
+  .page.page-report
+    position: absolute
+    left: 0
+    top: 0
+
+  // fixes
+  body
+    font-size: 0.5em
+
+  .main > .main-inner > .container
+    margin: 0
+
+    > .page
+      border: none
+      margin: 0
+      box-shadow: none
+
+      &:after
+        visibility: hidden
+        box-shadow: none
+        content: ''
+
+    > .page-report
+      margin-left: 50px

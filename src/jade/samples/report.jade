@@ -1,0 +1,230 @@
+- var path = '../'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+    link(href='#{path}public/css/bootstrap.dataTables-1.9.4.css', rel='stylesheet')
+    script(src='#{path}public/js/jquery.dataTables-1.9.4.js')
+    script(src='#{path}public/js/jquery.dataTables.bootstrap-1.9.4.js')
+
+  body
+    header.header
+      .header-inner
+        .brandbar.brandbar-xsmall.collapse.in
+            a.brand(href="#{path}index.html")
+
+            .statusbar.pull-right
+              strong Welcome 
+              | John Mustermann 
+              span.label.label-warning Admin Status
+
+        .navbar
+          include ../includes/sample-navbar
+
+          
+    .main
+      .main-inner
+        .container
+          .page.page-report
+            .report
+              .report-brandbar
+                img.brand(src="#{path}public/img/kaba.gif")
+                p.report-source Customer's Company, ...
+
+              .report-title
+                h1 Report Name
+                  small  more optional info
+                .report-info
+                  span Some additional information
+                  span.pull-right Hans Muster - 13422
+
+              .report-section
+                .row-fluid
+                  .span12
+                    h4 This is a section
+                    table.table.table-condensed
+                      thead
+                        tr
+                          th First row
+                          th Text
+                          th.right Decimal
+                          th.center Centered
+                          th Date / Times
+                      tbody
+                        tr
+                          td.right 1212.125
+                          td Ci dolor re porum dus
+                          td.right 145.5 h
+                          td.center #456
+                          td 23.12.2012 09:15
+                        tr
+                          td.right 4567.897
+                          td Lorem ipsum dolor sit amet
+                          td.right 45.5 h
+                          td.center #456
+                          td 24.12.2012 10:30
+                        tr.highlight
+                          td.right 123453.433
+                          td Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+                          td.right 122.0 h
+                          td.center #456
+                          td 25.12.2012 07:45
+                        tr
+                          td.right 19.190
+                          td Claritas est etiam processus dynamicus
+                          td.right 15.5 h
+                          td.center #456
+                          td 26.12.2012 09:00
+                        tr
+                          td.right 99.340
+                          td Typi non habent claritatem insitam
+                          td.right 140.0 h
+                          td.center #456
+                          td 27.12.2012 08:15
+                        tr
+                          td.right 13423.843
+                          td Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum
+                          td.right 145.5 h
+                          td.center #456
+                          td 28.12.2012 09:00
+                        tr
+                          td.right 8832.334
+                          td Nam liber tempor cum soluta
+                          td.right 45.5 h
+                          td.center #456
+                          td 29.12.2012 11:00
+                        tr
+                          td.right 123.453
+                          td illum dolore eu feugiat nulla facilisis 
+                          td.right 5.5 h
+                          td.center #456
+                          td 30.12.2012 10:15
+                      tfoot
+                        tr
+                          td Saldo
+                          td
+                          td.right 1205.5 h
+                          td.center
+                          td
+
+              .report-section
+                .row-fluid
+                  .span6
+                    h4 This is a section
+                    table.table.table-condensed
+                      thead
+                        tr
+                          th First row
+                          th Text
+                          th.right Decimal
+                      tbody
+                        tr
+                          td.right 1212.125
+                          td Ci dolor re porum dus
+                          td.right 145.5 h
+                        tr.error
+                          td.right 4567.897
+                          td Lorem ipsum dolor sit amet
+                          td.right.error -45.5 h
+                        tr.warning
+                          td.right 19.190
+                          td Claritas est etiam processus dynamicus
+                          td.right.warning 15.5 h
+                        tr.success
+                          td.right 99.340
+                          td Typi non habent claritatem insitam
+                          td.right.success 140.0 h
+                        tr
+                          td.right 123453.433
+                          td Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+                          td.right 122.0 h
+
+                  .span6
+                    h5 This is a secondary section
+                    table.table.table-condensed
+                      thead
+                        tr
+                          th First row
+                          th Text
+                          th.right Decimal
+                      tbody
+                        tr
+                          td.right 1212.125
+                          td Ci dolor re porum dus
+                          td.right 145.5 h
+                        tr
+                          td.right 4567.897
+                          td Lorem ipsum dolor sit amet
+                          td.right 45.5 h
+                        tr
+                          td.right 123453.433
+                          td Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                          td.right 122.0 h
+                        tr
+                          td.right 19.190
+                          td Claritas est etiam processus dynamicus
+                          td.right 15.5 h
+                        tr
+                          td.right 99.340
+                          td Typi non habent claritatem insitam
+                          td.right 140.0 h
+                      tfoot
+                        tr
+                          td Saldo
+                          td
+                          td.right 405.5 h
+
+              .report-section
+                .well.well-kabaBackgroundGray
+                  .row-fluid
+                    .span12
+                      h4 This is a section
+                      table.table.table-condensed
+                        thead
+                          tr
+                            th First row
+                            th Text
+                            th.right Decimal
+                            th.center Centered
+                            th Date / Times
+                        tbody
+                          tr
+                            td.right 1212.125
+                            td Ci dolor re porum dus
+                            td.right 145.5 h
+                            td.center #456
+                            td 23.12.2012 09:15
+                          tr
+                            td.right 4567.897
+                            td Lorem ipsum dolor sit amet
+                            td.right 45.5 h
+                            td.center #456
+                            td 24.12.2012 10:30
+                          tr
+                            td.right 123453.433
+                            td Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+                            td.right 122.0 h
+                            td.center #456
+                            td 25.12.2012 07:45
+                          tr
+                            td.right 123.453
+                            td illum dolore eu feugiat nulla facilisis 
+                            td.right 5.5 h
+                            td.center #456
+                            td 30.12.2012 10:15
+                        tfoot
+                          tr
+                            td Saldo
+                            td
+                            td.right 1205.5 h
+                            td.center
+                            td
+
+    footer.footer
+      .footer-inner
+          | kesign is freely distributable under the terms of the MIT license.
+    
+    include ../includes/layout/endscripts
+
+

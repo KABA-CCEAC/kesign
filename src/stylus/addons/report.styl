@@ -1,0 +1,79 @@
+.report
+  margin: 0 15px 25px
+
+  h1, h2
+    border-bottom: solid 1px $kabaBlue
+
+  h1
+    line-height: 50px
+  
+  h2
+    line-height: 42px
+
+  h5
+    font-size: 17.5px /* equal to h4 */
+    color: $kabaMiddleBlue
+
+  .report-brandbar
+    height: 90px
+    position: relative
+
+    .brand
+      position: absolute
+      top: -15px
+      right: -15px
+      display: inline-block
+      height: 80px
+      width: 159px
+      /*background: url(../img/kaba.gif) no-repeat*/
+
+    .report-source
+      position: absolute
+      bottom: 0
+      right: 0
+
+  .report-title
+    margin-bottom: 25px
+
+  .report-section
+    .well
+      padding: 0 8px
+
+    .table
+
+      tfoot tr td
+        border-top: solid 1px $kabaMiddleBlue
+
+      tr.highlight
+        font-weight: bold
+        color: $kabaBlue
+
+      td.right, th.right
+        text-align: right
+        padding-right: 15px
+
+      td.center, th.center
+        text-align: center
+
+      td.success
+        color: $kabaGreen
+
+      td.warning
+        color: $kabaOrange
+
+      td.error
+        color: $kabaRed
+
+@media print
+  .report
+    h4, h5
+      font-size: 12.5px
+
+    .report-section .well
+      padding: 0
+      border: none
+      box-shadow: none
+
+    .table-condensed th, .table-condensed td
+      padding: 0
+    line-height: 18px
