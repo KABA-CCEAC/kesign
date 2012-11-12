@@ -1,0 +1,341 @@
+- var path = '../'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+    script(src='http://d3js.org/d3.v3.min.js')
+
+    style
+      /* bar chart */
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .bar {
+        fill: steelblue;
+      }
+
+      .x.axis path {
+        display: none;
+      }
+
+      /* pie chart */
+      .arc path {
+        stroke: #fff;
+      }
+
+  body
+    header.header
+      .header-inner
+        .brandbar.brandbar-xsmall.collapse.in
+            a.brand(href="#{path}index.html")
+
+            .statusbar.pull-right
+              strong Welcome 
+              | John Mustermann 
+              span.label.label-warning Admin Status
+
+        .navbar
+          include ../includes/sample-navbar
+
+          
+    .main
+      .main-inner
+        .container
+          .page
+            .row-fluid
+              .span8
+                .widget
+                  .widget-header
+                    i.icon-bar-chart
+                    h3 Grouped Bar Chart Sample (using d3)
+                  .widget-content.container-barchart
+                    #barchart
+
+                    p 
+                      | Not much to say here, if possible and 
+                      strong usable 
+                      | try to reuse the color defined in the guidelines.
+
+              .span4
+                .well.well-kabaLightGray
+                  h5 
+                    i.icon-file.icon-large
+                    |  Source
+                  p This examples are based on d3:
+
+                  ul
+                    li: a(href="https://github.com/mbostock/d3/wiki/Gallery", target="_new") Basic d3 charts
+
+            .row-fluid
+              .span8
+                .widget
+                  .widget-header
+                    i.icon-bar-chart
+                    h3 Stacked Bar Chart Sample (using d3)
+                  .widget-content.container-stacked-barchart
+                    #stackedbarchart
+
+              .span4
+                .widget
+                  .widget-header
+                    i.icon-bar-chart
+                    h3 Pie Chart Sample (using d3)
+                  .widget-content.container-piechart
+                    #piechart
+
+
+    footer.footer
+      .footer-inner
+          | kesign is freely distributable under the terms of the MIT license.
+    
+    include ../includes/layout/endscripts
+
+    script(type="text/javascript")
+      // barchart
+      (function() {
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+        width = $('.container-barchart').width() - margin.left - margin.right,
+        height = width * 0.6 - margin.top - margin.bottom;
+
+        var x0 = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+        var x1 = d3.scale.ordinal();
+
+        var y = d3.scale.linear()
+            .range([height, 0]);
+
+        var color = d3.scale.ordinal()
+            .range(["#F2A200", "#04284D", "#8D97A6", "#D5DBE0", "#CCCCCC", "#808080", "#4C4C4C"]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x0)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(d3.format(".2s"));
+
+        var svg = d3.select("#barchart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("#{path}public/data/barchart.csv", function(error, data) {
+          var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "State"; });
+
+          data.forEach(function(d) {
+            d.ages = ageNames.map(function(name) { return {name: name, value: +d[name]}; });
+          });
+
+          x0.domain(data.map(function(d) { return d.State; }));
+          x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
+          y.domain([0, d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);
+
+          svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+
+          svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Population");
+
+          var state = svg.selectAll(".state")
+              .data(data)
+            .enter().append("g")
+              .attr("class", "g")
+              .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; });
+
+          state.selectAll("rect")
+              .data(function(d) { return d.ages; })
+            .enter().append("rect")
+              .attr("width", x1.rangeBand())
+              .attr("x", function(d) { return x1(d.name); })
+              .attr("y", function(d) { return y(d.value); })
+              .attr("height", function(d) { return height - y(d.value); })
+              .style("fill", function(d) { return color(d.name); });
+
+          var legend = svg.selectAll(".legend")
+              .data(ageNames.slice().reverse())
+            .enter().append("g")
+              .attr("class", "legend")
+              .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+          legend.append("rect")
+              .attr("x", width - 18)
+              .attr("width", 18)
+              .attr("height", 18)
+              .style("fill", color);
+
+          legend.append("text")
+              .attr("x", width - 24)
+              .attr("y", 9)
+              .attr("dy", ".35em")
+              .style("text-anchor", "end")
+              .text(function(d) { return d; });
+
+        });
+      })();
+
+      // stackedbarchart
+      (function() {
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+        width = $('.container-stacked-barchart').width() - margin.left - margin.right,
+        height = width * 0.6 - margin.top - margin.bottom;
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+        var y = d3.scale.linear()
+            .rangeRound([height, 0]);
+
+        var color = d3.scale.ordinal()
+            .range(["#F2A200", "#04284D", "#8D97A6", "#D5DBE0", "#CCCCCC", "#808080", "#4C4C4C"]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(d3.format(".2s"));
+
+        var svg = d3.select("#stackedbarchart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("#{path}public/data/stacked-barchart.csv", function(error, data) {
+          color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
+
+          data.forEach(function(d) {
+            var y0 = 0;
+            d.ages = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+            d.total = d.ages[d.ages.length - 1].y1;
+          });
+
+          data.sort(function(a, b) { return b.total - a.total; });
+
+          x.domain(data.map(function(d) { return d.State; }));
+          y.domain([0, d3.max(data, function(d) { return d.total; })]);
+
+          svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+
+          svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Population");
+
+          var state = svg.selectAll(".state")
+              .data(data)
+            .enter().append("g")
+              .attr("class", "g")
+              .attr("transform", function(d) { return "translate(" + x(d.State) + ",0)"; });
+
+          state.selectAll("rect")
+              .data(function(d) { return d.ages; })
+            .enter().append("rect")
+              .attr("width", x.rangeBand())
+              .attr("y", function(d) { return y(d.y1); })
+              .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+              .style("fill", function(d) { return color(d.name); });
+
+          var legend = svg.selectAll(".legend")
+              .data(color.domain().slice().reverse())
+            .enter().append("g")
+              .attr("class", "legend")
+              .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+          legend.append("rect")
+              .attr("x", width - 18)
+              .attr("width", 18)
+              .attr("height", 18)
+              .style("fill", color);
+
+          legend.append("text")
+              .attr("x", width - 24)
+              .attr("y", 9)
+              .attr("dy", ".35em")
+              .style("text-anchor", "end")
+              .text(function(d) { return d; });
+
+        });
+
+      })();
+
+      // piechart
+      (function() {
+        var width = $('.container-piechart').width(),
+        height = width * 0.8,
+        radius = Math.min(width, height) / 2;
+
+        var color = d3.scale.ordinal()
+            .range(["#F2A200", "#04284D", "#8D97A6", "#D5DBE0", "#CCCCCC", "#808080", "#4C4C4C"]);
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(0);
+
+        var pie = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d.population; });
+
+        var svg = d3.select("#piechart").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        d3.csv("#{path}public/data/piechart.csv", function(error, data) {
+
+          data.forEach(function(d) {
+            d.population = +d.population;
+          });
+
+          var g = svg.selectAll(".arc")
+              .data(pie(data))
+            .enter().append("g")
+              .attr("class", "arc");
+
+          g.append("path")
+              .attr("d", arc)
+              .style("fill", function(d) { return color(d.data.age); });
+
+          g.append("text")
+              .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+              .attr("dy", ".35em")
+              .style("text-anchor", "middle")
+              .text(function(d) { return d.data.age; });
+
+        });
+
+      })();
+
+      $('.widget-content').equalHeights();
+
+
+
