@@ -1606,6 +1606,10 @@ ul.commands li.divider {
 .report .report-section .table th.center {
   text-align: center;
 }
+.report .report-section .table td.highlight {
+  font-weight: bold;
+  color: #04284d;
+}
 .report .report-section .table td.success {
   color: #72a74b;
 }
