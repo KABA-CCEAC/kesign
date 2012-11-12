@@ -1,0 +1,421 @@
+- var path = '../'
+- var nav = '.documentation'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    include ../includes/layout/header
+          
+    include ../includes/layout/content
+      .sidebar(data-spy="affix", data-offset-top="100")
+        a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        .sidebar-collapse.collapse
+          ul.nav.nav-list
+            li.nav-header Pages
+            li.active: a(href="#page-section") Report Page
+            li.active: a(href="#header-section") Report Header
+            li.active: a(href="#title-section") Report Title
+            li.active: a(href="#data-section") Report Data
+            li
+              a(href="#{path}doc/index.html").pull-right
+                i.icon-chevron-left.orange
+                | back
+
+      .page
+        .section
+            .row-fluid
+              .span10
+                .widget
+                  .widget-header
+                    h3 Report Preview
+
+                  .widget-content
+                    .section
+                      h4 Preview:
+
+                      :markdown
+                        You can easily create a report page:
+
+                      .kesign-example.kesign-example-login
+                        img.sample-img.img-polaroid(src='#{path}public/img/samples/report.png')
+
+                      p 
+                        | You can have a look at the provided 
+                        a(href="#{path}samples/report.html") sample.
+
+        .section#page-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Report Page
+
+                .widget-content
+                  .section
+                    :markdown
+                      You can change the visible appearance of the default page by adding class `.report-page`.
+
+                      Wrap the report itself into a `div` with class `.report`.
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+
+                    .prettyprint
+                      - var sample = '<div class="page page-report">\n'
+                      - sample    += '  <div class="report">\n'
+                      - sample    += '    // report comes here\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#header-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Report Header
+
+                .widget-content
+                  .section
+
+                    :markdown
+                      You can add the report header by adding a `.report-brandbar`.
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .report-brandbar
+                                  img.brand(src="#{path}public/img/kaba.gif")
+                                  p.report-source Customer's Company, ...
+
+                    .prettyprint
+                      - var sample = '<div class="page page-report">\n'
+                      - sample    += '  <div class="report">\n'
+                      - sample    += '    <div class="report-brandbar">\n'
+                      - sample    += '      <img src="kaba.gif" />\n'
+                      - sample    += '      <p class="report-source">Customer\'s company</p>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#title-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Report Title
+
+                .widget-content
+                  .section
+
+                    :markdown
+                      You can add the report header by adding a `.report-title`.
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .report-title
+                                  h1 Title
+                                    small  small
+                                  .report-info
+                                    span Some additional information
+                                    span.pull-right Hans Muster - 13422
+
+                    .prettyprint
+                      - var sample = '<div class="page page-report">\n'
+                      - sample    += '  <div class="report">\n'
+                      - sample    += '    <div class="report-title">\n'
+                      - sample    += '      <h1>Title<small> small</small></h1>\n'
+                      - sample    += '      <div class="report-info">\n'
+                      - sample    += '        <span>Some additional info</span>\n'
+                      - sample    += '        <span class="pull-right">Hans Muster - 13422</span>\n'
+                      - sample    += '      </div>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+        .section#data-section
+          .row-fluid
+            .span10
+              .widget
+                .widget-header
+                  h3 Report Data
+
+                .widget-content
+                  .section
+
+                    :markdown
+                      Basically we just use a `table` wrapped into a `.report-section`. The multicolumn 
+                      layout can be done like everywhere with `.row-fluid > spanX`
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .report-section
+                                  .row-fluid
+                                    .span12
+                                      h4 This is a primary a section
+                                      table.table.table-condensed
+                                        thead
+                                          tr
+                                            th First row
+                                            th Text
+                                            th.right Decimal
+                                        tbody
+                                          tr
+                                            td.right 1212.125
+                                            td Ci dolor re porum dus
+                                            td.right 145.5 h
+                                          tr
+                                            td.right 4567.897
+                                            td Lorem ipsum dolor sit amet
+                                            td.right 45.5 h
+                                          tr
+                                            td.right 123453.433
+                                            td Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                                            td.right 122.0 h
+                                          tr
+                                            td.right 19.190
+                                            td Claritas est etiam processus dynamicus
+                                            td.right 15.5 h
+                                          tr
+                                            td.right 99.340
+                                            td Typi non habent claritatem insitam
+                                            td.right 140.0 h
+                                        tfoot
+                                          tr
+                                            td Saldo
+                                            td
+                                            td.right 405.5 h
+                                .report-section
+                                  .row-fluid
+                                    .span12
+                                      h5 This is a secondary a section
+                                      table.table.table-condensed
+                                        thead
+                                          tr
+                                            th First row
+                                            th Text
+                                            th.right Decimal
+                                        tbody
+                                          tr
+                                            td.right 1212.125
+                                            td Ci dolor re porum dus
+                                            td.right 145.5 h
+                                          tr
+                                            td.right 4567.897
+                                            td Lorem ipsum dolor sit amet
+                                            td.right 45.5 h
+
+                    .prettyprint
+                      - var sample = '<div class="page page-report">\n'
+                      - sample    += '  <div class="report">\n'
+                      - sample    += '    <div class="report-section">\n'
+                      - sample    += '      <h4>Title</h4>\n'
+                      - sample    += '      <table class="table table-condensed">\n'
+                      - sample    += '        <thead>...</thead>\n'
+                      - sample    += '        <tbody>...</tbody>\n'
+                      - sample    += '        <tfoot>...</tfoot>\n'
+                      - sample    += '      </table>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
+
+                  .section
+                    h5 alignment
+
+                    :markdown
+                      You can align content in a `th or td` by appending class `.right or .center`
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .report-section
+                                  .row-fluid
+                                    .span12
+                                      h4 h4 This is a primary section
+                                      table.table.table-condensed
+                                        thead
+                                          tr
+                                            th.right right
+                                            th.center center
+                                            th default
+                                        tbody
+                                          tr
+                                            td.right 1212.125
+                                            td.center Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr
+                                            td.right 12.125
+                                            td.center Ci dolor
+                                            td 5.5 h
+
+                  .section
+                    h5 highlighting
+
+                    :markdown
+                      You can highlight a row `tr` by appending class `.highlight, .success, .warning or .error`
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .report-section
+                                  .row-fluid
+                                    .span12
+                                      h5 h5 This is a secondary section
+                                      table.table.table-condensed
+                                        thead
+                                          tr
+                                            th First row
+                                            th Text
+                                            th.right Decimal
+                                        tbody
+                                          tr.highlight
+                                            td .highlight
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr.success
+                                            td .success
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr.warning
+                                            td .warning
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr.error
+                                            td .error
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+
+                    :markdown
+                      You can highlight a data-entry `td` by appending class `.highlight, .success, .warning or .error`
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .report-section
+                                  .row-fluid
+                                    .span12
+                                      h5 h5 This is a secondary section
+                                      table.table.table-condensed
+                                        thead
+                                          tr
+                                            th First row
+                                            th Text
+                                            th.right Decimal
+                                        tbody
+                                          tr
+                                            td.highlight .highlight
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr
+                                            td.success .success
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr
+                                            td.warning .warning
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+                                          tr
+                                            td.error .error
+                                            td Ci dolor re porum dus
+                                            td 145.5 h
+
+                    :markdown
+                      You can wrap the table into a well with class `.well-kabaBackgroundGray` to highlight it.
+
+                    .kesign-example.kesign-example-report
+                      .kesign-example-report-wrapper
+                        .main
+                          .container
+                            .page.page-report
+                              .report
+                                .well.well-kabaBackgroundGray
+                                  .report-section
+                                    .row-fluid
+                                      .span12
+                                        h5 h5 This is a secondary section
+                                        table.table.table-condensed
+                                          thead
+                                            tr
+                                              th First row
+                                              th Text
+                                              th.right Decimal
+                                          tbody
+                                            tr
+                                              td 123.45
+                                              td Ci dolor re porum dus
+                                              td 145.5 h
+                                            tr
+                                              td 3345.5
+                                              td Ci dolor re porum dus
+                                              td 145.5 h
+                                            tr
+                                              td 45.6
+                                              td Ci dolor re porum dus
+                                              td 145.5 h
+                                            tr
+                                              td 45.9
+                                              td Ci dolor re porum dus
+                                              td 145.5 h
+      
+    include ../includes/layout/footer
+    
+    include ../includes/layout/endscripts
+
+    // script(type='text/javascript')
+    //   if ($('.toggleBrandbar').data('toggle') === 'collapse') {
+    //     var icon = $('.toggleBrandbar i');
+    //     $('.brandbar-collapse').on('hide', function () {
+    //       $('.example-header').addClass('collapsed');
+    //       icon.removeClass('icon-chevron-up').addClass('icon-chevron-down');
+    //     });
+    //     $('.brandbar-collapse').on('show', function () {
+    //       $('.example-header').removeClass('collapsed');
+    //       icon.removeClass('icon-chevron-down').addClass('icon-chevron-up');
+    //     });
+    //   }
+
