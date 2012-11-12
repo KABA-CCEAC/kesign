@@ -1378,6 +1378,27 @@ body .navbar .brand {
 .widget-table .table tr th:last-child {
   border-right: none;
 }
+.widget-footer {
+  position: relative;
+  margin-top: -1px;
+  background: #f2f4f6;
+  color: #04284d;
+  border: 1px solid #d5dbe0;
+  -webkit-background-clip: padding-box;
+  padding: 3px 10px 4px;
+  zoom: 1;
+}
+.widget-footer:before,
+.widget-footer:after {
+  content: "";
+  display: table;
+}
+.widget-footer:after {
+  clear: both;
+}
+.widget-footer .btn {
+  margin-left: 5px;
+}
 .widget-content .section {
   margin-bottom: 40px;
 }
@@ -2083,6 +2104,18 @@ ul.commands li.divider {
 }
 .text-white {
   color: #fff;
+}
+.text-kabaOrange,
+.text-warning {
+  color: #f2a200;
+}
+.text-kabaRed,
+.text-error {
+  color: #f20000;
+}
+.text-kabaGreen,
+.text-success {
+  color: #72a74b;
 }
 .shortcuts {
   text-align: left;

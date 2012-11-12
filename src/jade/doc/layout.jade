@@ -472,7 +472,42 @@ html(lang="en")
                       pre
                         code
                           | #{sample}
+                  
+                  .section
+                    h4 Add a footer:
+                    .kesign-example.kesign-example-widget
+                      .kesign-example-page-wrapper
+                        .main
+                          .container
+                            .page
+                              .widget
+                                .widget-header
+                                  i.icon-envelope-alt
+                                  h3 Widget title with icon
+                                .widget-content
+                                  p content...
+                                .widget-footer
+                                  .pull-right
+                                    button.btn action 1
+                                    button.btn.btn-primary action 2
 
+                    .prettyprint
+                      - var sample = '<div class="widget">\n'
+                      - sample    += '  <div class="widget-header">\n'
+                      - sample    += '    <i class="icon-envelope-alt"></i>\n'
+                      - sample    += '    <h3>Title</h3>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '  <div class="widget-content">content...</div>\n'
+                      - sample    += '  <div class="widget-footer">\n'
+                      - sample    += '    <div class="pull-right">\n'
+                      - sample    += '      <button class="btn">a button</button>\n'
+                      - sample    += '    </div>\n'
+                      - sample    += '  </div>\n'
+                      - sample    += '</div>\n'
+                      
+                      pre
+                        code
+                          | #{sample}
                   .section
                     h4 Add an icon:
                     .kesign-example.kesign-example-widget
