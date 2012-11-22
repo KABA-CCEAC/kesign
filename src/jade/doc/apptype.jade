@@ -36,6 +36,10 @@ html(lang="en")
                 .app-type-title
                   h4 Webapplikation
                 .app-type-description
+                  .row-fluid
+                    .span12
+                      img.polaroid.span10.offset1(src="#{path}public/img/appTypes_web.jpg")
+                  
                   :markdown
                     Doing a responsive webapplikation is in most cases the best and cost efficient solution. If the 
                     applikation is developed with the mobile first approach for interaction there is not even the need 
@@ -64,6 +68,10 @@ html(lang="en")
                 .app-type-title
                   h4 Native / Hybrid Application
                 .app-type-description
+                  .row-fluid
+                    .span12
+                      img.polaroid.span10.offset1(src="#{path}public/img/appTypes_native.jpg")
+
                   :markdown
                     If an webapplikation is not sufficent. You should consider doing an application to the devices 
                     native style.
@@ -94,6 +102,10 @@ html(lang="en")
                 .app-type-title
                   h4 Custom Application
                 .app-type-description
+                  .row-fluid
+                    .span12
+                      img.polaroid.span10.offset1(src="#{path}public/img/appTypes_custom.jpg")
+
                   :markdown
                     If an native application is not sufficent. You should consider doing an application to the devices 
                     native style.
@@ -117,6 +129,7 @@ html(lang="en")
                         li higher cost than native applikation
                         li specific development environment
                         li deployment via store
+
                 .app-type-interface.red
                   h6 
                    | reuse a kaba design style or create a special 
@@ -127,7 +140,8 @@ html(lang="en")
     include ../includes/layout/endscripts
 
     script(type='text/javascript')
-      $(document).ready(function() {
+      //$(document).ready(function() {
+      $(window).load(function() {
         $('.app-type-description').equalHeights();
         $('.app-type-interface').equalHeights();
       });
