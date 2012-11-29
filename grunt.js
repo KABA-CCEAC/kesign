@@ -4,7 +4,7 @@
 //
 module.exports = function(grunt) {
 
-  var version = '0.9.0';
+  var version = '0.9.1';
 
 
   grunt.loadNpmTasks('grunt-contrib');
