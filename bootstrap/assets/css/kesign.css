@@ -1259,6 +1259,10 @@ body .navbar .brand {
   color: #04284d;
   border: 1px solid #d5dbe0;
   -webkit-background-clip: padding-box;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .widget-header .commands,
 .widget-th .commands,
@@ -1268,31 +1272,24 @@ body .navbar .brand {
 .widget-header h3,
 .widget-th h3,
 .widget-tf h3 {
-  overflow: hidden;
+  display: inline;
   margin-left: 13px;
   margin-right: 13px;
   font-size: 12px;
   font-weight: normal;
   line-height: 18px;
   text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .widget-header [class^="icon-"],
 .widget-header [class*=" icon-"] {
   position: relative;
-  margin-left: 13px;
-  margin-right: -2px;
+  margin: 2px -2px 0 13px;
+/* corrects icons in commands container */
+  top: 2px;
+/* corrects icons prepended to title */
   font-size: 18px;
+  line-height: 18px;
   color: #8d97a6;
-}
-.widget-header [class^="icon-"] + h3,
-.widget-header [class*=" icon-"] + h3 {
-  position: absolute;
-  height: 18px;
-  left: 24px;
-  display: inline-block;
 }
 .widget-th,
 .widget-tf {
