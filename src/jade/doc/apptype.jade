@@ -11,7 +11,7 @@ html(lang="en")
     include ../includes/layout/content
 
       .page
-        .section#hideLabels-section
+        .section
           .row-fluid
             .span8
               .widget
@@ -31,25 +31,26 @@ html(lang="en")
                     
 
           .row-fluid.app-types
-            .span4   
+            .span6   
               .app-type
                 .app-type-title
-                  h4 Webapplikation
+                  h4 Responsive Website
                 .app-type-description
                   .row-fluid
                     .span12
                       img.polaroid.span10.offset1(src="#{path}public/img/appTypes_web.jpg")
                   
                   :markdown
-                    Doing a responsive webapplikation is in most cases the best and cost efficient solution. If the 
-                    applikation is developed with the mobile first approach for interaction there is not even the need 
-                    for a separate solution for the mobile.
+                    Doing a responsive website/app is in most cases the best and cost efficient solution. This 
+                    solution brings 'good-enough' results in most cases for __desktop and tablet usage__. The usability on 
+                    a smartphone, depending on the content, might be insufficent.
 
                     You might consider not doing a webapplikation if you have special requirements:
 
                   ul.large
                     li access to device sensors
-                    li usability of webapplikation would be distracting
+                    li usability of website would be distracting
+                    li usage is primary for smartphone
 
                   .row-fluid
                     .span6
@@ -63,10 +64,45 @@ html(lang="en")
                 .app-type-interface
                   h6 choose the interface style of kesign
 
-            .span4
+            .span6   
               .app-type
                 .app-type-title
-                  h4 Native / Hybrid Application
+                  h4 todo: Mobilefirst Web / Hybrid Application
+                .app-type-description
+                  .row-fluid
+                    .span12
+                      img.polaroid.span10.offset1(src="#{path}public/img/appTypes_web.jpg")
+                  
+                  :markdown
+                    Doing a mobile-first website/app or hybrid app (eg. phonegap) is a cost efficient solution for doing a 
+                    solution primary focused for _smartphones_. The usability is significant raised on the smaller screensize 
+                    provided by this kind of device. Tablets would profit from a separate solution using the possibilities 
+                    of the larger screen size.
+
+                    You might consider not doing a Mobilefirst Web / Hybrid Application if you have special requirements:
+
+                  ul.large
+                    li access to device sensors not yet supported by platform builder
+                    li usability of mobilefirst web or hybrid applikation would be still distracting
+
+                  .row-fluid
+                    .span6
+                      ul.app-type-pros
+                        li do only once for all mobile devices
+                        li lower cost than native apps
+                        li branding is possible
+                        li hybrid: access to most device sensors
+                    .span6
+                      ul.app-type-cons
+                        li costs higer than pure responsive website
+                .app-type-interface
+                  h6 choose the interface style of kesign-mobile (tbd)
+
+          .row-fluid.app-types
+            .span6
+              .app-type
+                .app-type-title
+                  h4 Native Application
                 .app-type-description
                   .row-fluid
                     .span12
@@ -97,7 +133,7 @@ html(lang="en")
                    | choose the style of the given device 
                    small (iOS, Android, Win8,...)
 
-            .span4
+            .span6
               .app-type
                 .app-type-title
                   h4 Custom Application
