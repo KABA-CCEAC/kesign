@@ -181,9 +181,12 @@ html(lang="en")
                     is to decide for the right application type. Depending on the application type 
                     you could easily decide on the appropriate interface guideline.
 
-                  a.kaba-link(href='#{path}doc/apptype.html') choose your application type
+                  ul.unstyled
+                    li: a.kaba-link(href='#{path}doc/apptype.html') choose your application type
+                    li: a.kaba-link(href='#{path}ratchet/docs/') check out kesign-mobile visual style
 
             .span4
+              include includes/shared/downloads-mobile
       
     include includes/layout/footer
     

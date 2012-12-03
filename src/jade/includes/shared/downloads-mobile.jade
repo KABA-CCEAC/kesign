@@ -1,0 +1,33 @@
+- var version = '0.0.1'
+
+.downloads
+  h6 Downloads:
+  a.btn.btn-block.btn-large.btn-warning(href='#{path}public/download/versions/kesign-mobile-#{version}.zip', download='kesign-mobile-#{version}.zip') 
+    i.icon-download-alt
+    |  Latest v#{version} (zip)
+
+.downloads
+  h6 Quicklinks:
+  ul.unstyled
+    li: a(href='#{path}ratchet/docs/', target='_new') 
+      i.icon-cog
+      |  ratchet Documentation
+    //- li: a(href='#{path}doc/') 
+    //-   i.icon-cogs
+    //-   |   Kesign Documentation
+    //- li: a(href='#{path}pages/extensions.html') 
+    //-   i.icon-cogs
+    //-   |   Public Extensions & Javascripts
+    //- li: a(href='#{path}pages/samples.html') 
+    //-   i.icon-play-circle
+    //-   |   Samples
+   
+  hr
+  h6 Help:
+  ul.unstyled
+    li: a(href='https://github.com/KABA-CCEAC/kesign/issues')
+      i.icon-comments-alt
+      | Wishes & Issues
+    li: a(href='mailto://')
+      i.icon-envelope
+      |   send an email

@@ -209,6 +209,7 @@ module.exports = function(grunt) {
           "/": "./",
           "public": "public",
           "bootstrap": "bootstrap",
+          "ratchet": "ratchet",
           "pages": "pages",
           "doc": "doc",
           "samples": "samples"
