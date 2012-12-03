@@ -4,7 +4,8 @@
 //
 module.exports = function(grunt) {
 
-  var version = '0.9.1';
+  var version = '0.9.1'
+    , mobileVersion = '0.0.1';
 
 
   grunt.loadNpmTasks('grunt-contrib');
@@ -16,12 +17,23 @@ module.exports = function(grunt) {
   grunt.initConfig({
     meta: {
       version: version,
+      mobileVersion: mobileVersion,
       banner: '// kesign, v<%= meta.version %>\n' +
         '// Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
         '// Distributed under MIT license\n' + 
         '// http://kaba-cceac.github.com/kesign/',
       bannerCSS: '/*!' +
         ' * kesign, v<%= meta.version %>\n' +
+        ' * Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
+        ' * Distributed under MIT license\n' + 
+        ' * http://kaba-cceac.github.com/kesign/\n' +
+        ' */',
+      bannerMobile: '// kesign-mobile, v<%= meta.mobileVersion %>\n' +
+        '// Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
+        '// Distributed under MIT license\n' + 
+        '// http://kaba-cceac.github.com/kesign/',
+      bannerMobileCSS: '/*!' +
+        ' * kesign-mobile, v<%= meta.mobileVersion %>\n' +
         ' * Copyright (c)<%= grunt.template.today("yyyy") %> Kaba AG.\n' + 
         ' * Distributed under MIT license\n' + 
         ' * http://kaba-cceac.github.com/kesign/\n' +
@@ -40,6 +52,10 @@ module.exports = function(grunt) {
       kesignJS: {
         src: ['<banner:meta.banner>', 'src/js/main.js'],
         dest: 'public/js/kesign.js'
+      },
+      kesignMobileCSS: {
+        src: ['<banner:meta.bannerMobileCSS>', 'bin/css/kesign-mobile.css'],
+        dest: 'public/css/kesign-mobile.css'
       }
       /*,
       amd: {
@@ -105,7 +121,7 @@ module.exports = function(grunt) {
 
     stylus: {
       "bin/css/kesign.css": [
-        "src/stylus/main.styl"//"client/stylus/**/*.styl"
+        "src/stylus/main.styl"
       ],
       "bin/css/kesign-responsive.css": [
         "src/stylus/responsive.styl"
@@ -115,6 +131,12 @@ module.exports = function(grunt) {
       ],
       "bootstrap/assets/css/kesign-responsive.css": [
         "src/stylus/responsive.styl"
+      ],
+      "bin/css/kesign-mobile.css": [
+        "src-mobile/stylus/main.styl"
+      ],
+      "ratchet/docs/css/kesign-mobile.css": [
+        "src-mobile/stylus/main.styl"
       ]
     },
 
@@ -164,6 +186,12 @@ module.exports = function(grunt) {
             if (filename == "kesign-responsive-min.css") {
               filename = "kesign-responsive-min-" + version + ".css";
             }
+            if (filename == "kesign-mobile.css") {
+              filename = "kesign-mobile-" + mobileVersion + ".css";
+            }
+            if (filename == "kesign-mobile-min.css") {
+              filename = "kesign-mobile-min-" + mobileVersion + ".css";
+            }
             return filename;
           } 
         },
@@ -174,7 +202,9 @@ module.exports = function(grunt) {
             "public/css/kesign.css", 
             "public/css/kesign-min.css", 
             "public/css/kesign-responsive.css", 
-            "public/css/kesign-responsive-min.css"]
+            "public/css/kesign-responsive-min.css",
+            "public/css/kesign-mobile.css",
+            "public/css/kesign-mobile-min.css"]
         }
       },
       cssLatest: {
@@ -192,7 +222,10 @@ module.exports = function(grunt) {
             "public/css/bootstrap-2.2.0.css",
             "public/css/bootstrap-responsive-2.2.0.css",
             "public/css/font-awesome-2.0.css",
-            "public/css/font-awesome-ie7-2.0.css"]
+            "public/css/font-awesome-ie7-2.0.css",
+            "public/css/ratchet-1.0.0.css",
+            "public/css/kesign-mobile.css",
+            "public/css/kesign-mobile-min.css"]
         }
       },
       release: {
@@ -203,6 +236,7 @@ module.exports = function(grunt) {
           "dist/release/": [
             "public/**/*",
             "bootstrap/**/*",
+            "ratchet/**/*",
             "samples/**/*"]
         }
       }
@@ -229,6 +263,21 @@ module.exports = function(grunt) {
             "public/font/*",
             "public/img/*",
             "public/js/*"]
+        }
+      },
+      zipMobile: {
+        options: {
+          mode: "zip",
+          basePath: "public",
+          level: 1
+        },
+        files: {
+          "public/download/versions/kesign-mobile-<%= meta.mobileVersion %>.zip": [
+            "public/css/kesign-mobile-combined-min-" + mobileVersion + ".css", 
+            "public/css/kesign-mobile-" + mobileVersion + ".css", 
+            "public/css/kesign-mobiile-min-" + mobileVersion + ".css",
+            "public/css/ratchet-1.0.0.css",
+            "public/js/ratchet-1.0.0.js"]
         }
       }/*,
       zipamd: {
@@ -287,7 +336,12 @@ module.exports = function(grunt) {
         "public/css/kesign-responsive.css"
       ],
       "public/css/kesign-min.css": ["public/css/kesign.css"],
-      "public/css/kesign-responsive-min.css": ["public/css/kesign-responsive.css"]
+      "public/css/kesign-responsive-min.css": ["public/css/kesign-responsive.css"],
+      "public/css/kesign-mobile-min.css": ["public/css/kesign-mobile.css"],
+      "public/css/kesign-mobile-combined-min.css": [
+        "public/css/ratchet-1.0.0.css",
+        "public/css/kesign-mobile.css"
+      ]
     },
 
     // Takes the built require.js file and minifies it for filesize benefits.
@@ -319,8 +373,10 @@ module.exports = function(grunt) {
 
       folders: {
           "/": "./",
+          "bin": "bin",
           "public": "public",
           "bootstrap": "bootstrap",
+          "ratchet": "ratchet",
           "pages": "pages",
           "samples": "samples"
       }//,
@@ -379,6 +435,11 @@ module.exports = function(grunt) {
 
       js: {
         files: "src/js/**/*.js",
+        tasks: "build"
+      },
+
+      stylusMobile: {
+        files: "src-mobile/stylus/**/*.styl",
         tasks: "build"
       }
     }

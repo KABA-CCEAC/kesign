@@ -1,0 +1,55 @@
+// GRADIENT MIXINS
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+kabaDarkGray-gradient(d = top)
+    kaba-gradient(d, $kabaDarkGray, #333)
+
+kabaTextGray-gradient(d = top)
+    kaba-gradient(d, $kabaTextGray, #666)
+
+kabaMiddleGray-gradient(d = top)
+    kaba-gradient(d, $kabaMiddleGray, #b3b3b3)
+
+kabaLightGray-gradient(d = top)
+    kaba-gradient(d, $kabaLightGray, #d4d4d4)
+
+kabaBackgroundGray-gradient(d = top)
+    kaba-gradient(d, $kabaBackgroundGray, #e5e5e5)
+
+kabaWhite-gradient(d = top)
+    kaba-gradient(d, $white, #eee)
+
+
+// Blue
+// -------------------------
+kabaBlue-gradient(d = top)
+    kaba-gradient(d, #003366, $kabaBlue)
+
+kabaMiddleBlue-gradient(d = top)
+    kaba-gradient(d, $kabaMiddleBlue, #7e8794)
+
+kabaLightBlue-gradient(d = top)
+    kaba-gradient(d, $kabaLightBlue, #bdc2c7)
+
+
+// Accent colors
+// -------------------------
+kabaOrange-gradient(d = top)
+    kaba-gradient(d, $kabaOrange, #f2a200)
+
+kabaGreen-gradient(d = top)
+    kaba-gradient(d, #8bcc5c, $kabaGreen)
+
+kabaRed-gradient(d = top)
+    kaba-gradient(d, $kabaRed, #d20000)
+
+kabaLightYellow-gradient(d = top)
+    kaba-gradient(d, #fffccc, $kabaLightYellow)
+
+// Helper Function
+// -------------------------
+kaba-gradient(d = top, stop1, stop2)
+    background: stop2
+    background-image: linear-gradient(d, stop1, stop2)

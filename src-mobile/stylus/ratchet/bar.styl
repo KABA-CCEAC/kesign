@@ -1,0 +1,28 @@
+.bar-title
+  kabaBlue-gradient()
+
+  .title
+    font-size: 16px
+    font-weight: normal
+
+  [class*="button"]
+    kabaBlue-gradient()
+    border: 1px solid $kabaBlue
+
+  .button-prev:before
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#003366), to($kabaBlue));
+    background-image: gradient(linear, left bottom, right top, from(#003366), to($kabaBlue));
+  
+  .button-next:before
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#003366), to($kabaBlue));
+    background-image: gradient(linear, left bottom, right top, from(#003366), to($kabaBlue));
+
+  .segmented-controller
+    kabaBlue-gradient()
+    border: 1px solid $kabaBlue
+
+    li
+      border-left: 1px solid $kabaBlue
+
+      &.active
+        background-color: $kabaOrange
