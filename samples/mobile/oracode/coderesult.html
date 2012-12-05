@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>oracode</title><!-- Sets initial viewport load and disables zooming  --><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"><!-- Makes your prototype chrome-less once bookmarked to your phone's home screen --><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- Set a shorter title for iOS6 devices when saved to home screen --><meta name="apple-mobile-web-app-title" content="oracode"><!-- Set Apple icons for when prototype is saved to home screen --><link rel="apple-touch-icon" sizes="114x114" href="../../../public/img/samples/oracode/oracode-touch-icon-114.png"><link rel="apple-touch-icon" sizes="72x72" href="../../../public/img/samples/oracode/oracode-touch-icon-72.png"><link rel="apple-touch-icon" sizes="57x57" href="../../../public/img/samples/oracode/oracode-touch-icon-57.png"><!-- startup image for standalone mode--><link rel="apple-touch-startup-image" href="../../../public/img/samples/oracode/oracode-startup.png"><!-- Include the compiled Ratchet CSS--><link rel="stylesheet" href="../../../public/css/font-awesome-2.0.css"><link rel="stylesheet" href="../../../public/css/ratchet-1.0.0.css"><link rel="stylesheet" href="../../../public/css/kesign-mobile.css"><link rel="stylesheet" href="../../../public/css/add2home-2.0.4.css"><!-- Include js scripts--><script src="../../../public/js/zepto-1.0rc1.js"></script><script src="../../../public/js/ratchet-1.0.0.js"></script><script src="../../../public/js/add2home-2.0.4.js"></script><!-- send email page stuff--><link rel="stylesheet" href="../../../public/css/alertify.core-0.2.5.css"><link rel="stylesheet" href="../../../public/css/alertify.default-0.2.5.css"><script src="../../../public/js/alertify-0.2.5.min.js"></script><style type="text/css">.code-wrapper {
+  text-align: center;
+}
+.code-wrapper .access-code {
+  display: inline-block;
+}
+.code-wrapper .access-code p {
+  color: #111;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f2a200;
+  text-shadow: 0 1px #888;
+}
+nav.alertify-buttons, nav.alertify-buttons:active {
+  border: none;
+  background: #fff;
+  background-image: #fff;
+  box-shadow: none;
+  padding: 0;
+}
+.alertify-message {
+  font-size: 14px;
+  margin-bottom: 10px;
+}</style></head><body><!-- Make sure all your bars are the first things in your <body> --><header class="bar-title"><a href="confirm.html" data-transition="slide-out" class="button-prev">back</a><h1 class="title">Send Code</h1></header><nav class="bar-tab"><ul class="tab-inner"><li class="tab-item active"><a href="selectsite.html"><i class="icon-key"></i><div class="tab-label">Access</div></a></li><li class="tab-item"><a href="#"><i class="icon-info-sign"></i><div class="tab-label">About</div></a></li><li class="tab-item"><a href="#"><i class="icon-envelope-alt"></i><div class="tab-label">Contact</div></a></li><li class="tab-item"><a href="index.html"><i class="icon-unlock"></i><div class="tab-label">Logout</div></a></li></ul></nav><!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --><div class="content"><div class="content-padded"><div class="code-wrapper"><div class="access-code"><h6>Your Code:</h6><p>123456</p></div></div><hr><h3><i class="icon-envelope"></i> send email to:</h3><form><div><label class="checkbox"><input type="checkbox" checked="checked">Email me a copy</label></div><div><label class="checkbox"><input type="checkbox" checked="checked">send code to Mr. Smith</label></div></form></div><div class="content-padded"><h4>add email-address:</h4><input type="email" placeholder="Email address"><hr><a href="#" class="button"><i class="icon-bullhorn icon-large"></i> Add special instructions</a><hr><a href="javascript:;" class="sendEmail button-orange button-block"><i class="icon-envelope-alt icon-large"></i> Email Code</a></div><script id="pagescript">$('.sendEmail').tap(function(e) {
+  e.preventDefault();
+  setTimeout(function() {
+    alertify.alert('Email(s) where sent successfully.', function() {
+      alertify.log('redirecting back');
+      setTimeout(function() {
+        window.location = 'selectsite.html';
+      }, 2000);
+    });
+  }, 1000);
+});
+</script></div><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
+  $(window).on('load', function () { new FingerBlast('body'); });
+  $(window).on('push', function () { new FingerBlast('.content'); });
+}
+$(window).on('push', function (e) {
+  // run on page script with eval!!! risky but for prototype ok.
+  $('#pagescript').each(function() {
+    eval(this.outerText);
+  })
+});
+// go on with own scripts</script></body></html>

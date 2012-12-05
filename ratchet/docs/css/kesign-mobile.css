@@ -49,6 +49,13 @@
 .bar-title .segmented-controller li.active {
   background-color: #f2a200;
 }
+.bar-tab [class^="icon-"],
+.bar-tab [class*=" icon-"] {
+  color: #eee;
+  font-size: 24px;
+  line-height: 1px;
+  padding-bottom: 7px;
+}
 .button-main {
   background: #04284d;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #036), color-stop(1, #04284d));
@@ -75,6 +82,16 @@
   background-image: -o-linear-gradient(top, #f20000 0%, #d20000 100%);
   background-image: -ms-linear-gradient(top, #f20000 0%, #d20000 100%);
   background-image: linear-gradient(top, #f20000 0%, #d20000 100%);
+}
+.button-orange {
+  background: #f2a200;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2a200), color-stop(1, #f2a200));
+  background-image: -webkit-linear-gradient(top, #f2a200 0%, #f2a200 100%);
+  background-image: -moz-linear-gradient(top, #f2a200 0%, #f2a200 100%);
+  background-image: -o-linear-gradient(top, #f2a200 0%, #f2a200 100%);
+  background-image: -ms-linear-gradient(top, #f2a200 0%, #f2a200 100%);
+  background-image: linear-gradient(top, #f2a200 0%, #f2a200 100%);
+  color: #fff;
 }
 .toggle.active {
   background: #04284d;
@@ -111,4 +128,167 @@
   background-image: -o-linear-gradient(top, #f20000 0%, #d20000 100%);
   background-image: -ms-linear-gradient(top, #f20000 0%, #d20000 100%);
   background-image: linear-gradient(top, #f20000 0%, #d20000 100%);
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.login-page {
+  height: 100%;
+  position: relative;
+  background: #bdc2c7;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d5dbe0), color-stop(1, #bdc2c7));
+  background-image: -webkit-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background-image: -moz-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background-image: -o-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background-image: -ms-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background-image: linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
+  background: url("../img/login_bg.jpg") no-repeat center -120px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.login-page .login-content {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  background: #04284d;
+}
+.login-page .login-content .brandbar {
+  position: absolute;
+  top: -40px;
+  height: 40px;
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+}
+.login-page .login-content .brandbar a.brand {
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  background: url("../img/kaba_xs.gif") no-repeat;
+}
+.login-page .login-content .login-form {
+  padding: 10px;
+  margin: 0 auto;
+  color: #d5dbe0;
+}
+.login-page .login-content .login-form.hidden {
+  display: none;
+}
+.login-page .login-content .login-form.visible {
+  -webkit-animation: slideup 2s;
+  -moz-animation: slideup 2s;
+}
+.login-page .login-content .login-form form {
+  margin-bottom: 0;
+}
+.login-page .login-content .login-form form legend {
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  color: #d5dbe0;
+  margin-bottom: 0;
+  border: none;
+  margin-bottom: 5px;
+}
+.login-page .login-content .login-form form legend label.checkbox {
+  font-size: 10px;
+  margin-right: 5px;
+}
+.login-page .login-content .login-form form .fields input[type="password"],
+.login-page .login-content .login-form form .fields input[type="text"] {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2);
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2);
+}
+.login-page .login-content .login-form form .login-actions {
+  margin-top: 0;
+}
+.login-page .login-content .login-form form .login-actions .button {
+  position: relative;
+  padding-right: 30px;
+}
+.login-page .login-content .login-form form .login-actions .button:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #d1d1d1));
+  background-image: -webkit-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: -moz-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: -o-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: -ms-linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  background-image: linear-gradient(top, #f8f8f8 0%, #d1d1d1 100%);
+  -webkit-box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  box-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+.login-page .login-content .login-form form .login-actions .button::after {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #808080;
+  margin-right: 5px;
+}
+.login-page .login-content .login-form form .login-actions .button.button-orange::after {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #fff;
+  margin-right: 5px;
+}
+.login-page .login-content .load-progress {
+  text-align: center;
+  padding: 20px 100px;
+  color: #eee;
+}
+.login-page .login-content .load-progress .img-spinner {
+  width: 16px;
+}
+@-webkit-keyframes slideup {
+  0% {
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+  }
+
+  50% {
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slideup {
+  0% {
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: alpha(opacity=0);
+    -moz-transform: translateY(20px);
+  }
+
+  50% {
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: alpha(opacity=0);
+    -moz-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -moz-transform: translateY(0);
+  }
 }
