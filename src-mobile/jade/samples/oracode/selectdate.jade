@@ -1,0 +1,36 @@
+- var path = '../../../'
+!!! 5
+html
+  head
+    include ../../includes/oracode/head
+  body
+    // Make sure all your bars are the first things in your <body> 
+    header.bar-title
+      a.button-prev(href="selectrole.html", data-transition="slide-out") back
+      h1.title Door 101 - Guest Stay
+
+    include ../../includes/oracode/tabs
+    // Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content
+      .content-padded
+        h3 select a duration:
+      .content-padded
+        form
+          .input-group
+            .input-row
+              label 
+                i.icon-calendar
+                | start
+              input(type="date")
+            .input-row
+              label 
+                i.icon-calendar
+                | end
+              input(type="date")
+
+          a.button-block(href="confirm.html")
+            | Confirm your stay 
+            i.icon-chevron-right
+
+    include ../../includes/oracode/endscript
+        

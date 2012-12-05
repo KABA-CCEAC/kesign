@@ -1,0 +1,65 @@
+- var path = '../../../'
+!!! 5
+html
+  head
+    include ../../includes/oracode/head
+    
+  body
+    // Make sure all your bars are the first things in your <body> 
+    header.bar-title
+      a.button-prev(href="confirm.html", data-transition="slide-out") back
+      h1.title Send Code
+
+    include ../../includes/oracode/tabs
+    // Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content
+      .content-padded
+        .code-wrapper
+          .access-code
+            h6 Your Code:
+            p 123456
+
+        hr
+        h3
+          i.icon-envelope
+          |  send email to:
+        form
+          div
+            label.checkbox
+              input(type="checkbox", checked="checked")
+              | Email me a copy
+          div
+            label.checkbox
+              input(type="checkbox", checked="checked")
+              | send code to Mr. Smith
+
+      .content-padded
+        h4 add email-address:
+        input(type="email", placeholder="Email address")
+
+
+        hr
+        
+        a.button(href="#")
+          i.icon-bullhorn.icon-large
+          |  Add special instructions
+
+        hr
+        a.sendEmail.button-orange.button-block(href="javascript:;")
+          i.icon-envelope-alt.icon-large
+          |  Email Code
+
+      script#pagescript
+        $('.sendEmail').tap(function(e) {
+          e.preventDefault();
+          setTimeout(function() {
+            alertify.alert('Email(s) where sent successfully.', function() {
+              alertify.log('redirecting back');
+              setTimeout(function() {
+                window.location = 'selectsite.html';
+              }, 2000);
+            });
+          }, 1000);
+        });
+
+    include ../../includes/oracode/endscript

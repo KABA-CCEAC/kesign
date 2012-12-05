@@ -1,0 +1,52 @@
+- var path = '../../../'
+!!! 5
+html
+  head
+    include ../../includes/oracode/head
+  body
+    // Make sure all your bars are the first things in your <body> 
+    header.bar-title
+      a.button-prev(href="selectdoor.html", data-transition="slide-out") back
+      h1.title Door 101
+
+    include ../../includes/oracode/tabs
+    // Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content
+      .content-padded
+        h3 select a user role:
+      ul.list.inset
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Guest Stay
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Staff
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Maintenance
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Admin
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Owner Friends
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Outside service
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Security
+            span.chevron
+        li
+          a(href='selectdate.html', data-transition="slide-in")
+            strong Emergency
+            span.chevron
+
+    include ../../includes/oracode/endscript
+        

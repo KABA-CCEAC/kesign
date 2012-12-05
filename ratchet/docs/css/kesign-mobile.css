@@ -49,6 +49,13 @@
 .bar-title .segmented-controller li.active {
   background-color: #f2a200;
 }
+.bar-tab [class^="icon-"],
+.bar-tab [class*=" icon-"] {
+  color: #eee;
+  font-size: 24px;
+  line-height: 1px;
+  padding-bottom: 7px;
+}
 .button-main {
   background: #04284d;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #036), color-stop(1, #04284d));
@@ -145,7 +152,7 @@
 }
 .login-page .login-content {
   position: absolute;
-  min-height: 50%;
+  height: 50%;
   width: 100%;
   bottom: 0;
   background: #04284d;
@@ -169,9 +176,7 @@
   color: #d5dbe0;
 }
 .login-page .login-content .login-form.hidden {
-  opacity: 0;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  filter: alpha(opacity=0);
+  display: none;
 }
 .login-page .login-content .login-form.visible {
   -webkit-animation: slideup 2s;
@@ -187,7 +192,7 @@
   color: #d5dbe0;
   margin-bottom: 0;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .login-page .login-content .login-form form legend label.checkbox {
   font-size: 10px;
@@ -201,7 +206,7 @@
   box-shadow: inset 2px 2px 4px rgba(0,0,0,0.2);
 }
 .login-page .login-content .login-form form .login-actions {
-  margin-top: 15px;
+  margin-top: 0;
 }
 .login-page .login-content .login-form form .login-actions .button {
   position: relative;

@@ -1,0 +1,34 @@
+- var path = '../../../'
+!!! 5
+html
+  head
+    include ../../includes/oracode/head
+  body
+    // Make sure all your bars are the first things in your <body> 
+    header.bar-title
+      a.button-prev(href="selectdate.html", data-transition="slide-out") back
+      h1.title Confirm Guest Stay
+
+    include ../../includes/oracode/tabs
+    // Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content
+      .content-padded
+        :markdown
+          You have selected __Site A__ - __Door 101__ and __Guest Stay__. Code will be 
+          valid from __Dec 02, 2012, 03:00 PM__ to __Dec 12, 2012, 11:00 AM__.
+
+        hr
+        p Check-out time is 1 PM
+        p: strong Access: 7 AM - 7 PM
+        hr
+        
+        a.button(href="#")
+          | Select access code holder 
+          i.icon-chevron-right
+
+        hr
+        a.button-orange.button-block(href="coderesult.html")
+          | Generate Code 
+          i.icon-chevron-right
+
+    include ../../includes/oracode/endscript

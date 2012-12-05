@@ -1,0 +1,15 @@
+// simulate touch on desktop for debugging
+script(src='#{path}ratchet/docs/js/fingerblast.js')
+script
+  if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
+    $(window).on('load', function () { new FingerBlast('body'); });
+    $(window).on('push', function () { new FingerBlast('.content'); });
+  }
+  $(window).on('push', function (e) {
+    // run on page script with eval!!! risky but for prototype ok.
+    $('#pagescript').each(function() {
+      eval(this.outerText);
+    })
+  });
+  // go on with own scripts
+  

@@ -1,0 +1,67 @@
+- var path = '../../../'
+!!! 5
+html
+  head
+    include ../../includes/oracode/head
+  body
+    // Make sure all your bars are the first things in your <body> 
+    header.bar-title
+      a.button-prev(href="selectsite.html", data-transition="slide-out") back
+      h1.title Site A
+
+    include ../../includes/oracode/tabs
+    // Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content
+      .content-padded
+        h3 select a door:
+      ul.list.inset
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Main door
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Front door
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Back door
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 101
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 102
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 103
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 104
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 201
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 202
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 203
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Door 204
+            span.chevron
+        li
+          a(href='selectrole.html', data-transition="slide-in")
+            strong Pool
+            span.chevron
+
+    include ../../includes/oracode/endscript

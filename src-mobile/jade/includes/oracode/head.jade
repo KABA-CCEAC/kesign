@@ -1,0 +1,54 @@
+meta(charset='utf-8')
+title oracode
+// Sets initial viewport load and disables zooming  
+meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+// Makes your prototype chrome-less once bookmarked to your phone's home screen 
+meta(name='apple-mobile-web-app-capable', content='yes')
+meta(name='apple-mobile-web-app-status-bar-style', content='black')
+// Set a shorter title for iOS6 devices when saved to home screen 
+meta(name='apple-mobile-web-app-title', content='oracode')
+// Set Apple icons for when prototype is saved to home screen 
+link(rel='apple-touch-icon', sizes='114x114', href='#{path}public/img/samples/oracode/oracode-touch-icon-114.png')
+link(rel='apple-touch-icon', sizes='72x72', href='#{path}public/img/samples/oracode/oracode-touch-icon-72.png')
+link(rel='apple-touch-icon', sizes='57x57', href='#{path}public/img/samples/oracode/oracode-touch-icon-57.png')
+// startup image for standalone mode
+link(rel="apple-touch-startup-image", href="#{path}public/img/samples/oracode/oracode-startup.png")
+// Include the compiled Ratchet CSS
+link(rel='stylesheet', href='#{path}public/css/font-awesome-2.0.css')
+link(rel='stylesheet', href='#{path}public/css/ratchet-1.0.0.css')
+link(rel='stylesheet', href='#{path}public/css/kesign-mobile.css')
+link(rel='stylesheet', href='#{path}public/css/add2home-2.0.4.css')
+// Include js scripts
+script(src='#{path}public/js/zepto-1.0rc1.js')
+script(src='#{path}public/js/ratchet-1.0.0.js')
+script(src='#{path}public/js/add2home-2.0.4.js')
+
+// send email page stuff
+link(rel='stylesheet', href='#{path}public/css/alertify.core-0.2.5.css')
+link(rel='stylesheet', href='#{path}public/css/alertify.default-0.2.5.css')
+script(src='#{path}public/js/alertify-0.2.5.min.js')
+style(type="text/css")
+  .code-wrapper {
+    text-align: center;
+  }
+  .code-wrapper .access-code {
+    display: inline-block;
+  }
+  .code-wrapper .access-code p {
+    color: #111;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f2a200;
+    text-shadow: 0 1px #888;
+  }
+  nav.alertify-buttons, nav.alertify-buttons:active {
+    border: none;
+    background: #fff;
+    background-image: #fff;
+    box-shadow: none;
+    padding: 0;
+  }
+  .alertify-message {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }

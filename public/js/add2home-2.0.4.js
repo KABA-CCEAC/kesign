@@ -67,7 +67,7 @@ var addToHome = (function (w) {
 			zh_tw: '您可以將此應用程式安裝到您的 %device 上。請按 %icon 然後點選<strong>加入主畫面螢幕</strong>。'
 		};
 
-	function init () {
+	function init (opts) {
 		// Preliminary check, all further checks are performed on iDevices only
 		if ( !isIDevice ) return;
 
@@ -75,9 +75,10 @@ var addToHome = (function (w) {
 			i;
 
 		// Merge local with global options
-		if ( w.addToHomeConfig ) {
-			for ( i in w.addToHomeConfig ) {
-				options[i] = w.addToHomeConfig[i];
+		opts = opts || w.addToHomeConfig;
+		if ( opts ) {
+			for ( i in opts) {
+				options[i] = opts[i];
 			}
 		}
 		if ( !options.autostart ) options.hookOnLoad = false;
@@ -340,11 +341,12 @@ var addToHome = (function (w) {
 	}
 
 	// Bootstrap!
-	init();
+	//init();
 
-	return {
+	w.add2home = {
 		show: manualShow,
 		close: close,
-		reset: reset
+		reset: reset,
+		init: init
 	};
 })(window);

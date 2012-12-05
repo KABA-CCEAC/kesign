@@ -21,24 +21,7 @@ nav.alertify-buttons, nav.alertify-buttons:active {
 .alertify-message {
   font-size: 14px;
   margin-bottom: 10px;
-}</style></head><body><!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --><div class="content"><div class="login-page"><div class="login-content"><div class="brandbar"><a class="brand"></a></div><div style="display: none;" class="load-progress"><span> <img src="../../../public/img/load_spinner.gif" class="img-spinner">  loading ...</span></div><div class="login-form"><form action="/login" method="post"><legend> <span>Please Login</span><span class="pull-right"><label class="checkbox"><input type="checkbox">Remember me? </label></span></legend><div class="fields"><input name="username" type="text" placeholder="Username" class="span12"><input name="password" type="password" placeholder="Password" class="span12"></div><div class="login-actions"><a href="selectsite.html" data-transition="slide-in" class="button button-orange pull-right">Login</a><a class="button">Forgot Your Password?</a></div></form></div></div></div><script>// simulate loading
-function slideUp() {
-  $('.load-progress').hide();
-  $('.login-form').addClass('visible');
-  $('.login-form').removeClass('hidden');
-  add2home.init({
-    lifespan: 10000,
-    touchIcon: true,
-    expire: 0
-  });
-  add2home.show();
-}
-$('document').ready(function() {
-  $('.load-progress').show();
-  $('.login-form').addClass('hidden');
-  setTimeout(slideUp, 1000);
-});
-</script><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
+}</style></head><body><!-- Make sure all your bars are the first things in your <body> --><header class="bar-title"><a href="selectrole.html" data-transition="slide-out" class="button-prev">back</a><h1 class="title">Door 101 - Guest Stay</h1></header><nav class="bar-tab"><ul class="tab-inner"><li class="tab-item active"><a href="selectsite.html"><i class="icon-key"></i><div class="tab-label">Access</div></a></li><li class="tab-item"><a href="#"><i class="icon-info-sign"></i><div class="tab-label">About</div></a></li><li class="tab-item"><a href="#"><i class="icon-envelope-alt"></i><div class="tab-label">Contact</div></a></li><li class="tab-item"><a href="index.html"><i class="icon-unlock"></i><div class="tab-label">Logout</div></a></li></ul></nav><!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --><div class="content"><div class="content-padded"><h3>select a duration:</h3></div><div class="content-padded"><form><div class="input-group"><div class="input-row"><label> <i class="icon-calendar"></i> start</label><input type="date"></div><div class="input-row"><label> <i class="icon-calendar"></i> end</label><input type="date"></div></div><a href="confirm.html" class="button-block">Confirm your stay <i class="icon-chevron-right"></i></a></form></div></div><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
   $(window).on('load', function () { new FingerBlast('body'); });
   $(window).on('push', function () { new FingerBlast('.content'); });
 }
@@ -48,4 +31,4 @@ $(window).on('push', function (e) {
     eval(this.outerText);
   })
 });
-// go on with own scripts</script></div></body></html>
+// go on with own scripts</script></body></html>
