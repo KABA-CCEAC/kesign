@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Ratchet template page</title><!-- Sets initial viewport load and disables zooming  --><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"><!-- Makes your prototype chrome-less once bookmarked to your phone's home screen --><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- Set a shorter title for iOS6 devices when saved to home screen --><meta name="apple-mobile-web-app-title" content="Ratchet"><!-- Set Apple icons for when prototype is saved to home screen --><link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../public/img/samples/oracode/oracode-touch-icon-114.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../public/img/samples/oracode/oracode-touch-icon-72.png"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../../public/img/samples/oracode/oracode-touch-icon-57.png"><!-- Include the compiled Ratchet CSS--><link rel="stylesheet" href="../../../public/css/font-awesome-2.0.css"><link rel="stylesheet" href="../../../public/css/add2home-2.0.4.css"><link rel="stylesheet" href="../../../public/css/ratchet-1.0.0.css"><link rel="stylesheet" href="../../../public/css/kesign-mobile.css"><!-- Include the compiled Ratchet JS --><script src="../../../public/js/zepto-1.0rc1.js"></script><script>var addToHomeConfig = {
+  lifespan: 10000,
+  expire: 0,
+  touchIcon: true,
+};</script><script src="../../../public/js/add2home-2.0.4.js"></script><script src="../../../public/js/ratchet-1.0.0.js"></script></head><body><!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --><div class="content"><div class="login-page"><div class="login-content"><div class="brandbar"><a class="brand"></a></div><div class="load-progress"><span> <img src="../../../public/img/load_spinner.gif" class="img-spinner">  loading ...</span></div><div class="login-form hidden"><form action="/login" method="post"><legend> <span>Please Login</span><span class="pull-right"><label class="checkbox"><input type="checkbox">Remember me? </label></span></legend><div class="fields"><input name="username" type="text" placeholder="Username" class="span12"><input name="password" type="password" placeholder="Password" class="span12"></div><div class="login-actions"><a class="button button-orange pull-right">Login</a><a class="button">Forgot Your Password?</a></div></form></div></div></div><script>function slideUp() {
+  $('.load-progress').hide();
+  $('.login-form').addClass('visible');
+  $('.login-form').removeClass('hidden');
+}
+$('document').ready(function() {
+  setTimeout(slideUp, 1000);
+});
+</script></div></body></html>

@@ -150,8 +150,8 @@ module.exports = function(grunt) {
       "samples": [
         "src/jade/samples/**/*.jade"
       ],
-      "node/pages": [
-        "src/jade/node/pages/**/*.jade"
+      "samples/mobile/oracode": [
+        "src-mobile/jade/samples/oracode/*.jade"
       ]
     },
 
@@ -435,6 +435,11 @@ module.exports = function(grunt) {
 
       js: {
         files: "src/js/**/*.js",
+        tasks: "build"
+      },
+
+      jadeMobile: {
+        files: "src-mobile/jade/**/*.jade",
         tasks: "build"
       },
 

@@ -1,0 +1,71 @@
+- var path = '../../../'
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    title Ratchet template page
+    // Sets initial viewport load and disables zooming  
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    // Makes your prototype chrome-less once bookmarked to your phone's home screen 
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    // Set a shorter title for iOS6 devices when saved to home screen 
+    meta(name='apple-mobile-web-app-title', content='Ratchet')
+    // Set Apple icons for when prototype is saved to home screen 
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='#{path}public/img/samples/oracode/oracode-touch-icon-114.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='#{path}public/img/samples/oracode/oracode-touch-icon-72.png')
+    link(rel='apple-touch-icon-precomposed', sizes='57x57', href='#{path}public/img/samples/oracode/oracode-touch-icon-57.png')
+    // Include the compiled Ratchet CSS
+    link(rel='stylesheet', href='#{path}public/css/font-awesome-2.0.css')
+    link(rel='stylesheet', href='#{path}public/css/add2home-2.0.4.css')
+    link(rel='stylesheet', href='#{path}public/css/ratchet-1.0.0.css')
+    link(rel='stylesheet', href='#{path}public/css/kesign-mobile.css')
+    // Include the compiled Ratchet JS 
+    script(src='#{path}public/js/zepto-1.0rc1.js')
+    script
+      var addToHomeConfig = {
+        lifespan: 10000,
+        expire: 0,
+        touchIcon: true,
+      };
+    script(src='#{path}public/js/add2home-2.0.4.js')
+    script(src='#{path}public/js/ratchet-1.0.0.js')
+  body
+    // Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content
+      .login-page
+        .login-content
+          .brandbar
+            a.brand
+          .load-progress
+            span 
+              img.img-spinner(src="#{path}public/img/load_spinner.gif")
+              |  loading ...
+          .login-form.hidden
+            form(action='/login', method='post')
+              legend 
+                span Please Login
+                span.pull-right
+                  label.checkbox
+                    input(type="checkbox")
+                    | Remember me? 
+
+              .fields
+                input.span12(name='username', type='text', placeholder='Username')
+                input.span12(name='password', type='password', placeholder='Password')
+                      
+              .login-actions
+                a.button.button-orange.pull-right
+                  | Login
+                a.button Forgot Your Password?
+
+      script
+        function slideUp() {
+          $('.load-progress').hide();
+          $('.login-form').addClass('visible');
+          $('.login-form').removeClass('hidden');
+        }
+        $('document').ready(function() {
+          setTimeout(slideUp, 1000);
+        });
+        
