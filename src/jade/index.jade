@@ -106,6 +106,16 @@ html(lang="en")
                             | or checkout 
                             a.kaba-link(href='#{path}pages/samples.html') the samples page
 
+                    .section
+                      h4 what do i get?
+
+                      p 
+                        | A website that is full responsive and could be used on all devices:
+
+                      .row-fluid
+                        .span12
+                          img.polaroid.span8.offset2(src="#{path}public/img/responsive2.jpg")
+
 
             .span4
               include includes/shared/downloads
@@ -168,22 +178,29 @@ html(lang="en")
 
 
                 .widget-content
-                  p 
-                    | If there are no special requirements to the user interface you can build a webapplication 
-                    | with responsive layout:
+                  .section
+                    p 
+                      | If there are no special requirements to the user interface you can build a webapplication 
+                      | with responsive layout (kesign).
 
-                  .row-fluid
-                    .span13
-                      img.polaroid.span8.offset2(src="#{path}public/img/responsive2.jpg")
+                    p Else you could use the styles provided by kesign-mobile to create a mobilefirst webapplication:
 
-                  :markdown
-                    The most difficult part in getting the right design for a mobile application 
-                    is to decide for the right application type. Depending on the application type 
-                    you could easily decide on the appropriate interface guideline.
+                    .row-fluid
+                      .span12
+                        img.polaroid.span8.offset2(src="#{path}public/img/kesign-mobile.png", style="margin-bottom: 20px;")
 
-                  ul.unstyled
-                    li: a.kaba-link(href='#{path}doc/apptype.html') choose your application type
-                    li: a.kaba-link(href='#{path}ratchet/docs/') check out kesign-mobile visual style
+                    ul.unstyled
+                      li: a.kaba-link(href='#{path}ratchet/docs/') check out kesign-mobile visual style
+                      li: a.kaba-link(href='#{path}samples/mobile/oracode/') check out the oracode sample
+
+                  .section
+                    :markdown
+                      The most difficult part in getting the right design for a mobile application 
+                      is to decide for the right application type. Depending on the application type 
+                      you could easily decide on the appropriate interface guideline.
+
+                    ul.unstyled
+                      li: a.kaba-link(href='#{path}doc/apptype.html') choose your application type
 
             .span4
               include includes/shared/downloads-mobile

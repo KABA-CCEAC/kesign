@@ -38,7 +38,7 @@ $('document').ready(function() {
   $('.login-form').addClass('hidden');
   setTimeout(slideUp, 1000);
 });
-</script><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
+</script><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent)) {
   $(window).on('load', function () { new FingerBlast('body'); });
   $(window).on('push', function () { new FingerBlast('.content'); });
 }
@@ -48,4 +48,13 @@ $(window).on('push', function (e) {
     eval(this.outerText);
   })
 });
-// go on with own scripts</script></div></body></html>
+</script><script>var _gaq = window._gaq || [];
+_gaq.push(['_setAccount', 'UA-33181917-6']);
+_gaq.push(['_setDomainName', 'none']); // track localhost
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></div></body></html>

@@ -21,7 +21,7 @@ nav.alertify-buttons, nav.alertify-buttons:active {
 .alertify-message {
   font-size: 14px;
   margin-bottom: 10px;
-}</style></head><body><!-- Make sure all your bars are the first things in your <body> --><header class="bar-title"></header><nav class="bar-tab"><ul class="tab-inner"><li class="tab-item active"><a href="selectsite.html"><i class="icon-key"></i><div class="tab-label">Access</div></a></li><li class="tab-item"><a href="#"><i class="icon-info-sign"></i><div class="tab-label">About</div></a></li><li class="tab-item"><a href="#"><i class="icon-envelope-alt"></i><div class="tab-label">Contact</div></a></li><li class="tab-item"><a href="index.html"><i class="icon-unlock"></i><div class="tab-label">Logout</div></a></li></ul></nav><!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --><div class="content"><div class="content-padded"><h3>select a site:</h3></div><ul class="list inset"><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site A</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site B</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site C</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site D</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site E</strong><span class="chevron"></span></a></li></ul><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
+}</style></head><body><!-- Make sure all your bars are the first things in your <body> --><header class="bar-title"></header><nav class="bar-tab"><ul class="tab-inner"><li class="tab-item active"><a href="selectsite.html"><i class="icon-key"></i><div class="tab-label">Access</div></a></li><li class="tab-item"><a href="#"><i class="icon-info-sign"></i><div class="tab-label">About</div></a></li><li class="tab-item"><a href="#"><i class="icon-envelope-alt"></i><div class="tab-label">Contact</div></a></li><li class="tab-item"><a href="index.html"><i class="icon-unlock"></i><div class="tab-label">Logout</div></a></li></ul></nav><!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --><div class="content"><div class="content-padded"><h3>select a site:</h3></div><ul class="list inset"><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site A</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site B</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site C</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site D</strong><span class="chevron"></span></a></li><li><a href="selectdoor.html" data-transition="slide-in"><strong>Site E</strong><span class="chevron"></span></a></li></ul><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent)) {
   $(window).on('load', function () { new FingerBlast('body'); });
   $(window).on('push', function () { new FingerBlast('.content'); });
 }
@@ -31,4 +31,13 @@ $(window).on('push', function (e) {
     eval(this.outerText);
   })
 });
-// go on with own scripts</script></div></body></html>
+</script><script>var _gaq = window._gaq || [];
+_gaq.push(['_setAccount', 'UA-33181917-6']);
+_gaq.push(['_setDomainName', 'none']); // track localhost
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></div></body></html>
