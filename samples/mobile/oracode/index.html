@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>oracode</title><!-- Sets initial viewport load and disables zooming  --><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"><!-- Makes your prototype chrome-less once bookmarked to your phone's home screen --><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- Set a shorter title for iOS6 devices when saved to home screen --><meta name="apple-mobile-web-app-title" content="oracode"><!-- Set Apple icons for when prototype is saved to home screen --><link rel="apple-touch-icon" sizes="114x114" href="../../../public/img/samples/oracode/oracode-touch-icon-114.png"><link rel="apple-touch-icon" sizes="72x72" href="../../../public/img/samples/oracode/oracode-touch-icon-72.png"><link rel="apple-touch-icon" sizes="57x57" href="../../../public/img/samples/oracode/oracode-touch-icon-57.png"><!-- startup image for standalone mode--><link rel="apple-touch-startup-image" href="../../../public/img/samples/oracode/oracode-startup.png"><!-- Include the compiled Ratchet CSS--><link rel="stylesheet" href="../../../public/css/font-awesome-2.0.css"><link rel="stylesheet" href="../../../public/css/ratchet-1.0.0.css"><link rel="stylesheet" href="../../../public/css/kesign-mobile.css"><link rel="stylesheet" href="../../../public/css/add2home-2.0.4.css"><!-- Include js scripts--><script src="../../../public/js/zepto-1.0rc1.js"></script><script src="../../../public/js/ratchet-1.0.0.js"></script><script src="../../../public/js/add2home-2.0.4.js"></script><!-- send email page stuff--><link rel="stylesheet" href="../../../public/css/alertify.core-0.2.5.css"><link rel="stylesheet" href="../../../public/css/alertify.default-0.2.5.css"><script src="../../../public/js/alertify-0.2.5.min.js"></script><style type="text/css">.code-wrapper {
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>oracode</title><!-- Sets initial viewport load and disables zooming  --><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"><!-- Makes your prototype chrome-less once bookmarked to your phone's home screen --><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- Set a shorter title for iOS6 devices when saved to home screen --><meta name="apple-mobile-web-app-title" content="oracode"><!-- Set Apple icons for when prototype is saved to home screen --><link rel="apple-touch-icon" sizes="114x114" href="../../../public/img/samples/oracode/oracode-touch-icon-114.png"><link rel="apple-touch-icon" sizes="72x72" href="../../../public/img/samples/oracode/oracode-touch-icon-72.png"><link rel="apple-touch-icon" sizes="57x57" href="../../../public/img/samples/oracode/oracode-touch-icon-57.png"><link rel="apple-touch-icon" href="../../../public/img/samples/oracode/oracode-touch-icon-57.png"><!-- startup image for standalone mode--><link rel="apple-touch-startup-image" href="../../../public/img/samples/oracode/oracode-startup.png"><!-- Include the compiled Ratchet CSS--><link rel="stylesheet" href="../../../public/css/font-awesome-2.0.css"><link rel="stylesheet" href="../../../public/css/ratchet-1.0.0.css"><link rel="stylesheet" href="../../../public/css/kesign-mobile.css"><link rel="stylesheet" href="../../../public/css/add2home-2.0.4.css"><!-- Include js scripts--><script src="../../../public/js/zepto-1.0rc1.js"></script><script src="../../../public/js/ratchet-1.0.0.js"></script><script src="../../../public/js/add2home-2.0.4.js"></script><!-- send email page stuff--><link rel="stylesheet" href="../../../public/css/alertify.core-0.2.5.css"><link rel="stylesheet" href="../../../public/css/alertify.default-0.2.5.css"><script src="../../../public/js/alertify-0.2.5.min.js"></script><style type="text/css">.code-wrapper {
   text-align: center;
 }
 .code-wrapper .access-code {
@@ -38,7 +38,7 @@ $('document').ready(function() {
   $('.login-form').addClass('hidden');
   setTimeout(slideUp, 1000);
 });
-</script><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad/).test(navigator.userAgent)) {
+</script><!-- simulate touch on desktop for debugging--><script src="../../../ratchet/docs/js/fingerblast.js"></script><script>if (!(/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent)) {
   $(window).on('load', function () { new FingerBlast('body'); });
   $(window).on('push', function () { new FingerBlast('.content'); });
 }
@@ -48,4 +48,13 @@ $(window).on('push', function (e) {
     eval(this.outerText);
   })
 });
-// go on with own scripts</script></div></body></html>
+</script><script>var _gaq = window._gaq || [];
+_gaq.push(['_setAccount', 'UA-33181917-6']);
+_gaq.push(['_setDomainName', 'none']); // track localhost
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></div></body></html>

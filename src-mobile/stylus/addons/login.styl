@@ -3,7 +3,7 @@
   position: relative
   kabaLightBlue-gradient()
   // http://css-tricks.com/perfect-full-page-background-image/
-  background: url(../img/login_bg.jpg) no-repeat center -120px
+  background: url(../img/login_bg.jpg) no-repeat center -350px
   background-size: cover
 
   .login-content
@@ -129,3 +129,11 @@
    -moz-transform: translateY(0);
   }
 }
+
+@media (max-width: 799px)
+  .login-page
+    background: url(../img/login_bg_xs.jpg) no-repeat center -120px
+
+@media (min-width: 800px) and (max-width: 1599px)
+  .login-page
+    background: url(../img/login_bg_s.jpg) no-repeat center -350px

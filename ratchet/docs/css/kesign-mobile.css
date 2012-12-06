@@ -145,7 +145,7 @@
   background-image: -o-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
   background-image: -ms-linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
   background-image: linear-gradient(top, #d5dbe0 0%, #bdc2c7 100%);
-  background: url("../img/login_bg.jpg") no-repeat center -120px;
+  background: url("../img/login_bg.jpg") no-repeat center -350px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -290,5 +290,15 @@
     -ms-filter: none;
     filter: none;
     -moz-transform: translateY(0);
+  }
+}
+@media (max-width: 799px) {
+  .login-page {
+    background: url("../img/login_bg_xs.jpg") no-repeat center -120px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1599px) {
+  .login-page {
+    background: url("../img/login_bg_s.jpg") no-repeat center -350px;
   }
 }
