@@ -32,6 +32,9 @@
         $(this).parent().removeClass('collapsed');
       });
     }
+      $('body')
+        .on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); })
+        .on('touchstart.dropdown', '.dropdown-submenu', function (e) { e.preventDefault(); e.stopPropagation(); });
   });
 
   $.fn.hideLabels = function (options) {
@@ -63,7 +66,4 @@
   		});
   	}
   })(jQuery);
-  $('body')
-    .on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); })
-    .on('touchstart.dropdown', '.dropdown-submenu', function (e) { e.preventDefault(); e.stopPropagation(); });
 })();
