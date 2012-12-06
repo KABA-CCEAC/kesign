@@ -1220,6 +1220,16 @@ body .navbar .brand {
 }
 .brandbar {
   background: #fff;
+  overflow: hidden;
+  zoom: 1;
+}
+.brandbar:before,
+.brandbar:after {
+  content: "";
+  display: table;
+}
+.brandbar:after {
+  clear: both;
 }
 .brandbar .statusbar {
   margin: 10px 0;
