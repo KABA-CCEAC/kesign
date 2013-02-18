@@ -4,8 +4,8 @@
 //
 module.exports = function(grunt) {
 
-  var version = '0.9.1'
-    , mobileVersion = '0.0.1';
+  var version = '1.0.0'
+    , mobileVersion = '0.5.0';
 
 
   grunt.loadNpmTasks('grunt-contrib');
@@ -219,10 +219,10 @@ module.exports = function(grunt) {
             "public/css/kesign-min.css", 
             "public/css/kesign-responsive.css", 
             "public/css/kesign-responsive-min.css",
-            "public/css/bootstrap-2.2.0.css",
-            "public/css/bootstrap-responsive-2.2.0.css",
-            "public/css/font-awesome-2.0.css",
-            "public/css/font-awesome-ie7-2.0.css",
+            "public/css/bootstrap-2.3.0.css",
+            "public/css/bootstrap-responsive-2.3.0.css",
+            "public/css/font-awesome-3.0.css",
+            "public/css/font-awesome-ie7-3.0.css",
             "public/css/ratchet-1.0.0.css",
             "public/css/kesign-mobile.css",
             "public/css/kesign-mobile-min.css"]
@@ -256,10 +256,10 @@ module.exports = function(grunt) {
             "public/css/kesign-min-" + version + ".css", 
             "public/css/kesign-responsive-" + version + ".css", 
             "public/css/kesign-responsive-min-" + version + ".css",
-            "public/css/bootstrap-2.2.0.css",
-            "public/css/bootstrap-responsive-2.2.0.css",
-            "public/css/font-awesome-2.0.css",
-            "public/css/font-awesome-ie7-2.0.css",
+            "public/css/bootstrap-2.3.0.css",
+            "public/css/bootstrap-responsive-2.3.0.css",
+            "public/css/font-awesome-3.0.css",
+            "public/css/font-awesome-ie7-3.0.css",
             "public/font/*",
             "public/img/*",
             "public/js/*"]
@@ -323,15 +323,15 @@ module.exports = function(grunt) {
     // only want to load one stylesheet in index.html.
     mincss: {
       "public/css/doc-base.css": [
-        "public/css/bootstrap-2.2.0.css",
-        "public/css/bootstrap-responsive-2.2.0.css",
-        "public/css/font-awesome-2.0.css",
+        "public/css/bootstrap-2.3.0.css",
+        "public/css/bootstrap-responsive-2.3.0.css",
+        "public/css/font-awesome-3.0.css",
         "public/css/prettify.css"
       ],
       "public/css/kesign-combined-min.css": [
-        "public/css/bootstrap-2.2.0.css",
-        "public/css/bootstrap-responsive-2.2.0.css",
-        "public/css/font-awesome-2.0.css",
+        "public/css/bootstrap-2.3.0.css",
+        "public/css/bootstrap-responsive-2.3.0.css",
+        "public/css/font-awesome-3.0.css",
         "public/css/kesign.css",
         "public/css/kesign-responsive.css"
       ],
@@ -368,7 +368,9 @@ module.exports = function(grunt) {
       host: "0.0.0.0",
       files: { 
         "favicon.ico": "./favicon.ico",
-        "public/font/fontawesome-webfont.eot?": "public/font/fontawesome-webfont.eot" 
+        "public/font/fontawesome-webfont.eot?": "public/font/fontawesome-webfont.eot",
+        "public/font/fontawesome-webfont.woff?": "public/font/fontawesome-webfont.woff",
+        "public/font/fontawesome-webfont.ttf?": "public/font/fontawesome-webfont.ttf"
       },
 
       folders: {
