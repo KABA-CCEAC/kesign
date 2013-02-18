@@ -1,5 +1,5 @@
-// kesign, v0.9.1
-// Copyright (c)2012 Kaba AG.
+// kesign, v1.0.0
+// Copyright (c)2013 Kaba AG.
 // Distributed under MIT license
 // http://kaba-cceac.github.com/kesign/
 (function() {

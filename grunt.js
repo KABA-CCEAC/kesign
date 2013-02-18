@@ -202,7 +202,9 @@ module.exports = function(grunt) {
       host: "0.0.0.0",
       files: { 
         "favicon.ico": "./favicon.ico",
-        "public/font/fontawesome-webfont.eot?": "public/font/fontawesome-webfont.eot" 
+        "public/font/fontawesome-webfont.eot?": "public/font/fontawesome-webfont.eot",
+        "public/font/fontawesome-webfont.woff?": "public/font/fontawesome-webfont.woff",
+        "public/font/fontawesome-webfont.ttf?": "public/font/fontawesome-webfont.ttf"
       },
 
       folders: {
