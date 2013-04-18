@@ -3,119 +3,31 @@
  * Distributed under MIT license
  * http://kaba-cceac.github.com/kesign/
  */
-@media (max-width: 480px) {
-  .page {
-    margin: 10px;
-  }
-  .sidebar {
-    margin: 10px;
-    width: inherit;
-    position: relative;
-    min-height: 8px;
-    position: relative;
-    float: none;
-    display: block;
-  }
-  .sidebar + .page {
-    margin-left: 10px;
-  }
-  .sidebar.sidebar-fixed {
-    margin-top: 80px;
-    position: relative;
-  }
-  .sidebar.sidebar-fixed + .page {
-    margin-top: 10px;
-  }
-  .sidebar .btn-sidebar {
-    display: block;
-  }
-  .sidebar .sidebar-collapse,
-  .sidebar .sidebar-collapse.collapse {
-    -webkit-transform: translate3d(0, 0, 0);
-    height: 0;
-    overflow: hidden;
-  }
-  .container > .page {
-    margin: 10px;
-  }
-  .header-fixed-top.collapsed + .main .page {
-    margin-top: 40px;
-  }
-  .header-fixed-top.collapsed + .main .sidebar.sidebar-fixed {
-    margin-top: 40px;
-    -webkit-transition: margin 1s;
-    -moz-transition: margin 1s;
-    -o-transition: margin 1s;
-    -ms-transition: margin 1s;
-    transition: margin 1s;
-  }
-  .header-fixed-top.collapsed + .main .sidebar.sidebar-fixed + .page {
-    margin-top: 10px;
-  }
-  .login-page .login-content .brandbar {
-    top: -40px;
-    height: 40px;
-  }
-  .login-page .login-content .brandbar a.brand {
-    height: 40px;
-    width: 80px;
-    background: url("../img/kaba_xs.gif") no-repeat;
-  }
-  .login-page .login-content .login-form {
-    width: 90%;
-    padding: 10px;
-  }
-  .login-page .login-content .login-form .login-hero,
-  .login-page .login-content .login-form .span8 {
-    display: none;
-  }
-  .login-page .login-content .login-form .span4 {
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    padding: 0;
-  }
-}
-@media (max-width: 979px) and (min-width: 767px) {
-  .login-page .login-content .login-form {
-    width: 760px;
-  }
-  .login-page .login-content .login-form .span4,
-  .login-page .login-content .login-form .span8 {
-    width: 45%;
-  }
-}
-@media (max-width: 767px) and (min-width: 480px) {
-  .container > .page {
-    margin: 20px;
-  }
-  .login-page .login-content .brandbar {
-    top: -60px;
-    height: 60px;
-  }
-  .login-page .login-content .brandbar a.brand {
-    height: 60px;
-    width: 120px;
-    background: url("../img/kaba_s.gif") no-repeat;
-  }
-  .login-page .login-content .login-form {
-    width: 70%;
-    padding: 10px;
-  }
-  .login-page .login-content .login-form .login-hero,
-  .login-page .login-content .login-form .span8 {
-    display: none;
-  }
-  .login-page .login-content .login-form .span4 {
-    width: 100%;
-  }
-}
-@media (min-width: 481px) {
-  .sidebar .sidebar-collapse,
-  .sidebar .sidebar-collapse.collapse {
-    height: auto !important;
-    overflow: visible !important;
-  }
+
+@media (max-width: 480px){.page{margin:10px}
+.sidebar{margin:10px;width:inherit;position:relative;min-height:8px;position:relative;float:none;display:block;}
+.sidebar + .page{margin-left:10px}
+.sidebar.sidebar-fixed{margin-top:80px;position:relative;}
+.sidebar.sidebar-fixed + .page{margin-top:10px}
+.sidebar .btn-sidebar{display:block}
+.sidebar .sidebar-collapse,.sidebar .sidebar-collapse.collapse{-webkit-transform:translate3d(0,0,0);height:0;overflow:hidden}
+.container > .page{margin:10px}
+.header-fixed-top.collapsed + .main .page{margin-top:40px}
+.header-fixed-top.collapsed + .main .sidebar.sidebar-fixed{margin-top:40px;-webkit-transition:margin 1s;-moz-transition:margin 1s;-o-transition:margin 1s;-ms-transition:margin 1s;transition:margin 1s;}
+.header-fixed-top.collapsed + .main .sidebar.sidebar-fixed + .page{margin-top:10px}
+.login-page .login-content .brandbar{top:-40px;height:40px;}
+.login-page .login-content .brandbar a.brand{height:40px;width:80px;background:url("../img/kaba_xs.gif") no-repeat}
+.login-page .login-content .login-form{width:90%;padding:10px;}
+.login-page .login-content .login-form .login-hero,.login-page .login-content .login-form .span8{display:none}
+.login-page .login-content .login-form .span4{width:100%}
+}@media (max-width: 767px){body{padding:0}
+}@media (max-width: 979px) and (min-width: 767px){.login-page .login-content .login-form{width:760px;}
+.login-page .login-content .login-form .span4,.login-page .login-content .login-form .span8{width:45%}
+}@media (max-width: 767px) and (min-width: 480px){.container > .page{margin:20px}
+.login-page .login-content .brandbar{top:-60px;height:60px;}
+.login-page .login-content .brandbar a.brand{height:60px;width:120px;background:url("../img/kaba_s.gif") no-repeat}
+.login-page .login-content .login-form{width:70%;padding:10px;}
+.login-page .login-content .login-form .login-hero,.login-page .login-content .login-form .span8{display:none}
+.login-page .login-content .login-form .span4{width:100%}
+}@media (min-width: 481px){.sidebar .sidebar-collapse,.sidebar .sidebar-collapse.collapse{height:auto !important;overflow:visible !important}
 }
