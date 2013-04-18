@@ -4,6 +4,7 @@ $ cat .gitignore
 .settings.xml
 .monitor
 .DS_Store
+npm-debug.log
 
 # Use wildcards as well
 *~
