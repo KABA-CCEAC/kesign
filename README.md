@@ -47,6 +47,8 @@ To generate the files on change (save)
 
 ### Release
 
+Befor you crate a new version be sure to set the new version numbers inside the Gruntfile.js.
+
 To package the sources for release:
 
 	grunt release
