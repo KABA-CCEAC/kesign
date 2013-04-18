@@ -51,4 +51,4 @@ To package the sources for release:
 
 	grunt release
 
-Know you could copy the files from __/dist/release/__ to the current documentation branch and if needed add documentation content there for the new functionality.
+Now you could copy the files from __/dist/release/__ to the current documentation branch and if needed add documentation content there for the new functionality.
