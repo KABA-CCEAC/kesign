@@ -1,0 +1,113 @@
+- var path = '../../'
+!!! 5
+html(lang="en")
+  head
+    include ../includes/layout/head
+
+  body(data-spy="scroll", data-target=".sidebar")
+    header.header.header-fixed-top
+      .header-inner
+
+        .brandbar.brandbar-xsmall
+          a.brand(href="#{path}index.html")
+
+          .statusbar.pull-right
+            strong Welcome 
+            | John Mustermann 
+            span.label.label-warning Admin Status
+
+
+        .navbar
+
+          .navbar-btns.pull-left
+            button.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+              i.icon-large.icon-arrow-left
+
+            button.toggleLeftSnap.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+              i.icon-large.icon-reorder
+
+            button.hidden-sm.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+              i.icon-large.icon-home
+
+          .navbar-title Title of current page
+
+          .navbar-btns.pull-right
+            button.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+              i.icon-large.icon-envelope-alt
+
+
+
+
+          //- include ../includes/sample-navbar
+          
+    .main
+      .main-inner
+
+        .sidebar.snap-drawers.scrollable
+          .snap-drawer.snap-drawer-left
+            ul.list-group
+              li.list-group-item
+                span.glyphicon.glyphicon-chevron-right
+                | Item 1
+              li.list-group-item
+                span.glyphicon.glyphicon-chevron-right
+                | Item 2
+              li.list-group-item
+                span.glyphicon.glyphicon-chevron-right
+                | Item 3
+              li.list-group-item
+                span.glyphicon.glyphicon-chevron-right
+                | Item 4
+              li.list-group-item
+                span.glyphicon.glyphicon-chevron-right
+                | Item 5
+              li.list-group-item
+                span.glyphicon.glyphicon-chevron-right
+                | Item 6
+
+        .page.snap-content.scrollable
+          p Bla bla
+        //- .sidebar
+        //-   include ../includes/sample-sidebar
+
+        //- .page
+        //-   include ../includes/sample-content
+      
+    //- footer.footer
+    //-   .footer-inner
+    //-       | kesign is freely distributable under the terms of the MIT license.
+
+    script
+      var leftToggle = $('.toggleLeftSnap');
+
+      var snapper = new Snap({
+        element: $('.snap-content')[0],
+        disable: 'right',
+        slideIntent: 40,
+        minDragDistance: 20
+      });
+
+      snapper.on('end', function() {
+        var snap = snapper.state()
+        if (snap.state === 'closed' && snap.info.opening) {
+          leftToggle.addClass('active');
+        } else {
+          leftToggle.removeClass('active');
+        }
+      });
+
+      
+      leftToggle.click(function() {
+        if (snapper.state().state === 'closed') {
+          snapper.open('left');
+          leftToggle.addClass('active');
+        } else {
+          snapper.close('left');
+          leftToggle.removeClass('active');
+        }
+      });
+    
+    include ../includes/layout/endscripts
+
+
+

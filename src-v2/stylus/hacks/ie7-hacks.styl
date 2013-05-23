@@ -1,0 +1,104 @@
+// http://paulirish.com/2009/browser-specific-css-hacks/
+
+// sidebar
+.sidebar
+  *margin-top: 20px
+
+  &.sidebar-fixed
+    *margin-top: 90px
+    *position: absolute
+    *left: 0
+
+// layout
+.header-fixed-top + .main .page
+  *margin-top: 90px
+  *position: relatice
+  *top: 90px
+  *left: 0
+
+.header-fixed-top.collapsed + .main .page
+  *margin-top: 10px
+  *position: relative
+  *top: 10px
+  *left: 0
+
+.header-fixed-top.collapsed + .main .sidebar.sidebar-fixed
+  *margin-top: 10px
+  *position: relative
+  *top: 10px
+  *left: 0
+
+.header-fixed-top + .main .container .page
+  *margin-top: 50px
+  *position: relatice
+  *top: 50px
+  *left: 0
+
+.header-fixed-top.collapsed + .main .container .page
+  *margin-top: 30px
+  *position: relative
+  *top: 30px
+  *left: 0
+
+.brandbar
+  *position: relative
+
+  .statusbar
+    *float: none
+    *position: absolute
+    *right: 0
+
+.navbar-inverse, .navbar
+  .nav
+    li
+      a
+        [class^="icon-"], [class*=" icon-"]
+          *position: relative
+          *top: -5px
+
+    &.nav-small
+      [class^="icon-"], [class*=" icon-"]
+        *position: relative
+        *top: -5px
+
+      li
+        a.toggleBrandbar
+          [class^="icon-"], [class*=" icon-"]
+            *position: relative
+            *top: 0px
+
+
+// widget
+.widget-header
+  *position: relative
+
+  .commands.pull-right
+    *display: inline
+    *float: none
+    *position: absolute
+    *right: 0
+
+
+// stats
+.stats 
+  *display: block
+  clearfix()
+
+  .stat
+    *float: left
+    *display: block
+    *width: 22.50%
+
+// shortcut
+.shortcuts 
+  clearfix()
+
+  .shortcut
+    *float: left
+    *display: block
+    *width: 22.50%
+
+// responsive
+@media (max-width: 480px) 
+  .sidebar
+    *width: auto

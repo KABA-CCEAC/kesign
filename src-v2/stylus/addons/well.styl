@@ -1,0 +1,119 @@
+// mixin
+colored-well(c = #fff)
+  border: solid 1px #E3E3E3
+  color: c
+
+  h1, h2, h3, h4, h5, h6, legend
+    color: c
+
+// primary
+.well-kabaBlue
+  background: $kabaBlue
+  colored-well()
+
+.well-kabaMiddleBlue
+  background: $kabaMiddleBlue
+  colored-well()
+
+.well-kabaLightBlue
+  background: $kabaLightBlue
+  colored-well($kabaDarkGray)
+
+  // grays
+.well-kabaDarkGray
+  background: $kabaDarkGray
+  colored-well()
+
+.well-kabaTextGray
+  background: $kabaTextGray
+  colored-well()
+
+.well-kabaMiddleGray
+  background: $kabaMiddleGray
+  colored-well($kabaDarkGray)
+
+.well-kabaLightGray
+  background: $kabaLightGray
+  colored-well($kabaDarkGray)
+
+.well-kabaBackgroundGray
+  background: $kabaBackgroundGray
+  colored-well($kabaDarkGray)
+
+.well-kabaWhite
+  background: $white
+  colored-well($kabaDarkGray)
+
+// secondary
+.well-kabaOrange
+  background: $kabaOrange
+  colored-well()
+
+.well-kabaGreen
+  background: $kabaGreen
+  colored-well()
+
+.well-kabaRed
+  background: $kabaRed
+  colored-well()
+
+.well-kabaLightYellow
+  background: $kabaLightYellow
+  colored-well($kabaDarkGray)
+
+// GRADIENTS
+
+// primary
+.well-kabaBlue.gradient
+  kabaBlue-gradient()
+  colored-well()
+
+.well-kabaMiddleBlue.gradient
+  kabaMiddleBlue-gradient()
+  colored-well()
+
+.well-kabaLightBlue.gradient
+  kabaLightBlue-gradient()
+  colored-well($kabaDarkGray)
+
+// grays
+.well-kabaDarkGray.gradient
+  kabaDarkGray-gradient()
+  colored-well()
+
+.well-kabaTextGray.gradient
+  kabaTextGray-gradient()
+  colored-well()
+
+.well-kabaMiddleGray.gradient
+  kabaMiddleGray-gradient()
+  colored-well($kabaDarkGray)
+
+.well-kabaLightGray.gradient
+  kabaLightGray-gradient()
+  colored-well($kabaDarkGray)
+
+.well-kabaBackgroundGray.gradient
+  kabaBackgroundGray-gradient()
+  colored-well($kabaDarkGray)
+
+.well-kabaWhite.gradient
+  kabaWhite-gradient()
+  colored-well($kabaDarkGray)
+
+// secondary
+.well-kabaOrange.gradient
+  kabaOrange-gradient()
+  colored-well()
+
+.well-kabaGreen.gradient
+  kabaGreen-gradient()
+  colored-well()
+
+.well-kabaRed.gradient
+  kabaRed-gradient()
+  colored-well()
+
+.well-kabaLightYellow.gradient
+  kabaLightYellow-gradient()
+  colored-well($kabaDarkGray)

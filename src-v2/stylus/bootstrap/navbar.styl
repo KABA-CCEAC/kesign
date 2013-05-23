@@ -1,0 +1,227 @@
+.navbar
+  padding-right: 0
+  padding-left: 0
+  background-color: $kabaBlue
+
+  .navbar-title
+    display: block
+    max-width: 200px
+    padding: 15px
+    margin-right: auto
+    margin-left: auto
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    color: $white
+    text-align: center
+
+  .navbar-btns
+    position: relative
+    margin-top: -50px
+
+    &:first-child
+      margin-top: 0
+
+    .btn
+      margin-left: 1px
+
+      &:first-child
+        margin-left: 0
+
+    .navbar-btn
+      margin-top: 0
+      padding: 14px 14px
+      border-radius: 0
+
+  .btn.btn-default
+    background-color: lighten($kabaBlue, 5)
+    border-color: lighten($kabaBlue, 8)
+
+    &.active
+      background-color: $white
+      color: lighten($kabaBlue, 5)
+      border-color: darken($kabaMiddleBlue, 3)
+
+    &:hover, :focus
+      background-color: lighten($kabaBlue, 3)
+      border-color: lighten($kabaBlue, 6)
+      color: $kabaLightBlue
+
+
+@media screen and (min-width: 768px)
+  .navbar
+    padding-right: 15px
+    padding-left: 15px
+
+    .navbar-title
+      float: left;
+      font-size: 18px
+      margin-right: 5px;
+      margin-left: -5px;
+
+    .navbar-btns
+      margin-top: 0
+
+      .navbar-btn
+        margin-top: 7px
+        padding: 8px 12px
+        border-radius: 4px
+
+      .btn.hidden-sm
+        display: inline !important
+
+// .navbar-inverse, .navbar
+//   .navbar-inner
+//     kabaBlue-gradient()
+//     border: none
+//     border-radius: 0
+
+// .navbar-inverse, .navbar
+
+//   .brand
+//     padding: 5px 20px 5px
+//     color: $white
+//     text-shadow: 0 -1px 0 $black
+
+//   .nav
+//     li
+//       a
+//         padding: 5px 20px 5px
+//         color: $white
+//         text-shadow: 0 -1px 0 $black
+
+//         [class^="icon-"], [class*=" icon-"]
+//           height: 14px
+
+//       a:focus, a:hover
+//         color: $white
+
+//         &:hover
+//           background: $kabaLightGray
+//           color: $kabaBlue
+//           text-shadow: 0 1px 0 $white
+
+//       &.dropdown > .dropdown-toggle .caret
+//         border-top-color: $white
+//         border-bottom-color: $white
+
+//       &.dropdown.open > .dropdown-toggle, &.dropdown.active > .dropdown-toggle, &.dropdown.open.active > .dropdown-toggle
+//         background: $kabaLightGray
+//         color: $kabaBlue
+//         text-shadow: 0 1px 0 $white
+
+//         .caret
+//           border-top-color: $kabaBlue
+//           border-bottom-color: $kabaBlue
+
+//       .dropdown-menu
+//         margin: 0
+//         border: none
+//         border-bottom: solid 2px $kabaBlue
+//         border-radius: 0
+//         background: $kabaLightGray
+//         color: $kabaBlue
+//         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+
+//         &::before, &::after
+//           display: none
+        
+//         li
+//           a
+//             padding: 2px 20px 2px
+//             color: $kabaTextGray
+//             text-shadow: 0 1px 0 $white
+
+//             &:hover
+//               color: $kabaBlue
+//               text-shadow: 0 1px 0 $white
+
+//             &::before
+//               font-family: 'FontAwesome'
+//               content: "\f054"
+//               color: $orange
+//               margin-right: 5px
+
+
+//     > .active
+//       a, a:hover
+//         background: $kabaLightGray
+//         color: $kabaBlue
+//         text-shadow: 0 1px 0 $white
+
+//     &.nav-small
+//       font-size: 12px
+
+//       li
+//           a
+//             display: inline-block
+//             min-height: 21px
+//             padding: 5px 10px 4px
+
+//       [class^="icon-"], [class*=" icon-"]
+//         margin-top: 0
+
+
+//   .divider-vertical
+//     height: 30px
+//     border-right: 1px solid #2A4D74
+//     border-left: 1px solid #072039
+//     margin: 0
+
+//   .navbar-form input, .navbar-form select, .navbar-form .radio, .navbar-form .checkbox
+//     margin-top: 2px
+//     height: 16px
+//     font-size: 12px
+//     border-radius: 4px
+
+//   .btn, .btn-group
+//     margin-top: 2px
+//     font-size: 12px
+//     line-height: 16px
+//     border-radius: 4px
+
+//   .navbar-search
+//     margin-top: 0px
+
+//     .search-query
+//       margin-top: 2px
+//       padding: 5px 14px 3px
+//       height: 16px
+//       kabaBlue-gradient(bottom)
+//       font-size: 12px
+//       line-height: 15px
+//       border: solid 1px lighten($kabaBlue, 15)
+//       color: $kabaLightBlue
+
+//       &:hover, &:focus
+//         background: $white
+//         color: $kabaBlue
+
+//     &::after
+//       position: absolute
+//       font-size: 14px
+//       font-family: 'FontAwesome'
+//       content: "\f002"
+//       color: $kabaMiddleBlue
+//       right: 8px
+//       top : 7px
+
+// .navbar-inner
+//   min-height: 30px
+
+// // collapse button for responsive ui
+// .btn.btn-navbar
+//   kabaBlue-gradient(bottom)
+//   padding: 5px
+//   margin-top: 2px
+
+//   &:hover
+//     background: $kabaBlue
+//     border: solid 1px $kabaBlue
+
+
+// body .navbar
+//   font-size: 14px
+
+//   .brand
+//     color: $kabaMiddleBlue

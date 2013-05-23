@@ -1,0 +1,11 @@
+// http://paulirish.com/2009/browser-specific-css-hacks/
+
+// sidebar-fixed fix for margin top
+x:-o-prefocus, .sidebar.sidebar-fixed
+  margin-top: 90px
+
+// ribbons fix position of ribbon (failed rendering in widget-header)
+x:-o-prefocus, [class^="icon-"] .ribbon, [class*=" icon-"] .ribbon
+  position: relative
+  right: 0px
+  margin-left: -6px

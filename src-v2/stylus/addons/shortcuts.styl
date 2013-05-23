@@ -1,0 +1,92 @@
+.shortcuts 
+  text-align: left  
+
+  .shortcut
+    text-align: center  
+    width: 22.50%
+    display: inline-block
+    padding: 18px 0 12px
+    margin: 0 .9% 1em
+    vertical-align: top         
+    text-decoration: none       
+    background: $kabaLightBlue
+    color: $kabaMiddleBlue
+    border-radius: 3px
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.02)
+
+    &.selected
+      background: darken($kabaLightBlue, 6)
+
+    &:hover
+      background: darken($kabaLightBlue, 2)
+      box-shadow: none
+
+      .shortcut-icon 
+        color: lighten($kabaMiddleBlue, 10)
+
+      .shortcut-label
+        color: lighten($kabaMiddleBlue, 10)
+
+    .shortcut-icon 
+      margin-top: .25em
+      margin-bottom: .25em
+      
+      font-size: 32px
+      text-shadow: -1px -1px 2px $white
+      color: $kabaOrange
+
+    .shortcut-image 
+      margin-top: .25em
+      margin-bottom: .25em
+      width: 32px
+
+    .shortcut-label
+      display: block
+      font-weight: 400
+      color: $kabaMiddleBlue
+
+  .shortcut-orange
+    background: lighten($orange, 28)
+
+    &.selected
+      background: lighten($orange, 22)
+
+    &:hover
+      background: lighten($orange, 24)
+
+
+  .shortcut-gray
+    background: darken($kabaLightGray, 2)
+
+    &.selected
+      background: darken($kabaLightGray, 6)
+
+    &:hover
+      background: darken($kabaLightGray, 4)
+
+
+  .shortcut.disabled
+    background: darken($kabaBackgroundGray, 2)
+    cursor: default
+    box-shadow: none
+
+    &:hover
+      background: darken($kabaBackgroundGray, 2)
+
+      .shortcut-icon 
+        color: lighten($kabaMiddleGray, 10)
+
+      .shortcut-label
+        color: $kabaMiddleGray
+
+    .shortcut-icon 
+      color: lighten($kabaMiddleGray, 10)
+
+    .shortcut-label
+      color: $kabaMiddleGray
+
+  .shortcut.selected
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3)
+
+    &:hover
+      box-shadow: none

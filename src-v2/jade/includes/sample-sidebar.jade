@@ -1,0 +1,26 @@
+a.btn.btn-sidebar(data-toggle='collapse', data-target='.sidebar-collapse')
+  span.icon-bar
+  span.icon-bar
+  span.icon-bar
+
+.sidebar-collapse.collapse
+  ul#accordion1.nav.nav-list
+    li: a(href="#{path}index.html") Home
+    li: a(href="#{path}doc/") Documentation
+    li.divider
+    li.nav-header Samples
+    li.active: a(href="#sample-widget") widget
+    li: a(href="#sample-widget-commands") widget with commands
+    li: a(href="#sample-widget-tabs") widget with tabs
+    li.divider
+    li.nav-header Accordion Samples
+    li.accordion-group(data-toggle="collapse", data-target="#acc1", data-parent="#accordion1") 
+      .accordion-header accordion 1
+      ul#acc1.nav.nav-list.collapse.in
+        li: a(href="#") item 1
+        li: a(href="#") item 2
+    li.accordion-group.collapsed(data-toggle="collapse", data-target="#acc2", data-parent="#accordion1") 
+      .accordion-header accordion 2
+      ul#acc2.nav.nav-list.collapse
+        li: a(href="#") item 1
+        li: a(href="#") item 2

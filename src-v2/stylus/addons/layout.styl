@@ -1,0 +1,70 @@
+// header fixed
+.header
+  .navbar
+    border-radius: 0
+
+  &.header-fixed-top
+    position: fixed
+    z-index: 1040
+    top: 0
+    left: 0
+    right: 0
+    margin-bottom: 0
+
+    .brandbar + .navbar 
+      margin-top: -40px
+      margin-bottom: 0
+
+    + .main .page
+      margin-top: 60px
+
+    + .main .sidebar
+      margin-top: 50px
+
+.scrollable
+    overflow: auto
+    -webkit-transition-property: top, bottom
+    transition-property: top, bottom
+    -webkit-transition-duration: .2s, .2s
+    transition-duration: .2s, .2s
+    -webkit-transition-timing-function: linear, linear
+    transition-timing-function: linear, linear
+    -webkit-overflow-scrolling: touch
+
+
+@media screen and (min-width: 768px) and (max-height: 599px)
+  .header
+    &.header-fixed-top
+      + .main .page
+        margin-top: 50px
+
+      + .main .sidebar
+        margin-top: 70px
+
+@media screen and (min-width: 768px) and (min-height: 600px)
+  .header
+    &.header-fixed-top
+      .brandbar + .navbar 
+        margin-top: 0px
+
+      + .main .page
+        margin-top: 90px
+
+      + .main .sidebar
+        margin-top: 110px
+
+// header fixed and collapsed
+// - reduce margin top
+// .header-fixed-top.collapsed + .main .page
+//   margin-top: 50px
+//   transition: margin 1s
+
+// footer
+// .footer
+//   height: 30px
+//   width: 100%
+//   background: $kabaBlue
+  
+// .footer-fixed-bottom
+//   position: fixed
+//   bottom: 0px

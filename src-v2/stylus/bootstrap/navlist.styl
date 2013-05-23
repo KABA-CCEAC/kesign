@@ -1,0 +1,71 @@
+.nav-list 
+  padding: 0
+
+  > li > a, .nav-header
+    margin-right: 0
+    margin-left: 0
+
+  > .active > a, > .active > a:hover
+    background-color: $kabaMiddleBlue
+
+  > .active > a, > .active > a:hover
+    border-left: solid 4px $orange
+    padding: 3px 15px 3px 11px
+
+  // fix for bootstrap doc
+  &.bs-docs-sidenav
+   > .active > a, > .active > a:hover
+    border-left: solid 4px $orange
+    padding: 8px 15px 8px 11px
+
+  // accordion inside navl-ist
+  .accordion-group
+    position: relative
+    border: none
+    padding: 0
+    margin: 0
+
+    .accordion-header
+      position: relative
+      padding: 3px 15px 3px 8px
+      cursor: pointer
+      background-color: darken($kabaLightBlue, 15)
+      color: $white
+      border-left: solid 3px lighten($orange, 5)
+      margin: 0 0 1px 0
+
+      &::after
+        font-family: 'FontAwesome'
+        position: absolute
+        top: 3px
+        right: 4px
+        content: "\f077"
+        color: $white
+        margin-right: 5px
+
+    &.collapsed
+      .accordion-header
+        //background-color: inherit
+        //color: $kabaTextGray
+        border-left: none
+        padding: 3px 15px 3px 11px
+
+        &::after
+          font-family: 'FontAwesome'
+          position: absolute
+          top: 3px
+          right: 4px
+          content: "\f078"
+          color: $white
+          margin-right: 5px
+
+    ul.nav.nav-list 
+      margin-bottom: 0
+
+      li
+        background: $kabaLightBlue
+
+
+
+.icon-white, .nav-tabs > .active > a > [class^="icon-"], .nav-tabs > .active > a > [class*=" icon-"], .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"]
+  background-image: none

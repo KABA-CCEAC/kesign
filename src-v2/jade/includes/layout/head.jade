@@ -1,0 +1,29 @@
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+meta(name='apple-mobile-web-app-capable', content='yes')
+
+if (typeof(title) != 'undefined')
+  title=title
+else
+  title kesign - software design @kaba
+
+//- Application styles
+link(href='#{path}public/css/doc-baseV2.css', rel='stylesheet')
+link(href='#{path}public/css/kesignV2.css', rel='stylesheet')
+
+script(src='#{path}public/js/jquery-1.8.2.min.js')
+script(src='#{path}public/js/bootstrap-3.0.0.min.js')
+script(src='#{path}public/js/snap-1.7.10.js')
+script(src='#{path}public/js/kesignV2.js')
+
+
+// HTML5 shim, for IE6-8 support of HTML5 elements
+// if lt IE 9
+  script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+  script(src='#{path}public/js/respond.js')
+
+// if lt IE 8
+  link(href='#{path}public/css/font-awesome-ie7-3.1.1.css', rel='stylesheet', type='text/css')
+
+
+

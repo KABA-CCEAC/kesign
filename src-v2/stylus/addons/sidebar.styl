@@ -1,0 +1,46 @@
+.sidebar
+  display: inline-block
+  float: left
+  width: 200px
+  box-shadow: -1px 2px 7px darken($kabaBackgroundGray, 20)
+  border: solid 1px darken($kabaBackgroundGray, 20)
+  border-bottom: solid 3px $orange
+  padding: 4px 0 19px
+  background: #f5
+
+  + .page
+    margin-left: 220px
+    overflow: hidden
+
+  // fixed sidebar
+  &.sidebar-fixed
+    margin-top: 0
+    position: fixed
+    float: none
+    display: inline-block
+
+  .btn-sidebar
+    z-index: 1000
+    position: absolute
+    right: 0
+    margin-right: 5px
+    padding: 2px 8px 6px
+    display: none
+
+    .icon-bar
+      display: block
+      width: 18px
+      height: 2px
+      background-color: whiteSmoke
+      border-radius: 1px
+      box-shadow: 0 1px 0 rgba(0, 0, 0, .25)
+
+      + .icon-bar
+        margin-top: 2px
+
+  .sidebar-collapse, .sidebar-collapse.collapse
+    height: auto
+
+// support for bootstrap affix
+.sidebar.affix
+  top: 10px

@@ -1,0 +1,41 @@
+.news-list
+  padding: 10px 0
+  background: $kabaLightBlue
+  border-bottom: solid 2px $kabaBlue
+
+  h1, h2, h3, h4, h5, h6
+    font-size: 16px
+    font-weight: 400
+    padding: 0 19px
+
+  ul
+    list-style-type: none
+    margin: 0
+
+    li
+      position: relative
+      padding: 5px 40px 5px 19px
+      border-top: solid 1px $white
+      border-bottom: solid 1px $kabaMiddleGray
+
+      &:hover
+        border-left: solid 2px $kabaOrange
+        padding: 5px 40px 5px 17px
+        background: darken($kabaLightBlue, 10)
+
+      &.news-end
+        text-align: right
+        border-bottom: none
+        padding: 5px 30px 5px 17px
+
+      a:hover
+        text-decoration: none
+
+      &::after
+        position: absolute
+        top: 50%
+        margin-top: -8px
+        right: 15px
+        font-family: 'FontAwesome'
+        content: "\f054"
+        color: $kabaOrange

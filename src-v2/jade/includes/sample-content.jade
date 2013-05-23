@@ -1,0 +1,287 @@
+#sample-widget.row-fluid
+  .span8
+    .widget
+      .widget-header
+        i.icon-user
+          small.ribbon.ribbon-error 5
+        h3 User Information - this title should be short enough but if you can't do better we will add ellipsis
+
+      .widget-content
+        p 
+          a.btn(href="#myModal", role="button", data-toggle="modal") Launch demo modal
+        p
+          h6 some list
+          ul
+            li item a
+            li item b
+
+  .span4
+    .widget
+      .widget-header
+          i.icon-user
+          h3 More Information - this title should be short enough but if you can't do better we will add ellipsis
+
+      .widget-content
+        p 
+          a.btn(href="#myModal", role="button", data-toggle="modal") Launch demo modal
+        p
+          h6 some list
+          ul
+            li item a
+            li item b
+
+#sample-widget-commands.row-fluid
+  .span12
+    .widget
+      .widget-header
+        ul.commands
+          li: a(href='#')
+            i.icon-copy
+            | copy
+          li: a(href='#')
+            i.icon-copy
+            | paste
+          li.divider
+          li: a(href='#')
+            i.icon-save
+            | save
+
+      .widget-content
+        :markdown
+          Write long copytext in color __TEXTGRAY__. Format __bold__ or _italic_. 
+
+          Add links in copytext as needed 
+          [some mystical link leading to nowhere](http://nowhere.com)! Links are 
+          always good stuff. 
+
+        p
+          | Might be good to mark external links: 
+          a(href="#") 
+            i.icon-external-link
+            |  going no where, too
+
+        :markdown
+          But still 
+          wondering where in kaba apps there should be long copytext? But if you need 
+          it it's there. Nothing to do at all, as it's the default text stuff. Not much 
+          more to say about it. Boring stuff - isn't it?
+
+      .widget-footer
+        .pull-right
+          button.btn action 1
+          button.btn.btn-primary action 2
+
+#sample-widget-tabs.row-fluid
+  .span12
+    .widget
+      ul.nav.nav-tabs
+        li.active: a(href="#tab1", data-toggle="tab") Table Inline
+        li: a(href="#tab2", data-toggle="tab") Table Widget - Basic
+        li: a(href="#tab3", data-toggle="tab") Table Widget - Striped/Hover
+    
+      .tab-content
+        #tab1.tab-pane.active
+          .widget-header
+            ul.commands.pull-right
+              li: a(href='#')
+                i.icon-copy
+                | copy
+              li: a(href='#')
+                i.icon-copy
+                | paste
+              li.divider
+              li: a(href='#')
+                i.icon-save
+                | save
+
+          .widget-content
+            p some table inlined:
+            table.table.table-striped.table-hover
+              thead
+                tr
+                  th #
+                  th givenname
+                  th familyname
+                  th @twitter
+              tbody
+                tr
+                  td 1
+                  td Jan
+                  td Mühlemann
+                  td @jamuhl
+                tr
+                  td 2
+                  td Mark
+                  td Otto
+                  td @mdo
+                tr
+                  td 3
+                  td Jacob
+                  td Thornton
+                  td @fat
+
+        #tab2.tab-pane
+          .widget-header
+            ul.commands.pull-right
+              li: a(href='#')
+                i.icon-copy
+                | copy
+              li: a(href='#')
+                i.icon-copy
+                | paste
+
+          .widget-table
+            .widget-content
+                table.table
+                  thead
+                    tr
+                      th #
+                      th givenname
+                      th familyname
+                      th @twitter
+                  tbody
+                    tr
+                      td 1
+                      td Jan
+                      td Mühlemann
+                      td @jamuhl
+                    tr
+                      td 2
+                      td Mark
+                      td Otto
+                      td @mdo
+                    tr
+                      td 3
+                      td Jacob
+                      td Thornton
+                      td @fat
+
+        #tab3.tab-pane
+          .widget-header
+            ul.commands.pull-right
+              li: a(href='#')
+                i.icon-save
+                | save
+
+          .widget-table
+            .widget-content
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th #
+                      th givenname
+                      th familyname
+                      th @twitter
+                  tbody
+                    tr
+                      td 1
+                      td Jan
+                      td Mühlemann
+                      td @jamuhl
+                    tr
+                      td 2
+                      td Mark
+                      td Otto
+                      td @mdo
+                    tr
+                      td 3
+                      td Jacob
+                      td Thornton
+                      td @fat
+
+
+//- MODAL DEMO
+#myModal.modal.hide.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+  .modal-header
+    button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+    h3#myModalLabel Modal header
+
+  .modal-body
+    .row-fluid
+      .span12
+        .widget
+          ul.nav.nav-tabs
+            li.active: a(href="#tab11", data-toggle="tab") Table Inline
+            li: a(href="#tab12", data-toggle="tab") Table Widget - Basic
+        
+          .tab-content
+            #tab11.tab-pane.active
+              .widget-header
+                ul.commands.pull-right
+                  li: a(href='#')
+                    i.icon-copy
+                    | copy
+                  li: a(href='#')
+                    i.icon-copy
+                    | paste
+                  li.divider
+                  li: a(href='#')
+                    i.icon-save
+                    | save
+
+              .widget-content
+                p some table inlined:
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th #
+                      th givenname
+                      th familyname
+                      th @twitter
+                  tbody
+                    tr
+                      td 1
+                      td Jan
+                      td Mühlemann
+                      td @jamuhl
+                    tr
+                      td 2
+                      td Mark
+                      td Otto
+                      td @mdo
+                    tr
+                      td 3
+                      td Jacob
+                      td Thornton
+                      td @fat
+
+            #tab12.tab-pane
+              .widget-header
+                ul.commands.pull-right
+                  li: a(href='#')
+                    i.icon-copy
+                    | copy
+                  li: a(href='#')
+                    i.icon-copy
+                    | paste
+
+              .widget-table
+                .widget-content
+                    table.table
+                      thead
+                        tr
+                          th #
+                          th givenname
+                          th familyname
+                          th @twitter
+                      tbody
+                        tr
+                          td 1
+                          td Jan
+                          td Mühlemann
+                          td @jamuhl
+                        tr
+                          td 2
+                          td Mark
+                          td Otto
+                          td @mdo
+                        tr
+                          td 3
+                          td Jacob
+                          td Thornton
+                          td @fat
+
+  .modal-footer
+    button.btn(data-dismiss="modal", aria-hidden="true") Close
+    button.btn.btn-primary Save changes
+

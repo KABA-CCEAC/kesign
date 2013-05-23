@@ -1,0 +1,31 @@
+.brandbar
+  background: $white
+  overflow: hidden
+  clearfix()
+
+  .statusbar
+    margin: 10px 0
+
+    strong
+      color: $kabaBlue
+
+    .label
+      border-radius: 0
+      vertical-align: baseline
+      margin-right: -1px
+
+.brandbar-xsmall
+  height: 40px
+  max-height: 40px
+
+  a.brand
+    display: inline-block
+    margin-left: 13px
+    height: 40px
+    width: 80px
+    background: url(../img/kaba_xs.gif) no-repeat
+
+
+@media screen and (min-width: 768px) and (min-height: 600px)
+  .brandbar + .navbar 
+    margin-top: 40px
