@@ -2,6 +2,7 @@
 // Copyright (c)2013 Kaba AG.
 // Distributed under MIT license
 // http://kaba-cceac.github.com/kesign/
+
 (function() {
   $.support.placeholder = false;
   var placeholderTest = document.createElement('input');

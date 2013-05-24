@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><title>kesign - software design @kaba</title><link href="../../public/css/doc-baseV2.css" rel="stylesheet"><link href="../../public/css/kesignV2.css" rel="stylesheet"><script src="../../public/js/jquery-1.8.2.min.js"></script><script src="../../public/js/bootstrap-3.0.0.min.js"></script><script src="../../public/js/push-1.0.0.js"></script><script src="../../public/js/snap-1.7.10.js"></script><script src="../../public/js/kesignV2.js"></script><!-- HTML5 shim, for IE6-8 support of HTML5 elements--><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><script src="../../public/js/respond.js"></script><![endif]--><!--[if lt IE 8]><link href="../../public/css/font-awesome-ie7-3.1.1.css" rel="stylesheet" type="text/css"><![endif]--></head><body data-spy="scroll" data-target=".sidebar"><header class="header header-fixed-top"><div class="header-inner"><div class="brandbar brandbar-xsmall"><a href="../../index.html" class="brand"></a><div class="statusbar pull-right"><strong>Welcome </strong>John Mustermann <span class="label label-warning">Admin Status</span></div></div><div class="navbar"><div class="navbar-btns pull-left"><button href="../../pages/samples.html" class="btn btn-default navbar-btn"><i class="icon-large icon-arrow-left"></i></button><button href="../../pages/samples.html" class="toggleLeftSnap btn btn-default navbar-btn"><i class="icon-large icon-reorder"></i></button><button href="../../pages/samples.html" class="hidden-sm btn btn-default navbar-btn"><i class="icon-large icon-home"></i></button></div><div class="navbar-title">Title of current page</div><div class="navbar-btns pull-right"><button href="../../pages/samples.html" class="btn btn-default navbar-btn"><i class="icon-large icon-envelope-alt"></i></button></div></div></div></header><div class="main"><div class="main-inner"><div class="sidebar snap-drawers scrollable"><div class="snap-drawer snap-drawer-left"><ul class="list-group"><li class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Item 1</li><li class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Item 2</li><li class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Item 3</li><li class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Item 4</li><li class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Item 5</li><li class="list-group-item"><span class="glyphicon glyphicon-chevron-right"></span>Item 6</li></ul></div></div><div class="content"><div class="page snap-content scrollable"><p>Bla bla  <a href="page2.html" data-transition="slide-in">go to page2</a></p></div></div></div></div><script>// shelf snap.js
+var snapper
+  , leftToggle = $('.toggleLeftSnap');
+  
+function initSnapper() {
+  snapper = new Snap({
+    element: $('.snap-content')[0],
+    disable: 'right',
+    slideIntent: 40,
+    minDragDistance: 20
+  });
+  
+  snapper.on('end', function() {
+    var snap = snapper.state()
+    if (snap.state === 'closed' && snap.info.opening) {
+      leftToggle.addClass('active');
+    } else {
+      leftToggle.removeClass('active');
+    }
+  });
+}
+
+leftToggle.click(function() {
+  if (snapper && snapper.state().state === 'closed') {
+    snapper.open('left');
+    leftToggle.addClass('active');
+  } else {
+    snapper.close('left');
+    leftToggle.removeClass('active');
+  }
+});
+
+// page transition push.js
+$(window).on('push', function (e) {
+  // run on page script with eval!!! risky but for prototype ok.
+  $('[id^=pagescript]').each(function() {
+    eval(this.outerText);
+  });
+  
+  // reninit Snap.js
+  initSnapper();
+});
+
+// init Snap.js
+initSnapper();
+</script><script type="text/javascript">var _gaq = window._gaq || [];
+_gaq.push(['_setAccount', 'UA-33181917-6']);
+_gaq.push(['_setDomainName', 'none']); // track localhost
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></body></html>
