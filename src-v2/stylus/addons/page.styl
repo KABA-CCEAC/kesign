@@ -1,9 +1,13 @@
 .page
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background: $white
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: $white
+  border-top: solid 10px $white
+
+  
 // .page.page-report
 //     background: #fff
 //     border: solid 1px $kabaBlue
@@ -11,11 +15,12 @@
 .snapjs-left .page
   left: 10px
 
-.container > .page
-  margin-left: 0
+// .container > .page
+//   margin-left: 0
 
 @media screen and (min-width: 768px)
   .page
+    position: absolute
     top: 0
     right: -1px
     bottom: -1px
@@ -24,12 +29,12 @@
     padding: 15px
     border-left: solid 20px $white
     border-top: solid 20px $white
-    min-height: 450px
 
   .snapjs-left .page
     border-left: solid 10px $white
 
-  .page:before 
+  .page:before
+      background: transparent
       border: solid 1px darken($kabaBackgroundGray, 20)
       content: ''
       position: absolute
@@ -37,3 +42,4 @@
       left: 0
       right: 0
       bottom: 0
+      z-index: -1

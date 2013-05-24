@@ -11,11 +11,11 @@
   z-index: 2
   overflow: auto
   -webkit-overflow-scrolling: touch
-  -webkit-transform: translate3d(0, 0, 0)
-     -moz-transform: translate3d(0, 0, 0)
-      -ms-transform: translate3d(0, 0, 0)
-       -o-transform: translate3d(0, 0, 0)
-          transform: translate3d(0, 0, 0)
+  // -webkit-transform: translate3d(0, 0, 0)
+  // -moz-transform: translate3d(0, 0, 0)
+  // -ms-transform: translate3d(0, 0, 0)
+  // -o-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
 
 .snap-drawers
   position: absolute
@@ -36,11 +36,11 @@
   height: auto
   overflow: auto
   -webkit-overflow-scrolling: touch
-  -webkit-transition: width 0.3s ease
-     -moz-transition: width 0.3s ease
-      -ms-transition: width 0.3s ease
-       -o-transition: width 0.3s ease
-          transition: width 0.3s ease
+  // -webkit-transition: width 0.3s ease
+  // -moz-transition: width 0.3s ease
+  // -ms-transition: width 0.3s ease
+  // -o-transition: width 0.3s ease
+  transition: width 0.3s ease
 
 .snap-drawer-left
   left: 0
@@ -57,3 +57,8 @@
 .snapjs-expand-left .snap-drawer-left,
 .snapjs-expand-right .snap-drawer-right
   width: 100%
+
+// hide if push transition going on
+.push-transition
+  .snap-drawers
+    display: none
