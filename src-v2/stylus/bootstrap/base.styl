@@ -1,26 +1,33 @@
-.pad-sm
-  padding: 0 10px
+/*
+ * Base CSS override
+ */
+body
+  color: $kabaTextGray
 
-.snapjs-left .pad-sm, .snapjs-right .pad-sm
-  padding: 0
+
+h1, h2, h3, h4, h5, h6
+  color: $kabaBlue
+
+a
+  color: $kabaBlue
+
+p
+  a
+    color: lighten($kabaBlue, 5)
+    text-shadow: 0 1px 0 $kabaLightBlue
+
 
 
 @media screen and (min-width: 768px)
-  .pad-sm
-    padding: 0
-
-
+  body
+    font-size: 14px
+    
 
 
 // html, body
 //   height: 100%
 
-// body
-//   font-size: 12px
-//   color: $kabaTextGray
 
-// h1, h2, h3, h4, h5, h6
-//   color: $kabaBlue
 
 // address strong
 //   color: $kabaBlue
@@ -32,13 +39,7 @@
 // dt
 //   color: $kabaBlue
 
-// a
-//   color: $kabaBlue
 
-// p
-//   a
-//     color: lighten($kabaBlue, 5)
-//     text-shadow: 0 1px 0 $kabaLightBlue
 
 
 
