@@ -32,7 +32,7 @@ html(lang="en")
           .navbar-title Title of current page
 
           .navbar-btns.pull-right
-            button.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+            button.toggleRightSnap.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
               i.icon-large.icon-envelope-alt
 
 
@@ -65,8 +65,17 @@ html(lang="en")
                 span.glyphicon.glyphicon-chevron-right
                 | Item 6
 
+          .snap-drawer.snap-drawer-right
+            ul.list-group
+              li.list-group-item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              li.list-group-item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              li.list-group-item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              li.list-group-item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        
         .content
           .page.snap-content.scrollable
+            h4 lorem ipsum
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
             p Bla bla  
               a(href='default.html', data-transition='slide-out') go to page1
         //- .sidebar
@@ -83,33 +92,57 @@ html(lang="en")
 
       // shelf snap.js
       var snapper
-        , leftToggle = $('.toggleLeftSnap');
+        , leftToggle = $('.toggleLeftSnap')
+        , rightToggle = $('.toggleRightSnap');
 
       function initSnapper() {
         snapper = new Snap({
           element: $('.snap-content')[0],
-          disable: 'right',
+          //disable: 'right',
           slideIntent: 40,
           minDragDistance: 20
         });
 
         snapper.on('end', function() {
-          var snap = snapper.state()
-          if (snap.state === 'closed' && snap.info.opening) {
+          var snap = snapper.state();
+
+          if (snap.state === 'closed' && snap.info.opening === 'left') {
             leftToggle.addClass('active');
+            rightToggle.removeClass('active');
           } else {
             leftToggle.removeClass('active');
+          }
+
+          if (snap.state === 'closed' && snap.info.opening === 'right') {
+            rightToggle.addClass('active');
+            leftToggle.removeClass('active');
+          } else {
+            rightToggle.removeClass('active');
           }
         });
       }
 
       leftToggle.click(function() {
-        if (snapper && snapper.state().state === 'closed') {
+        var snap = snapper.state();
+        if (snap.state === 'closed' || snap.state === 'right') {
           snapper.open('left');
           leftToggle.addClass('active');
+          rightToggle.removeClass('active');
         } else {
           snapper.close('left');
           leftToggle.removeClass('active');
+        }
+      });
+
+      rightToggle.click(function() {
+        var snap = snapper.state();
+        if (snap.state === 'closed' || snap.state === 'left') {
+          snapper.open('right');
+          rightToggle.addClass('active');
+          leftToggle.removeClass('active');
+        } else {
+          snapper.close('right');
+          rightToggle.removeClass('active');
         }
       });
 

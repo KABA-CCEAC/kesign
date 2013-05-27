@@ -29,17 +29,27 @@
     padding: 15px
     border-left: solid 20px $white
     border-top: solid 20px $white
+    border-radius: top left 5px
+
+  .page:before
+    background: transparent
+    border: solid 1px darken($kabaBackgroundGray, 20)
+    border-radius: top left 4px
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
 
   .snapjs-left .page
     border-left: solid 10px $white
 
-  .page:before
-      background: transparent
-      border: solid 1px darken($kabaBackgroundGray, 20)
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      z-index: -1
+  .snapjs-right .page
+    border-right: solid 10px $white
+    border-radius: top right 5px
+
+  .snapjs-right .page:before
+    border-radius: top right 4px
+

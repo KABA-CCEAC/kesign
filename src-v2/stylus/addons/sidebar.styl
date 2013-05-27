@@ -1,19 +1,28 @@
 .sidebar
 
   .list-group
-    /* remove border-radius on first-child as it's bound to header */
     .list-group-item
+      /* remove border-radius on first-child as it's bound to header */
       &:first-child
         border-radius: 0
 
 
 @media screen and (min-width: 768px)
   .sidebar
-    margin-left: 10px
+
+    .snap-drawer-left
+      margin-left: 10px
+
+    .snap-drawer-right
+      border-right: solid 10px $white
+      margin-left: 10px
 
     .list-group
-      /* add border-radius on first-child again */
+      
       .list-group-item
+        border: solid 1px darken($kabaBackgroundGray, 20)
+        
+        /* add border-radius on first-child again */
         &:first-child
           border-radius: top 4px
 
