@@ -28,6 +28,17 @@ p a{color:#053565;text-shadow:0 1px 0 #d5dbe0}
 .navbar .navbar-btns{margin-top:0;}
 .navbar .navbar-btns .navbar-btn{margin-top:7px;padding:8px 12px;-webkit-border-radius:4px;border-radius:4px}
 .navbar .navbar-btns .btn.hidden-sm{display:inline !important}
+}.nav-list{padding:0;}
+.nav-list > li{margin-bottom:-1px;border:solid 1px #c2c2c2;}
+.nav-list > li:last-child{-webkit-border-bottom-right-radius:4px;border-bottom-right-radius:4px;}
+.nav-list > li:not(.nav-header)::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#4c4c4c}
+@media screen and (min-width: 768px){.nav-list{padding:0;}
+.nav-list > li{margin-bottom:0;border:none;}
+.nav-list > li::last-child{-webkit-border-radius:0;border-radius:0}
+.nav-list > li > a,.nav-list > li .nav-header{margin-right:0;margin-left:0}
+.nav-list > li:not(.nav-header)::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#f2a200}
+.nav-list li.active > a,.nav-list li.active a:hover{background-color:#8d97a6;border-left:solid 4px #f89406;padding:10px 15px 10px 11px}
+.nav-list li.active::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#04284d}
 }.pad-sm{padding:0 10px}
 .snapjs-left .pad-sm,.snapjs-right .pad-sm{padding:0}
 @media screen and (min-width: 768px){.pad-sm{padding:0}
@@ -68,6 +79,7 @@ p a{color:#053565;text-shadow:0 1px 0 #d5dbe0}
 .sidebar .snap-drawer-right{border-right:solid 10px #fff;margin-left:10px}
 .sidebar .list-group .list-group-item{border:solid 1px #c2c2c2;}
 .sidebar .list-group .list-group-item:first-child{-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px;}
+.sidebar .nav-list{-webkit-box-shadow:-1px 2px 7px #c2c2c2;box-shadow:-1px 2px 7px #c2c2c2;border:solid 1px #c2c2c2;border-bottom:solid 3px #f89406;padding:4px 0 19px;background:#f5f5f5;-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px;}
 }.brandbar{background:#fff;overflow:hidden;zoom:1;}
 .brandbar:before,.brandbar:after{content:"";display:table}
 .brandbar:after{clear:both}

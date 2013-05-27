@@ -46,25 +46,14 @@ html(lang="en")
 
         .sidebar.snap-drawers.scrollable
           .snap-drawer.snap-drawer-left
-            ul.list-group
-              li.list-group-item
-                span.glyphicon.glyphicon-chevron-right
-                | Item 1
-              li.list-group-item
-                span.glyphicon.glyphicon-chevron-right
-                | Item 2
-              li.list-group-item
-                span.glyphicon.glyphicon-chevron-right
-                | Item 3
-              li.list-group-item
-                span.glyphicon.glyphicon-chevron-right
-                | Item 4
-              li.list-group-item
-                span.glyphicon.glyphicon-chevron-right
-                | Item 5
-              li.list-group-item
-                span.glyphicon.glyphicon-chevron-right
-                | Item 6
+
+            .nav.nav-list
+              li.nav-header.hidden-sm Pages:
+              li: a(href="#") link 1
+              li.active: a(href="#") link 2
+              li: a(href="#") link 3
+              li: a(href="#") link 4
+
 
           .snap-drawer.snap-drawer-right
             .news-list
@@ -75,6 +64,8 @@ html(lang="en")
                 li: a(href='#') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                 li: a(href='#') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                 li.news-end: a(href='#') more messages
+        
+
         .content
           .page.snap-content.scrollable
 
