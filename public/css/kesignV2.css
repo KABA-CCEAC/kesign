@@ -77,10 +77,16 @@ p a{color:#053565;text-shadow:0 1px 0 #d5dbe0}
 .brandbar-xsmall{height:40px;max-height:40px;}
 .brandbar-xsmall a.brand{display:inline-block;margin-left:13px;height:40px;width:80px;background:url("../img/kaba_xs.gif") no-repeat}
 @media screen and (min-width: 768px) and (min-height: 600px){.brandbar + .navbar{margin-top:40px}
+}[class^="icon-"],[class*=" icon-"]{position:relative;}
+[class^="icon-"] .ribbon,[class*=" icon-"] .ribbon{position:absolute;bottom:-5px;right:-5px;display:inline-block;-webkit-border-radius:10px;border-radius:10px;font-size:12px;font-style:normal;line-height:10px;padding:2px 3px 1px 3px;background:#04284d;color:#fff;font-weight:bold;}
+[class^="icon-"] .ribbon.ribbon-error,[class*=" icon-"] .ribbon.ribbon-error{background:#9d261d}
+[class^="icon-"] .ribbon.ribbon-success,[class*=" icon-"] .ribbon.ribbon-success{background:#46a546}
+@media screen and (min-width: 768px){[class^="icon-"] .ribbon,[class*=" icon-"] .ribbon{font-size:10px}
 }.news-list{padding:10px 0;background:#d5dbe0;border-bottom:solid 2px #04284d;font-size:14px;}
 .news-list h1,.news-list h2,.news-list h3,.news-list h4,.news-list h5,.news-list h6{font-size:16px;font-weight:400;padding:0 19px}
 .news-list ul{list-style-type:none;margin:0;}
 .news-list ul li{position:relative;padding:5px 40px 5px 19px;border-top:solid 1px #fff;border-bottom:solid 1px #ccc;}
+.news-list ul li.unread{font-weight:bold}
 .news-list ul li:hover{border-left:solid 2px #f2a200;padding:5px 40px 5px 17px;background:#b8c2ca}
 .news-list ul li.news-end{text-align:right;border-bottom:none;padding:5px 30px 5px 17px}
 .news-list ul li a:hover{text-decoration:none}

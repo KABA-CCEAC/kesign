@@ -3,21 +3,19 @@
 
   .ribbon
     position: absolute
-    bottom: 1px
-    right: -4px
+    bottom: -5px
+    right: -5px
     display: inline-block
-    width: 4px
-    height: 4px
     border-radius: 10px
-    font-size: 8px
+    font-size: 12px
     font-style: normal
-    line-height: 8px
-    padding: 1px 3px 5px 3px
+    line-height: 10px
+    padding: 2px 3px 1px 3px
     background: $kabaBlue
     color: $white
     //border: solid 1px $white
-    font-weight: 800
-    box-shadow: 1px 1px 2px $kabaBlue
+    font-weight: bold
+    //box-shadow: 1px 1px 2px $kabaBlue
     //opacity: 0.9
 
     &.ribbon-error
@@ -25,3 +23,9 @@
 
     &.ribbon-success
       background: $green
+
+
+@media screen and (min-width: 768px)
+    [class^="icon-"], [class*=" icon-"]
+      .ribbon
+        font-size: 10px
