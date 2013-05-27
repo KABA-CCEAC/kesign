@@ -8,9 +8,11 @@
  * Main CSS for kesign
  *
  */
-.pad-sm{padding:0 10px}
-.snapjs-left .pad-sm,.snapjs-right .pad-sm{padding:0}
-@media screen and (min-width: 768px){.pad-sm{padding:0}
+body{color:#676767}
+h1,h2,h3,h4,h5,h6{color:#04284d}
+a{color:#04284d}
+p a{color:#053565;text-shadow:0 1px 0 #d5dbe0}
+@media screen and (min-width: 768px){body{font-size:14px}
 }.navbar{padding-right:0;padding-left:0;background-color:#04284d;}
 .navbar .navbar-title{display:block;max-width:200px;padding:15px;margin-right:auto;margin-left:auto;font-size:14px;font-weight:500;line-height:20px;color:#fff;text-align:center}
 .navbar .navbar-btns{position:relative;margin-top:-50px;}
@@ -26,6 +28,20 @@
 .navbar .navbar-btns{margin-top:0;}
 .navbar .navbar-btns .navbar-btn{margin-top:7px;padding:8px 12px;-webkit-border-radius:4px;border-radius:4px}
 .navbar .navbar-btns .btn.hidden-sm{display:inline !important}
+}.nav-list{padding:0;}
+.nav-list > li{margin-bottom:-1px;border:solid 1px #c2c2c2;}
+.nav-list > li:last-child{-webkit-border-bottom-right-radius:4px;border-bottom-right-radius:4px;}
+.nav-list > li:not(.nav-header)::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#4c4c4c}
+@media screen and (min-width: 768px){.nav-list{padding:0;}
+.nav-list > li{margin-bottom:0;border:none;}
+.nav-list > li::last-child{-webkit-border-radius:0;border-radius:0}
+.nav-list > li > a,.nav-list > li .nav-header{margin-right:0;margin-left:0}
+.nav-list > li:not(.nav-header)::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#f2a200}
+.nav-list li.active > a,.nav-list li.active a:hover{background-color:#8d97a6;border-left:solid 4px #f89406;padding:10px 15px 10px 11px}
+.nav-list li.active::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#04284d}
+}.pad-sm{padding:0 10px}
+.snapjs-left .pad-sm,.snapjs-right .pad-sm{padding:0}
+@media screen and (min-width: 768px){.pad-sm{padding:0}
 }.snap-content{position:absolute;top:0;right:0;bottom:0;left:0;width:auto;height:auto;z-index:2;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 .snap-drawers{position:absolute;top:0;right:0;bottom:0;left:0;width:auto;height:auto}
 .snap-drawer{position:absolute;top:0;right:auto;bottom:0;left:auto;width:265px;height:auto;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-transition:width .3s ease;-moz-transition:width .3s ease;-o-transition:width .3s ease;-ms-transition:width .3s ease;transition:width .3s ease}
@@ -63,6 +79,7 @@
 .sidebar .snap-drawer-right{border-right:solid 10px #fff;margin-left:10px}
 .sidebar .list-group .list-group-item{border:solid 1px #c2c2c2;}
 .sidebar .list-group .list-group-item:first-child{-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px;}
+.sidebar .nav-list{-webkit-box-shadow:-1px 2px 7px #c2c2c2;box-shadow:-1px 2px 7px #c2c2c2;border:solid 1px #c2c2c2;border-bottom:solid 3px #f89406;padding:4px 0 19px;background:#f5f5f5;-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px;}
 }.brandbar{background:#fff;overflow:hidden;zoom:1;}
 .brandbar:before,.brandbar:after{content:"";display:table}
 .brandbar:after{clear:both}
@@ -72,4 +89,19 @@
 .brandbar-xsmall{height:40px;max-height:40px;}
 .brandbar-xsmall a.brand{display:inline-block;margin-left:13px;height:40px;width:80px;background:url("../img/kaba_xs.gif") no-repeat}
 @media screen and (min-width: 768px) and (min-height: 600px){.brandbar + .navbar{margin-top:40px}
+}[class^="icon-"],[class*=" icon-"]{position:relative;}
+[class^="icon-"] .ribbon,[class*=" icon-"] .ribbon{position:absolute;bottom:-5px;right:-5px;display:inline-block;-webkit-border-radius:10px;border-radius:10px;font-size:12px;font-style:normal;line-height:10px;padding:2px 3px 1px 3px;background:#04284d;color:#fff;font-weight:bold;}
+[class^="icon-"] .ribbon.ribbon-error,[class*=" icon-"] .ribbon.ribbon-error{background:#9d261d}
+[class^="icon-"] .ribbon.ribbon-success,[class*=" icon-"] .ribbon.ribbon-success{background:#46a546}
+@media screen and (min-width: 768px){[class^="icon-"] .ribbon,[class*=" icon-"] .ribbon{font-size:10px}
+}.news-list{padding:10px 0;background:#d5dbe0;border-bottom:solid 2px #04284d;font-size:14px;}
+.news-list h1,.news-list h2,.news-list h3,.news-list h4,.news-list h5,.news-list h6{font-size:16px;font-weight:400;padding:0 19px}
+.news-list ul{list-style-type:none;margin:0;}
+.news-list ul li{position:relative;padding:5px 40px 5px 19px;border-top:solid 1px #fff;border-bottom:solid 1px #ccc;}
+.news-list ul li.unread{font-weight:bold}
+.news-list ul li:hover{border-left:solid 2px #f2a200;padding:5px 40px 5px 17px;background:#b8c2ca}
+.news-list ul li.news-end{text-align:right;border-bottom:none;padding:5px 30px 5px 17px}
+.news-list ul li a:hover{text-decoration:none}
+.news-list ul li::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#f2a200}
+@media screen and (min-width: 768px){.news-list{font-size:12px;-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px;}
 }
