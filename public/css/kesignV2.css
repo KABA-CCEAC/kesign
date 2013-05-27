@@ -8,7 +8,10 @@
  * Main CSS for kesign
  *
  */
-.navbar{padding-right:0;padding-left:0;background-color:#04284d;}
+.pad-sm{padding:0 10px}
+.snapjs-left .pad-sm,.snapjs-right .pad-sm{padding:0}
+@media screen and (min-width: 768px){.pad-sm{padding:0}
+}.navbar{padding-right:0;padding-left:0;background-color:#04284d;}
 .navbar .navbar-title{display:block;max-width:200px;padding:15px;margin-right:auto;margin-left:auto;font-size:14px;font-weight:500;line-height:20px;color:#fff;text-align:center}
 .navbar .navbar-btns{position:relative;margin-top:-50px;}
 .navbar .navbar-btns:first-child{margin-top:0}
