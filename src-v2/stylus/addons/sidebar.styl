@@ -1,6 +1,23 @@
+.sidebar
+
+  .list-group
+    /* remove border-radius on first-child as it's bound to header */
+    .list-group-item
+      &:first-child
+        border-radius: 0
+
+
 @media screen and (min-width: 768px)
   .sidebar
     margin-left: 10px
+
+    .list-group
+      /* add border-radius on first-child again */
+      .list-group-item
+        &:first-child
+          border-radius: top 4px
+
+
 
 
 // .sidebar
