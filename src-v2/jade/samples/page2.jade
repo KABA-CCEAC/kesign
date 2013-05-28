@@ -21,19 +21,21 @@ html(lang="en")
           .page.snap-content.scrollable
 
             .row.row-page-nav
-              .col.col-lg-4.col-page-nav
+              
+
+              .col.col-lg-8.col-push-4.pad
+                h4 lorem ipsum
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                p Bla bla  
+                  a(href='default.html', data-transition='slide-out') go to page1
+
+              .col.col-lg-4.col-pull-8.col-page-nav
                 .page-nav
                   ul.nav.nav-pills.nav-stacked
                     li: a(href="#") Home
                     li: a(href="#") Profile
                     li.active: a(href="#") Messages
                     li: a(href="#") Mehr ...
-
-              .col.col-lg-8.pad
-                h4 lorem ipsum
-                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                p Bla bla  
-                  a(href='default.html', data-transition='slide-out') go to page1
 
 
     include ../includes/sample-layoutscript
