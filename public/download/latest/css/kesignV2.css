@@ -39,9 +39,13 @@ p a{color:#053565;text-shadow:0 1px 0 #d5dbe0}
 .nav-list > li:not(.nav-header)::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#f2a200}
 .nav-list li.active > a,.nav-list li.active a:hover{background-color:#8d97a6;border-left:solid 4px #f89406;padding:10px 15px 10px 11px}
 .nav-list li.active::after{position:absolute;top:50%;margin-top:-8px;right:15px;font-family:'FontAwesome';content:"\f054";color:#04284d}
-}.pad-sm{padding:0 10px}
+}.pad{padding:0 15px;}
+.pad:first-child h1,.pad:first-child h2,.pad:first-child h3,.pad:first-child h4,.pad:first-child h5,.pad:first-child h6{margin-top:0}
+.pad-sm{padding:0 15px}
 .snapjs-left .pad-sm,.snapjs-right .pad-sm{padding:0}
-@media screen and (min-width: 768px){.pad-sm{padding:0}
+@media screen and (min-width: 768px){.pad{padding:0 15px;margin-top:5px;}
+.pad:first-child h1,.pad:first-child h2,.pad:first-child h3,.pad:first-child h4,.pad:first-child h5,.pad:first-child h6{margin-top:15px}
+.pad-sm{padding:0}
 }.snap-content{position:absolute;top:0;right:0;bottom:0;left:0;width:auto;height:auto;z-index:2;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 .snap-drawers{position:absolute;top:0;right:0;bottom:0;left:0;width:auto;height:auto}
 .snap-drawer{position:absolute;top:0;right:auto;bottom:0;left:auto;width:265px;height:auto;overflow:auto;-webkit-overflow-scrolling:touch;-webkit-transition:width .3s ease;-moz-transition:width .3s ease;-o-transition:width .3s ease;-ms-transition:width .3s ease;transition:width .3s ease}
@@ -67,9 +71,19 @@ p a{color:#053565;text-shadow:0 1px 0 #d5dbe0}
 }@media screen and (min-width: 768px) and (min-height: 600px){.header.header-fixed-top .brandbar + .navbar{margin-top:0}
 .header.header-fixed-top + .main .page{margin-top:90px}
 .header.header-fixed-top + .main .sidebar{margin-top:110px}
-}.page{position:absolute;top:0;right:0;bottom:0;left:0;background:#fff;border-top:solid 10px #fff}
+}.page{position:absolute;top:0;right:0;bottom:0;left:0;background:#fff;border-top:solid 15px #fff;}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li a{background-color:transparent;color:#04284d;background-color:#fafafa;border:solid 1px #ccc;}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li a:hover{background-color:#d5dbe0}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li.active a{background-color:#05305c;border:solid 1px #063c74;margin-right:-1px;color:#fff}
 .snapjs-left .page{left:10px}
-@media screen and (min-width: 768px){.page{position:absolute;top:0;right:-1px;bottom:-1px;left:0;background:#f5f5f5;padding:15px;border-left:solid 20px #fff;border-top:solid 20px #fff;-webkit-border-top-left-radius:5px;border-top-left-radius:5px;}
+@media screen and (min-width: 768px){.page{position:absolute;top:0;right:-1px;bottom:-1px;left:0;background:#f5f5f5;border-left:solid 20px #fff;border-top:solid 20px #fff;-webkit-border-top-left-radius:5px;border-top-left-radius:5px;}
+.page .row-page-nav{height:100%;}
+.page .row-page-nav .col-page-nav{height:100%;padding:0;}
+.page .row-page-nav .col-page-nav .page-nav{height:100%;margin:1px 0 0 1px;border-right:solid 1px #c2c2c2;background-color:#fafafa;-webkit-border-top-left-radius:5px;border-top-left-radius:5px;}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li a{background-color:transparent;-webkit-border-radius:0;border-radius:0;margin-top:0;color:#04284d;border:none;border-bottom:solid 1px #dcdcdc;background-color:#fafafa;}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li a:hover{background-color:#f8f8f8}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li.active a{margin-top:-1px;background-color:#f5f5f5;margin-right:-1px;border:none;border-top:solid 1px #c2c2c2;border-bottom:solid 1px #c2c2c2;color:#676767}
+.page .row-page-nav .col-page-nav .page-nav .nav.nav-pills li.active:first-child a{margin-top:0;border-top:none}
 .page:before{background:transparent;border:solid 1px #c2c2c2;-webkit-border-top-left-radius:4px;border-top-left-radius:4px;content:'';position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1}
 .snapjs-left .page{border-left:solid 10px #fff}
 .snapjs-right .page{border-right:solid 10px #fff;-webkit-border-top-right-radius:5px;border-top-right-radius:5px;}
