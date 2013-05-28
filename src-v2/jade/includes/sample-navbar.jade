@@ -1,51 +1,27 @@
-.navbar-inner
-  .container
+.brandbar.brandbar-xsmall
+  a.brand(href="#{path}index.html")
 
-    //.btn-navbar is used as the toggle for collapsed navbar content
-    a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-      span.icon-bar
-      span.icon-bar
-      span.icon-bar
+  .statusbar.pull-right
+    strong Welcome 
+    | John Mustermann 
+    span.label.label-warning Admin Status
 
-    ul.nav.pull-right.nav-small
-      li
-        a.toggleBrandbar(href='#', data-toggle="collapse", data-target=".brandbar")
-          i.icon-chevron-up
 
-    // Everything you want hidden at 940px or less, place within here
-    .nav-collapse.collapse
+.navbar
 
-      ul.nav
-        li
-          a(href="#{path}pages/samples.html")
-            i.icon-arrow-left
-            |  zurück
-        li.divider-vertical
-        li.dropdown
-          a.dropdown-toggle(href="#", data-toggle='dropdown') 
-            | Sample DropDown 
-            b.caret
-          ul.dropdown-menu(role='menu', aria-labelledBy='dropdownMenu')
-            li: a(href="#") Sample 1
-            li: a(href="#") Sample 2
-            li.dropdown-submenu
-              a(href="#") Sample 3
-              ul.dropdown-menu(role='menu', aria-labelledBy='dropdownMenu')
-                li: a(href="#") Sample 3.1
-                li: a(href="#") Sample 3.2
-                li: a(href="#") Sample 3.3
-                li: a(href="#") Sample 3.4
-                li: a(href="#") Sample 3.5
-        li.divider-vertical
+  .navbar-btns.pull-left
+    button.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+      i.icon-large.icon-arrow-left
 
-      ul.nav.pull-right.nav-small
-        li
-          a(href='#')
-            i.icon-unlock
-            |  Logout
-        li.divider-vertical
-        li
-          a(href='#')
-            strong ?
-            |  Help
-        li.divider-vertical
+    button.toggleLeftSnap.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+      i.icon-large.icon-reorder
+
+    button.hidden-sm.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+      i.icon-large.icon-home
+
+  .navbar-title Title of current page
+
+  .navbar-btns.pull-right
+    button.toggleRightSnap.btn.btn-default.navbar-btn(href="#{path}pages/samples.html")
+      i.icon-large.icon-envelope-alt
+        small.ribbon.ribbon-error 2

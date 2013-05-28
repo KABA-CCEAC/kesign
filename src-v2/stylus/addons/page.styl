@@ -5,7 +5,31 @@
   bottom: 0
   left: 0
   background: $white
-  border-top: solid 10px $white
+  border-top: solid 15px $white
+
+  .row-page-nav
+    .col-page-nav
+      .page-nav
+        .nav
+        
+          &.nav-pills
+            li
+              a
+                background-color: transparent
+                color: $kabaBlue
+                background-color: #fa
+                border: solid 1px $kabaMiddleGray
+
+                &:hover
+                  background-color: $kabaLightBlue
+
+
+            li.active
+              a
+                background-color: lighten($kabaBlue, 3)
+                border: solid 1px lighten($kabaBlue, 8)
+                margin-right: -1px
+                color: $white
 
   
 // .page.page-report
@@ -26,10 +50,57 @@
     bottom: -1px
     left: 0
     background: #f5
-    padding: 15px
+    //padding: 15px
     border-left: solid 20px $white
     border-top: solid 20px $white
     border-radius: top left 5px
+
+    .row-page-nav
+      height: 100%
+
+      .col-page-nav
+        height: 100%
+        padding: 0
+
+        .page-nav
+          height: 100%
+          margin: 1px 0 0 1px
+          border-right: solid 1px darken($kabaBackgroundGray, 20)
+          background-color: $white
+          border-radius: top left 5px
+
+          .nav
+            
+            &.nav-pills
+              li
+                a
+                  background-color: transparent
+                  border-radius: 0
+                  margin-top: 0
+                  color: $kabaBlue
+                  border: none
+                  border-bottom: solid 1px darken($kabaBackgroundGray, 10)
+                  background-color: #fa
+
+                  &:hover
+                    background-color: #f8
+
+
+              li.active
+                a
+                  margin-top: -1px
+                  background-color: #f5
+                  margin-right: -1px
+                  border: none
+                  border-top: solid 1px darken($kabaBackgroundGray, 20)
+                  border-bottom: solid 1px darken($kabaBackgroundGray, 20)
+                  color: $kabaTextGray
+
+                &:first-child
+                  a
+                    margin-top: 0
+                    border-top: none
+
 
   .page:before
     background: transparent

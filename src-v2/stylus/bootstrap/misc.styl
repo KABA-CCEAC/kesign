@@ -1,11 +1,29 @@
+.pad
+  padding: 0 15px
+
+  &:first-child
+    h1, h2, h3, h4, h5, h6
+      margin-top: 0
+
 .pad-sm
-  padding: 0 10px
+  padding: 0 15px
+
+
 
 .snapjs-left .pad-sm, .snapjs-right .pad-sm
   padding: 0
 
 
 @media screen and (min-width: 768px)
+
+  .pad
+    padding: 0 15px
+    margin-top: 5px
+
+    &:first-child
+      h1, h2, h3, h4, h5, h6
+        margin-top: 15px
+
   .pad-sm
     padding: 0
 
