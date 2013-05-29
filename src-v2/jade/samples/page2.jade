@@ -10,12 +10,29 @@ html(lang="en")
 
         include ../includes/sample-navbar
 
+    footer.footer.footer-fixed-bottom.visible-sm
+      .footer-inner
+        .row
+          .col.col-lg-12.col-no-padding
+            .tabs
+              ul.nav.nav-tabs.nav-justified
+                li: a(href="#")
+                  .tab-icon: i.icon-home
+                  .tab-label Home
+                li: a(href="#") 
+                  .tab-icon: i.icon-user
+                  .tab-label Profile
+                li.active: a(href="#") 
+                  .tab-icon: i.icon-envelope-alt
+                  .tab-label Messages
+                li: a(href="#") 
+                  .tab-icon: i.icon-ellipsis-horizontal
+                  .tab-label Mehr
           
     .main
       .main-inner
 
         include ../includes/sample-sidebar
-
 
         .content
           .page.snap-content.scrollable
@@ -29,13 +46,15 @@ html(lang="en")
                 p Bla bla  
                   a(href='default.html', data-transition='slide-out') go to page1
 
-              .col.col-lg-4.col-pull-8.col-page-nav
+              .col.col-lg-4.col-pull-8.col-page-nav.hidden-sm
                 .page-nav
                   ul.nav.nav-pills.nav-stacked
                     li: a(href="#") Home
                     li: a(href="#") Profile
                     li.active: a(href="#") Messages
                     li: a(href="#") Mehr ...
+
+
 
 
     include ../includes/sample-layoutscript
