@@ -27,7 +27,8 @@
     bartitle           : '.bar-title',
     barfooter          : '.bar-footer',
     barheadersecondary : '.bar-header-secondary',*/
-    sidebar            : '.sidebar-content'
+    sidebar            : '.sidebar-content',
+    footer             : '.footer'
   };
 
   var cacheReplace = function (data, updates) {
